@@ -1,6 +1,6 @@
 # DiffSign
 
-DiffSign (Different Sign) - is a project that created to develop a web app that teaches children sign-language through a game.
+DiffSign (Different Sign) - is a project that created to develop a web app that teaches children sign-language through a game, which is more easy and fun way to learn.
 
 The project developing the wab app for the "SHAY-PROJECT" organization that helps deaf and mute kids.
 

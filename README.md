@@ -2,7 +2,7 @@
 
 A template repository with wiki for a team project at JCE's software engineering course
 
-![project logo (this one is taken from basecamp)](http://klipfolio.com/sites/default/files/integrations/basecamp.png)
+![project logo (this one is taken from basecamp)](https://raw.githubusercontent.com/neviko/Different-sign-project/master/%E2%80%AB%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%9E%D7%A4%D7%AA%20%E2%80%AB%D7%A1%D7%99%D7%91%D7%99%D7%95%D7%AA%20%E2%80%AB%D7%97%D7%93%D7%A9%D7%94.bmp)
 
 ## Please visit our [live application](https://demo.reactstarterkit.com/)
 - Alright, currently only a landing page...

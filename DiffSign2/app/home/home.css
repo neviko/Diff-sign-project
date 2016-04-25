@@ -1,0 +1,47 @@
+#title
+{
+    text-align: center;
+}
+#menu
+{
+    margin-top:200px;
+}
+
+#signUp
+{
+    height: 15vmax;
+    background-color: bisque;
+    text-align: center;
+    font-size: 8vmax;
+    font-family: fantasy;
+    padding: 1vmax;
+    border: black solid 1px;
+}
+
+#signIn
+{
+    height: 15vmax;
+    background-color: bisque;
+    text-align: center;
+    font-size: 8vmax;
+    font-family: fantasy;
+    padding: 1vmax;
+    border: black solid 1px;
+
+        
+}
+
+
+#learningMode
+{
+    border: black solid 1px;
+    height: 15vmax;
+    background-color: bisque;
+    font-size: 6vmax;
+    font-family: fantasy;
+    padding: 3vmax;    
+
+}
+
+
+

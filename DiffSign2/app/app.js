@@ -1,5 +1,6 @@
 // create the module and name it diffSign
-var diffSign = angular.module('diffSign', ['ngRoute']);
+var diffSign = angular.module('diffSign', ['ngRoute','ui.bootstrap']);
+
 
 // configure our routes
 diffSign.config(function($routeProvider) {
@@ -61,6 +62,3 @@ diffSign.controller('signUpController', function($scope) {
     $scope.image ='pic/aha.jpg';
     ;
 });
-/**
- * Created by Sayag on 04/04/2016.
- */

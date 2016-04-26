@@ -9,14 +9,14 @@ diffSign.config(function($routeProvider) {
     // route for the home page
         .when('/', {
             templateUrl : 'app/home/home.html',
-            controller  : 'loginController'
+            controller  : 'homeController'
         })
 
         // route for the about page
 
         .when('/login', {
             templateUrl : 'app/login/login.html',
-            controller  : 'homeController'
+            controller  : 'loginController'
         })
 
 
@@ -37,16 +37,16 @@ diffSign.config(function($routeProvider) {
 
 
 // create the controller and inject Angular's $scope
-diffSign.controller('loginController', function($scope) {
-    // create a message to display in our view
-    $scope.message = 'סרטי בורקס';
-});
-
-diffSign.controller('homeController', function($scope) {
-    $scope.message = 'סרט מדהים'
-    $scope.image = 'pic/ho.jpg';
-    ;
-});
+//diffSign.controller('loginController', function($scope) {
+//    // create a message to display in our view
+//    $scope.message = 'סרטי בורקס';
+//});
+//
+//diffSign.controller('homeController', function($scope) {
+//    $scope.message = 'סרט מדהים'
+//    $scope.image = 'pic/ho.jpg';
+//    ;
+//});
 
 diffSign.controller('learningModeController', function($scope)
 {
@@ -55,10 +55,3 @@ diffSign.controller('learningModeController', function($scope)
     ;
 });
 
-
-
-diffSign.controller('signUpController', function($scope) {
-    $scope.message = 'סרט מצויין';
-    $scope.image ='pic/aha.jpg';
-    ;
-});

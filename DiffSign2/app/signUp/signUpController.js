@@ -8,9 +8,6 @@
 
     }
 
-
-
-
     app.controller('signUpController',signUpController); // declare on the controller and run loginController
 
 

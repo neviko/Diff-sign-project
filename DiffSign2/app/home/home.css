@@ -9,37 +9,52 @@
 
 #signUp
 {
-    height: 15vmax;
-    background-color: bisque;
-    text-align: center;
-    font-size: 8vmax;
-    font-family: fantasy;
-    padding: 1vmax;
+    background-color: white;
+    background-image:url(images/9.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    
+    padding: 3vmax;
     border: black solid 1px;
+    height: 16vmax;
+    
+    text-align: center;
+    font-size: 5vmax;
 }
 
 #signIn
 {
-    height: 15vmax;
-    background-color: bisque;
+    background-color: white;
+    background-image:url(images/7.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    
+    padding: 3vmax;
+    border: black solid 1px ;       
+    height: 16vmax;
+    
     text-align: center;
-    font-size: 8vmax;
-    font-family: fantasy;
-    padding: 1vmax;
-    border: black solid 1px;
-
-        
+    font-size: 5vmax;
+    
 }
 
 
 #learningMode
 {
-    border: black solid 1px;
-    height: 15vmax;
-    background-color: bisque;
-    font-size: 6vmax;
-    font-family: fantasy;
+    background-color: white;
+    background-image:url(images/8.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;    
+    
     padding: 3vmax;    
+    border: black solid 1px;
+    height: 16vmax;
+    
+    text-align: center;
+    font-size: 5vmax;
 
 }
 

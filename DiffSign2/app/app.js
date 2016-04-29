@@ -30,7 +30,20 @@ diffSign.config(function($routeProvider) {
         .when('/learningMode', {
             templateUrl : 'app/learningMode/learningMode.html',
             controller  : 'learningModeController'
+        })
+
+        .when('/contactUs', {
+            templateUrl : 'app/contactUs/contactUs.html',
+            controller  : 'contactUsController'
+
+        })
+
+        .when('/games', {
+            templateUrl : 'app/games/games.html',
+            controller  : 'gamesController'
+
         });
+
 });
 
 

@@ -1,0 +1,32 @@
+<div>
+    <h2 id="header" >  זיהיתם תוכן שגוי - אנא שלחו לנו </h2>
+
+
+    <div class="form">
+
+        <form>
+            <label for="name">שם</label>
+            <input ng-model="name" type="text" placeholder="אנא רשום כאן את שמך">
+
+            <label for="email">Email</label>
+            <input ng-model="email" required type="email" placeholder="אנא רשמו כאן את כתובת המייל שלכם">
+
+            <br><br>
+
+            <label for="text"></label>
+            <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם" >
+
+            <br><br>
+            <input ng-click="clicked()" type="submit" value="שלח">
+            <br>
+            <span id="thanks">{{message}}</span>
+
+
+
+        </form>
+
+    </div>
+
+
+
+</div>

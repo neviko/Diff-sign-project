@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+<head>
     <!-- PERSONAL_CSS-->
     <link rel="stylesheet" href="app/home/home.css" />
     <link rel="stylesheet" href="app/signUp/signUp.css" />
     <link rel="stylesheet" href="app/login/login.css" />
     <link rel="stylesheet" href="app/learningMode/learningMode.css" />
-    <link rel="stylesheet" href="app/gameMode/triviaGame.css" />    
+    <link rel="stylesheet" href="app/gameMode/triviaGame.css" />
+    <link rel="stylesheet" href="app/contactUs/contactUs.css"/>
     <!--TWITTER BOOTSTRAP-->
     <!-- Latest compiled and minified CSS -->
-<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
     <!-- ANGULAR -->
@@ -28,23 +29,26 @@
     <script src="app/home/homeController.js"></script>
     <script src="app/login/loginController.js"></script>
     <script src="app/signUp/signUpController.js"></script>
+    <script src="app/contactUs/contactUsController.js"></script>
 
-    </head>
+</head>
 
-    <body ng-app="diffSign">
-        <div class="container-fluid">
-            <div class="slidebar">
-                <ul class="nav nav-tabs">
-                    <li role="presentation" ><a href="#">Home</a></li>
-                    <li role="presentation"><a href="#login">כניסה</a></li>
-                    <li role="presentation"><a href="#signUp">הרשמה</a></li>
-                    <li role="presentation"><a href="#learningMode">מצב למידה</a></li>
-                </ul>    
-            </div>
-            <div class= "container">
-                <div ng-view>
-                </div>
-            </div>    
+<body ng-app="diffSign">
+<div class="container-fluid">
+    <div class="slidebar">
+        <ul class="nav nav-tabs">
+            <li role="presentation" ><a href="#">Home</a></li>
+            <li role="presentation"><a href="#login">כניסה</a></li>
+            <li role="presentation"><a href="#signUp">הרשמה</a></li>
+            <li role="presentation"><a href="#learningMode">מצב למידה</a></li>
+            <li role="presentation"><a href="#games">משחקים</a></li>
+            <li role="presentation"><a href="#contactUs">צור קשר</a></li>
+        </ul>
+    </div>
+    <div class= "container">
+        <div ng-view>
         </div>
-    </body>
+    </div>
+</div>
+</body>
 </html>

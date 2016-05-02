@@ -4,7 +4,9 @@
 }
 #menu
 {
-    margin-top:200px;
+    padding-top: 10%;
+    width:80%;
+	margin:auto;
 }
 
 #signUp
@@ -15,7 +17,7 @@
     background-size:contain;
     background-position: center;
     
-    padding: 3vmax;
+    padding-top: 3vmax;
     border: black solid 1px;
     height: 16vmax;
     
@@ -31,7 +33,7 @@
     background-size:contain;
     background-position: center;
     
-    padding: 3vmax;
+    padding-top: 3vmax;
     border: black solid 1px ;       
     height: 16vmax;
     
@@ -49,7 +51,7 @@
     background-size:contain;
     background-position: center;    
     
-    padding: 3vmax;    
+    padding-top: 1vmax;
     border: black solid 1px;
     height: 16vmax;
     
@@ -57,6 +59,4 @@
     font-size: 5vmax;
 
 }
-
-
 

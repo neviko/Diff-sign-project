@@ -1,11 +1,10 @@
 // create the module and name it diffSign
-var diffSign = angular.module('diffSign', ['ngRoute','ui.bootstrap']);
+var diffSign = angular.module('diffSign', ['ngRoute', 'ui.bootstrap']);
 
 
 // configure our routes
-diffSign.config(function($routeProvider) {
+diffSign.config(function ($routeProvider) {
     $routeProvider
-
     // route for the home page
         .when('/', {
             templateUrl : 'app/home/home.html',
@@ -37,6 +36,18 @@ diffSign.config(function($routeProvider) {
             controller  : 'contactUsController'
 
         })
+        
+        .when('/Learning_Kitchen', {
+            templateUrl : 'app/learningMode/kitchen/Learning_Kitchen.html',
+            controller  : 'Learning_KitchenController'
+
+        })
+    
+        .when('/accordingToLetters', {
+            templateUrl : 'app/learningMode/accordingToLetters/accordingToLetters.html',
+            controller  : 'accordingToLettersController'
+
+        })
 
         .when('/games', {
             templateUrl : 'app/games/games.html',
@@ -45,26 +56,3 @@ diffSign.config(function($routeProvider) {
         });
 
 });
-
-
-
-
-// create the controller and inject Angular's $scope
-//diffSign.controller('loginController', function($scope) {
-//    // create a message to display in our view
-//    $scope.message = 'סרטי בורקס';
-//});
-//
-//diffSign.controller('homeController', function($scope) {
-//    $scope.message = 'סרט מדהים'
-//    $scope.image = 'pic/ho.jpg';
-//    ;
-//});
-
-diffSign.controller('learningModeController', function($scope)
-{
-    $scope.message = 'סרט מצויין';
-    $scope.image ='pic/aha.jpg';
-    ;
-});
-

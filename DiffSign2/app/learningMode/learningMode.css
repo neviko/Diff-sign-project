@@ -2,3 +2,33 @@
 {
     text-align: center;
 }
+
+#menu_learning
+{
+    padding-top: 10%;
+    width:70%;
+	margin:auto;
+}
+
+#accordingToLetters
+{
+    background-color: white;    
+    height: 16vmax;
+    border: black solid 1px;
+    
+    font-size: 5vmax;
+    text-align: center;
+    padding-top: 3vmax;
+}
+
+#Learning_Kitchen
+{
+    background-color: white;
+    height: 16vmax;
+    border: black solid 1px;
+    
+    font-size: 5vmax;
+    text-align: center;
+    padding-top: 3vmax;
+}
+

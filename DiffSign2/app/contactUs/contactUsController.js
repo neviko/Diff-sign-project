@@ -1,6 +1,3 @@
-/**
- * Created by russo on 4/29/2016.
- */
 (function() {
     var app = angular.module('diffSign');
 

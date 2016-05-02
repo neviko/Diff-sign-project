@@ -1,8 +1,3 @@
-/**
- * Created by Sayag on 26/04/2016.
- */
-
-//iffy
 (function(app){
 
     function loginController($scope) {

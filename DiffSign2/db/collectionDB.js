@@ -7,14 +7,14 @@ db.once('open', function() {console.log("we're connected!")
   // we're connected!
 });
 
-// Defin the schema
+// define the schema
 var clipsSchema = mongoose.Schema({
     name : String,
     path : String,
     type : String
 });
 
-// Defin the collection
+// define the collection
 var clips = mongoose.model('clips', clipsSchema);
 
 var clip = new clips({
@@ -24,7 +24,7 @@ var clip = new clips({
 });
 console.log('Clip created, the name of the clip: '+clip.name);
 
-// Defin a function for print the name
+// define a function for print the name
 clipsSchema.methods.print_name = function () {
   console.log(this.name)
 }

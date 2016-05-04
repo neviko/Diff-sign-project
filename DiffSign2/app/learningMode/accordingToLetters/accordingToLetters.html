@@ -1,1 +1,16 @@
 <h1 class="title">{{message}}</h1>
+
+<div ng-controller="accordingToLettersController as letters">
+
+    <div>
+
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="user in users">
+             {{user.login}}
+            <img ng-src="{{user.avatar_url}}"/>
+        </li>
+
+    </ul>
+
+</div>

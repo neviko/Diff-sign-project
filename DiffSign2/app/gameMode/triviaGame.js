@@ -8,7 +8,7 @@ function clip(name, clipUrl)
     this.clipUrl = clipUrl;
 }
 
-//object : single quesion
+//object : single response
 function response(name,imageUrl)
 {
     this.name = name;

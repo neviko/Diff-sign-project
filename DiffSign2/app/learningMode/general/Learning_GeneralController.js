@@ -1,21 +1,26 @@
 (function(app){
 
-    function Learning_GeneralController($scope) {
+    function Learning_GeneralController($scope,$http,$routeParams) {
         $scope.message='כללי';
-        
-        
-        
-        
-        
-        
-        
-        
-    }
+
+        var onUsersComplete = function(response) {
+            $scope.users = response.data;
+        };
 
 
-    app.controller('Learning_GeneralController',Learning_GeneralController); 
+        var onRepos = function(data) {
+            $scope.repos = data;
+        };
+
+        $http.get("https://api.github.com/users").then(onUsersComplete);
 
 
-})(angular.module('diffSign'));
+    };
+
+
+    app.controller('Learning_GeneralController',Learning_GeneralController);
+
+
+})( angular.module('diffSign'));
 
 

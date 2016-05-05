@@ -60,7 +60,7 @@ diffSign.config(function ($routeProvider) {
         })
 
         .when('/games', {
-            templateUrl : 'app/games/games.html',
+            templateUrl : 'app/games/trivia/triviaGame.html',
             controller  : 'gamesController'
 
         });

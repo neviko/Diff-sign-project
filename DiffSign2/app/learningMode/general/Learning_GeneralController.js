@@ -2,6 +2,14 @@
 
     function Learning_GeneralController($scope) {
         $scope.message='כללי';
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
 

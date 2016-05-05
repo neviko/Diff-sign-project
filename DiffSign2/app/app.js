@@ -37,15 +37,25 @@ diffSign.config(function ($routeProvider) {
 
         })
         
-        .when('/Learning_Kitchen', {
-            templateUrl : 'app/learningMode/kitchen/Learning_Kitchen.html',
-            controller  : 'Learning_KitchenController'
+        .when('/Learning_House', {
+            templateUrl : 'app/learningMode/house/Learning_House.html',
+            controller  : 'Learning_HouseController'
 
         })
     
-        .when('/accordingToLetters', {
-            templateUrl : 'app/learningMode/accordingToLetters/accordingToLetters.html',
-            controller  : 'accordingToLettersController'
+        .when('/Learning_Letters', {
+            templateUrl : 'app/learningMode/Letters/Learning_Letters.html',
+            controller  : 'Learning_LettersController'
+
+        })
+        .when('/Learning_playground', {
+            templateUrl : 'app/learningMode/playground/Learning_playground.html',
+            controller  : 'Learning_playgroundController'
+
+        })
+        .when('/Learning_General', {
+            templateUrl : 'app/learningMode/general/Learning_General.html',
+            controller  : 'Learning_GeneralController'
 
         })
 

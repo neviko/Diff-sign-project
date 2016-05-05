@@ -10,7 +10,7 @@
 	margin:auto;
 }
 
-#accordingToLetters
+#Learning_Letters
 {
     background-color: white;    
     height: 16vmax;
@@ -19,9 +19,22 @@
     font-size: 5vmax;
     text-align: center;
     padding-top: 3vmax;
+
 }
 
-#Learning_Kitchen
+#Learning_House
+{
+    background-color: white;
+    height: 16vmax;
+    border: black solid 1px;
+    
+    font-size: 5vmax;
+    text-align: center;
+    padding-top: 3vmax;
+
+}
+
+#Learning_General
 {
     background-color: white;
     height: 16vmax;
@@ -31,4 +44,16 @@
     text-align: center;
     padding-top: 3vmax;
 }
+
+#Learning_playground
+{
+    background-color: white;
+    height: 16vmax;
+    border: black solid 1px;
+    
+    font-size: 5vmax;
+    text-align: center;
+    padding-top: 3vmax;
+}
+
 

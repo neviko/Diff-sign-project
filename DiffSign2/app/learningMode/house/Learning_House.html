@@ -2,13 +2,15 @@
 
 <div ng-controller="Learning_HouseController as house">
     <div class="row">
-    <div ng-repeat="user in users">
+    <div ng-repeat="clip in clips">
         <div class="clearfix" ng-if="$index % 3 == 0"></div>
         <div class="col-sm-4">
-            <h2>{{user.login}}</h2>
-            <img ng-src="{{user.avatar_url}}"/>
+            
+        <a href="#playVideo/{{clip.name_en}}">{{clip.name_en}}</a>
         </div>
+            
     </div>
 </div>
 
 </div>
+

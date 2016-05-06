@@ -2,13 +2,34 @@
 
 <div ng-controller="Learning_GeneralController as general">
     <div class="row">
-    <div ng-repeat="user in users">
+    <div ng-repeat="clip in clips">
         <div class="clearfix" ng-if="$index % 3 == 0"></div>
         <div class="col-sm-4">
-            <h2>{{user.login}}</h2>
-            <img ng-src="{{user.avatar_url}}"/>
+            
+        <a href="#playVideo/{{clip.name_en}}">{{clip.name_en}}</a>
         </div>
+            
     </div>
 </div>
 
 </div>
+
+
+
+
+
+
+
+<!--
+
+          <a href ng-click = "tab = 1 ">{{user.login}}</a> <!--{{user.avatar_url}}
+            
+            <div class = "panel" ng-show = "tab === 1">
+                <h1>Test</h1>
+<video width="576" height="320" controls>
+    <source src="https://diffsign.blob.core.windows.net/clips/general/father.MOV"  type='video/mp4; codecs="avc1.42e01e, mp4a.40.2"'>
+</video>
+
+            </div>  
+
+-->

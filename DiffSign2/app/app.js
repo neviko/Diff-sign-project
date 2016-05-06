@@ -47,7 +47,7 @@ diffSign.config(function ($routeProvider) {
 
         })
     
-        .when('/playVideo/:linkVideo', {
+        .when('/playVideo/:videoName', {
             templateUrl : 'app/learningMode/playVideo.html',
             controller  : 'playVideoController'
 

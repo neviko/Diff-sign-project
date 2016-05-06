@@ -2,6 +2,14 @@
 {
     text-align: center;
 }
+
+#contentPosition
+{
+    width:576;
+    height:320;
+    text-align: center;
+}
+
 #menu
 {
     padding-top: 10%;

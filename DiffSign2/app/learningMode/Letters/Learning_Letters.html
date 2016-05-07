@@ -7,11 +7,10 @@
     </div>
     
     <div class="row">
-    <div ng-repeat="user in users">
+    <div ng-repeat="pic in pictures">
         <div class="clearfix" ng-if="$index % 3 == 0"></div>
-        <div class="col-sm-4">
-            <h2>{{user.login}}</h2>
-            <img ng-src="{{user.avatar_url}}"/>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img style="height:300px; width:300px;" ng-src="{{pic.url}}"/>
         </div>
     </div>
 </div>

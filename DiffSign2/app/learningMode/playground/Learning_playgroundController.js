@@ -8,7 +8,8 @@
     "name_heb": "אבא",
     "category": "general",
     "clip_url": "https://diffsign.blob.core.windows.net/clips/general/father.MOV",
-    "pic_url": ""
+    "pic_url": "",
+     "isViewed"  : false
 },
             {
     "_id": {
@@ -18,8 +19,10 @@
     "name_heb": "אדמה",
     "category": "general",
     "clip_url": "https://diffsign.blob.core.windows.net/clips/general/ground.MOV",
-    "pic_url": ""
-},
+    "pic_url": "",
+    "isViewed"  : false
+
+            },
             {
     "_id": {
         "$oid": "5728954efca0fd6392731d11"
@@ -28,7 +31,8 @@
     "name_heb": "ארוחת_ערב",
     "category": "house",
     "clip_url": "https://diffsign.blob.core.windows.net/clips/general/dinner.MOV",
-    "pic_url": ""
+    "pic_url": "",
+                "isViewed"  : false
 },
             {
     "_id": {
@@ -38,7 +42,8 @@
     "name_heb": "?איך_אתה_מרגיש",
     "category": "general",
     "clip_url": "https://diffsign.blob.core.windows.net/clips/general/how_do_you_feel.MOV",
-    "pic_url": ""
+    "pic_url": "",
+                "isViewed"  : false
 },
             {
     "_id": {
@@ -48,7 +53,8 @@
     "name_heb": "אני_אוהב_אותך",
     "category": "general",
     "clip_url": "https://diffsign.blob.core.windows.net/clips/general/i_love_you.MOV",
-    "pic_url": ""
+    "pic_url": "",
+                "isViewed"  : false
 },
             {
     "_id": {
@@ -58,7 +64,8 @@
     "name_heb": "ארוחת_צהריים",
     "category": "general",
     "clip_url": "https://diffsign.blob.core.windows.net/clips/general/lunch.MOV",
-    "pic_url": ""
+    "pic_url": "",
+                "isViewed"  : false
 }];
 
     function Learning_playgroundController($scope,$http,$routeParams,$window) {

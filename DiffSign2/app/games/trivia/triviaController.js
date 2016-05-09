@@ -80,6 +80,8 @@
 
     function triviaController($scope) {
 
+        $scope.score="550";
+        $scope.timer ="5";
 
     }
 

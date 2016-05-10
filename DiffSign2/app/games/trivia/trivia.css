@@ -1,0 +1,31 @@
+.center{
+
+    text-align:center;
+
+
+}
+
+#img{
+
+    width: 80%;
+    height:80%;
+    /*text-align:center;*/
+    padding: 30px 30px 30px 50px;
+}
+
+.answerImg{
+    width: 80%;
+    height:80%;
+    padding-bottom: 30px;
+}
+
+#gameInfo{
+    padding-bottom: 7%;
+    padding-top: 7%;
+    border: dotted;
+    font-family: "Century Gothic";
+    color: crimson;
+    background-color: black;
+    text-align: left;
+    font-size: x-large;
+}

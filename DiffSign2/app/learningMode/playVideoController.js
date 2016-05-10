@@ -1,15 +1,15 @@
 (function(app){
 
-    function playVideoController($scope,$http,$routeParams) {
-        $scope.messagee='Diff-Sign Player';
-        $scope.videoName = $routeParams.videoName; 
-        $scope.clips=clips;        
+        function playVideoController($scope,$http,$routeParams) {
+            $scope.messagee='Diff-Sign Player';
+            $scope.videoName = $routeParams.videoName;
+            $scope.clips=clips;
 
-       
-        
-    };
 
-    app.controller('playVideoController',playVideoController);
+
+        };
+
+        app.controller('playVideoController',playVideoController);
 
 })( angular.module('diffSign'));
 

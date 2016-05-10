@@ -1,5 +1,4 @@
-(function() {
-    var app = angular.module('diffSign');
+(function(app) {
 
     var contactUsController= function($scope){
 
@@ -21,11 +20,10 @@
 
     };
 
-
-
-
     app.controller("contactUsController",contactUsController);
 
 
 
-}());
+})( angular.module('diffSign'));
+
+

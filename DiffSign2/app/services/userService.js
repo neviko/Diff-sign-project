@@ -7,7 +7,7 @@
 
     // create a new service for all user - db hand shake
     function Service($http, $q) {
-        var service = {}; // the returned element
+               var service = {}; // the returned element
 
         service.GetAll = GetAll;
         service.GetById = GetById;

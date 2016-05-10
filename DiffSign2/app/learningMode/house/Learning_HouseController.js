@@ -1,7 +1,7 @@
 (function(app){
 
 
-    function Learning_HouseController($scope,$http,$routeParams,$window,$sce) {
+    function Learning_HouseController($scope,$http,$sce) {
         $scope.message='כלי בית';
         $scope.clips=clips;
         $scope.clip = 

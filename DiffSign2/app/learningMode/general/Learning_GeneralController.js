@@ -66,7 +66,7 @@
 
     
 
-    function Learning_GeneralController($scope,$http,$routeParams,$window,$sce) 
+    function Learning_GeneralController($scope,$http,$sce) 
     {
         $scope.message='כללי';
         $scope.clips=clips;
@@ -86,7 +86,6 @@
         //function to show the video clip
         $scope.goShow = function(clip) 
         {    
-            console.log(clip);
             $scope.clip = clip;
         };
         

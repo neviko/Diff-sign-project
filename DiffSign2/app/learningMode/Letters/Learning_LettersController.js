@@ -1,6 +1,7 @@
 (function(app){
     
-    function Learning_LettersController($scope,$http,$routeParams) {
+    function Learning_LettersController($scope,$http)
+    {
         $scope.message='מאגר האותיות';
             
     var picts = [
@@ -100,20 +101,6 @@
         
         ];
         $scope.pictures = picts;
-        console.log("in leaning");
-        /*
-        var onUsersComplete = function(response) {
-            $scope.users = response.data;
-        };
-
-
-        var onRepos = function(data) {
-            $scope.repos = data;
-        };
-
-        $http.get("https://api.github.com/users").then(onUsersComplete);
-        */
-
     };
 
 

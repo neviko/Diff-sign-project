@@ -1,5 +1,5 @@
 // create the module and name it diffSign
-var diffSign = angular.module('diffSign', ['ngRoute', 'ui.bootstrap','media']);
+var diffSign = angular.module('diffSign', ['ngRoute', 'ui.bootstrap']);
 
 
 // configure our routes
@@ -44,12 +44,6 @@ diffSign.config(function ($routeProvider) {
         .when('/Learning_House', {
             templateUrl : 'app/learningMode/house/Learning_House.html',
             controller  : 'Learning_HouseController'
-
-        })
-
-        .when('/playVideo/:videoName', {
-            templateUrl : 'app/learningMode/playVideo.html',
-            controller  : 'playVideoController'
 
         })
 

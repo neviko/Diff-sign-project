@@ -100,7 +100,7 @@
         
         ];
         $scope.pictures = picts;
-
+        console.log("in leaning");
         /*
         var onUsersComplete = function(response) {
             $scope.users = response.data;

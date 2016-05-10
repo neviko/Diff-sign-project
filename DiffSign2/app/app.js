@@ -40,20 +40,20 @@ diffSign.config(function ($routeProvider) {
             controller  : 'contactUsController'
 
         })
-        
+
         .when('/Learning_House', {
             templateUrl : 'app/learningMode/house/Learning_House.html',
             controller  : 'Learning_HouseController'
 
         })
-    
+
         .when('/playVideo/:videoName', {
             templateUrl : 'app/learningMode/playVideo.html',
             controller  : 'playVideoController'
 
         })
 
-    
+
         .when('/Learning_Letters', {
             templateUrl : 'app/learningMode/Letters/Learning_Letters.html',
             controller  : 'Learning_LettersController'

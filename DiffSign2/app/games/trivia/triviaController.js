@@ -1,6 +1,6 @@
-(function(app){
+(function (app) {
 
-    clips = [{
+    var clips = [{
         "_id": {
             "$oid": "572798cfc80eb653c3020a75"
         },
@@ -8,8 +8,8 @@
         "name_heb": "אבא",
         "category": "general",
         "clip_url": "https://diffsign.blob.core.windows.net/clips/general/father.MOV",
-        "pic_url": "",
-        "isViewed"  : false
+        "pic_url": "app/games/trivia/imagesTemp/1.jpg",
+        "isViewed": false
     },
         {
             "_id": {
@@ -19,8 +19,8 @@
             "name_heb": "אדמה",
             "category": "general",
             "clip_url": "https://diffsign.blob.core.windows.net/clips/general/ground.MOV",
-            "pic_url": "",
-            "isViewed"  : false
+            "pic_url": "app/games/trivia/imagesTemp/2.jpg",
+            "isViewed": false
 
         },
         {
@@ -31,8 +31,8 @@
             "name_heb": "ארוחת_ערב",
             "category": "house",
             "clip_url": "https://diffsign.blob.core.windows.net/clips/general/dinner.MOV",
-            "pic_url": "",
-            "isViewed"  : false
+            "pic_url": "app/games/trivia/imagesTemp/3.jpg",
+            "isViewed": false
         },
         {
             "_id": {
@@ -42,8 +42,8 @@
             "name_heb": "?איך_אתה_מרגיש",
             "category": "general",
             "clip_url": "https://diffsign.blob.core.windows.net/clips/general/how_do_you_feel.MOV",
-            "pic_url": "",
-            "isViewed"  : false
+            "pic_url": "app/games/trivia/imagesTemp/3.jpg",
+            "isViewed": false
         },
         {
             "_id": {
@@ -53,8 +53,8 @@
             "name_heb": "אני_אוהב_אותך",
             "category": "general",
             "clip_url": "https://diffsign.blob.core.windows.net/clips/general/i_love_you.MOV",
-            "pic_url": "",
-            "isViewed"  : false
+            "pic_url": "app/games/trivia/imagesTemp/4.png",
+            "isViewed": false
         },
         {
             "_id": {
@@ -65,30 +65,21 @@
             "category": "general",
             "clip_url": "https://diffsign.blob.core.windows.net/clips/general/lunch.MOV",
             "pic_url": "",
-            "isViewed"  : false
+            "isViewed": false
         }];
 
+    var triviaController = function ($scope, triviaService) {
+        $scope.score = "550";
+        $scope.timer = "5";
+      //  $scope.videoName = $routeParams.videoName;
+        $scope.currClip = triviaService.currObj(clips);//now trivia service have this mathood because we externalize it in triviaService page.
+
+    };
 
 
+    app.controller('triviaController', triviaController); // declare on the controller and run loginController
 
 
-
-
-
-
-
-
-    function triviaController($scope) {
-
-        $scope.score="550";
-        $scope.timer ="5";
-
-    }
-
-
-    app.controller('triviaController',triviaController); // declare on the controller and run loginController
-
-
-})( angular.module('diffSign'));
+})(angular.module('diffSign'));
 
 

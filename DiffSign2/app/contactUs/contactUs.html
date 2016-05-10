@@ -1,32 +1,36 @@
-<div>
-    <h2 id="header" >  זיהיתם תוכן שגוי - אנא שלחו לנו </h2>
+<div class = "body">
+    <h2 id="header" >  זיהיתם תוכן שגוי - עדכנו אותנו</h2>
 
-
-    <div class="form">
+    <div>
 
         <form>
-            <label for="name">שם</label>
-            <input ng-model="name" type="text" placeholder="אנא רשום כאן את שמך">
+            <div id="fname">
+                <label for="name">שם</label>
+                <input  ng-model="name" type="text" placeholder="אנא רשום כאן את שמך">
+            </div>
 
-            <label for="email">Email</label>
-            <input ng-model="email" required type="email" placeholder="אנא רשמו כאן את כתובת המייל שלכם">
+            
+            <div id="email">
+                <label for="email">Email</label>
+                <input ng-model="email" required type="email" placeholder="אנא רשמו כאן את כתובת המייל שלכם">
+            </div>
+        
 
-            <br><br>
+            <div>
+                <label for="text"> הערות</label>
+                <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם" >
+            </div>
 
-            <label for="text"></label>
-            <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם" >
-
-            <br><br>
-            <input ng-click="clicked()" type="submit" value="שלח">
-            <br>
-            <span id="thanks">{{message}}</span>
+           
+            <div>
+                <input id="submit" ng-click="clicked()" type="submit" value="שלח">
+                <span id="thanks">{{message}}</span>  
+            </div>
 
 
 
         </form>
 
     </div>
-
-
 
 </div>

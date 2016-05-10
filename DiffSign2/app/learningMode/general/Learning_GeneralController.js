@@ -1,6 +1,7 @@
 (function(app){
 
-    clips = [{
+    clips = [
+{
     "_id": {
         "$oid": "572798cfc80eb653c3020a75"
     },
@@ -59,45 +60,36 @@
     "category": "general",
     "clip_url": "https://diffsign.blob.core.windows.net/clips/general/lunch.MOV",
     "pic_url": ""
-}];
+}
+];
+
+
     
-    
-    
-    
-    /*
-clips = [
-  {
-    _id: {
-        "$oid": "572798cfc80eb653c3020a75"
-    },
-    name_en: "father",
-    category: "general",
-    clip_url: "https://diffsign.blob.core.windows.net/clips/general/father.MOV",
-    pic_url: ""
-  },
-  {
-     _id: {
-        "$oid": "57279930c80eb653c3020a94"
-    },
-    name_en: "spring",
-    category: "general",
-    clip_url: "https://diffsign.blob.core.windows.net/clips/general/spring.MOV",
-    pic_url: ""
-  }
-]; 
-    
-    */
-    function Learning_GeneralController($scope,$http,$routeParams,$window) {
+
+    function Learning_GeneralController($scope,$http,$routeParams,$window,$sce) 
+    {
         $scope.message='כללי';
         $scope.clips=clips;
-     
-        /*
-        var onUsersComplete = function(response) {
-            $scope.clips = response.data;
+        $scope.clip = 
+        {
+            name_en: "",
+            name_heb: "",
+            category: "",
+            clip_url: "",
+            pic_url: ""
         };
-        $http.get("https://github.com/raphym/teste/blob/master/users").then(onUsersComplete);
-       */
-      
+        //function to repair the url to be trust
+        $scope.trustSrc = function(src) 
+        {
+            return $sce.trustAsResourceUrl(src);
+        }
+        //function to show the video clip
+        $scope.goShow = function(clip) 
+        {    
+            console.log(clip);
+            $scope.clip = clip;
+        };
+        
     };
     app.controller('Learning_GeneralController',Learning_GeneralController);
  

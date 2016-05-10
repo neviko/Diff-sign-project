@@ -1,3 +1,4 @@
+
 #title
 {
     text-align: center;
@@ -5,56 +6,71 @@
 
 #menu_learning
 {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    width:70%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    width:80%;
 	margin:auto;
+}
+
+.link_learning
+{
+    display: block;
+
+    height:  100%;
+    width: 100%;
 }
 
 #Learning_Letters
 {
-    background-color: white;    
-    height: 16vmax;
+    height:200px;
     border: black solid 1px;
     
-    font-size: 5vmax;
-    text-align: center;
-    padding-top: 3vmax;
-
-}
-
-#Learning_House
-{
     background-color: white;
-    height: 16vmax;
-    border: black solid 1px;
-    
-    font-size: 5vmax;
-    text-align: center;
-    padding-top: 3vmax;
+    background-image:url(/app/learningMode/images/4.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 
 }
 
 #Learning_General
 {
-    background-color: white;
-    height: 16vmax;
+    height:200px;
     border: black solid 1px;
     
-    font-size: 5vmax;
-    text-align: center;
-    padding-top: 3vmax;
+    background-color: white;
+    background-image:url(/app/learningMode/images/7.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;    
+
+}
+
+#Learning_House
+{
+    height:200px;
+    border: black solid 1px;
+    
+    background-color: white;
+    background-image:url(/app/learningMode/images/5.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
 }
 
 #Learning_playground
 {
-    background-color: white;
-    height: 16vmax;
+    height:200px;
     border: black solid 1px;
-    
-    font-size: 5vmax;
-    text-align: center;
-    padding-top: 3vmax;
+
+    background-color: white;
+    background-image:url(/app/learningMode/images/8.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;     
+
 }
 
 

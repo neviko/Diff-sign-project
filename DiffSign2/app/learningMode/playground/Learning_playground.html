@@ -1,16 +1,21 @@
 <h1 class="title">{{message}}</h1>
 
 <div ng-controller="Learning_playgroundController as playground">
-    <div class="row">
-    <div ng-repeat="clip in clips">
-        <div class="clearfix" ng-if="$index % 3 == 0"></div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            
-        <a href="#playVideo/{{clip.name_en}}">{{clip.name_heb}}</a>
+    <div class="container" id = "menu_learning_general">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" id="player">                
+
+                        <h1 >{{clip.name_heb}}</h1>
+            <video ng-src='{{trustSrc(clip.clip_url)}}' width="350" height="300" controls 
+            autoplay='true' controls='true'>
+            </video>                
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="theWords">
+                <div ng-repeat="clip in clips">
+                    <a ng-href='#/Learning_playground' ng-click='goShow(clip)' >{{clip.name_heb}}</a>
+                </div>    
+            </div>
         </div>
-            
-    </div>
-</div>
-
-</div>
-
+    </div>  
+</div>  

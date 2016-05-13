@@ -16,7 +16,8 @@
 
 
         service.currObj = currObj; // the returned object
-
+        service.setAnswers = setAnswers;
+        service.mixArrayObjects = mixArrayObjects;
 
         ///////////////return the object that have all the functions in this page that include all the logic//////
         return service;
@@ -24,7 +25,7 @@
 
         var globalCurrClip;
         //method to choose array element that not choose yet
-        var currObj = function (clips) {
+        function currObj (clips) {
 
             while (1) {
                 var randClip = Math.floor((Math.random() * clips.length) );
@@ -40,24 +41,62 @@
 
 
 
-
+        //this method set 4 random answers and mix answers play order
         function setAnswers(clips,answers){
 
             answers[0]=globalCurrClip;
+           // var isFound=false;
             for(var i=1 ; i < 4 ; i++)
             {
+                var isFound=false;
                 var randClip = Math.floor((Math.random() * clips.length) );
                 for(var j=0 ; j < answers.length; j++)
                 {
-                    if(clips[randclip] == answers[j])
+
+                    if(clips[randClip] == answers[j]) // if we choose an existing object we will choose again
                     {
                         i--;
+                        isFound=true;
+                        break;
                     }
                 }
-            }
+                if(isFound == false)
+                    answers[i]= clips[randClip];
 
+            }
+            return answers;
         }
 
+
+
+        // this method mix the 4 answers positions
+        function mixArrayObjects(array){
+
+            var tempArr=[{}];
+            var randClip = Math.floor((Math.random() * array.length));
+            tempArr[0]= array[randClip];
+            for(var i=1 ; i < array.length; i++)
+            {
+                var randClip = Math.floor((Math.random() * array.length));
+                var isFound=false;
+                for(var j=0 ; j < tempArr.length; j++)
+                {
+                    if(array[randClip] == tempArr[j])// if we choose an existing object we will choose again
+                    {
+                        i--;
+                        isFound=true;
+                        break;
+                    }
+                }
+                if(isFound == false)
+                    tempArr[i]= array[randClip];
+            }
+
+            for(var i=0 ; i < array.length; i++)
+                array[i]=tempArr[i];
+
+            return array;
+        }
     }
 })();
 

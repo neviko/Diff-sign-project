@@ -12,7 +12,7 @@
         "isViewed": false
     },
         {
-            "_id": {
+            "_id":   {
                 "$oid": "572798fec80eb653c3020a79"
             },
             "name_en": "ground",
@@ -73,6 +73,14 @@
         $scope.timer = "5";
       //  $scope.videoName = $routeParams.videoName;
         $scope.currClip = triviaService.currObj(clips);//now trivia service have this mathood because we externalize it in triviaService page.
+        var answers=[{}];
+        triviaService.setAnswers(clips,answers);
+        console.log(answers);
+        // here answers contain 4 different answers
+        triviaService.mixArrayObjects(answers);
+        console.log(answers);
+        $scope.ansArr=answers;
+
 
     };
 

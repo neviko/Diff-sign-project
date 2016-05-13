@@ -10,8 +10,10 @@
 
           <div class="col-lg-9 ">
 
-              <!-- place for video!!!! -->
-              </div>
+              <video ng-src='{{trustSrc(currClip.clip_url)}}' controls
+                     autoplay='true' controls='true'>
+              </video>
+          </div>
 
 
        </div>
@@ -24,10 +26,10 @@
 
 
         <div class="col-lg-3 col-lg-offset-3">
-            <img class="answerImg"  src="app\games\trivia\imagesTemp\1.jpg">
+            <img class="answerImg"  src="{{ansArr[0].pic_url}}">
         </div>
         <div class="col-lg-3 col-lg-offset-1" >
-            <img class="answerImg" src="app\games\trivia\imagesTemp\1.jpg">
+            <img class="answerImg" src="{{ansArr[1].pic_url}}">
         </div>
 
 
@@ -38,10 +40,10 @@
 
 
         <div class="col-lg-3 col-lg-offset-3">
-            <img class="answerImg"  src="app\games\trivia\imagesTemp\1.jpg">
+            <img class="answerImg"  src="{{ansArr[2].pic_url}}">
         </div>
         <div class="col-lg-3 col-lg-offset-1" >
-            <img class="answerImg" src="app\games\trivia\imagesTemp\1.jpg">
+            <img class="answerImg" src="{{ansArr[3].pic_url}}">
         </div>
 
 

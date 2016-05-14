@@ -92,6 +92,6 @@
     };
     app.controller('Learning_GeneralController',Learning_GeneralController);
  
-})( angular.module('diffSign'));
+}( angular.module('diffSign')));
 
 

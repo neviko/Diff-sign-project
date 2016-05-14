@@ -69,17 +69,42 @@
         }];
 
     var triviaController = function ($scope, triviaService) {
-        $scope.score = "550";
-        $scope.timer = "5";
-      //  $scope.videoName = $routeParams.videoName;
+
+        $scope.score = 550;
+        $scope.timer = 5;
+        $scope.lives = 3;
+        $scope.messageAfterAnswer="";
+
+
+
         $scope.currClip = triviaService.currObj(clips);//now trivia service have this mathood because we externalize it in triviaService page.
-        var answers=[{}];
+        var answers=[{triviaObj:"",isCorrect:false}];
         triviaService.setAnswers(clips,answers);
         console.log(answers);
         // here answers contain 4 different answers
         triviaService.mixArrayObjects(answers);
         console.log(answers);
         $scope.ansArr=answers;
+
+
+        //this function bind the dom with the trivia service because on ng-click we must call to function in $scope controller!
+        $scope.onUserPicClick = function (e) {
+
+
+            var elementId = $(e.target).data('id'); // get the element id from dom
+
+           var isCorrect= triviaService.onUserChooseAnswer(answers,elementId);
+            if(isCorrect){
+                $scope.messageAfterAnswer="תשובה נכונה !";
+
+            }
+
+
+            else{
+                $scope.messageAfterAnswer="תשובה שגויה יה זלמה !...חבל";
+            }
+
+        };
 
 
     };

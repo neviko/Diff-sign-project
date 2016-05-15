@@ -70,7 +70,7 @@
     {
         $scope.message='כללי';
         $scope.clips=clips;
-        /*
+
         $scope.clip = 
         {
             name_en: "",
@@ -79,7 +79,7 @@
             clip_url: "",
             pic_url: ""
         };
-        */
+
         
 //        //function to repair the url to be trust
 //        $scope.trustSrc = function(src) 
@@ -91,7 +91,7 @@
         
         $scope.goTrust = function(src)
         {
-            videoService.trustSrc(src);
+            return videoService.trustSrc(src);
         };
         
         

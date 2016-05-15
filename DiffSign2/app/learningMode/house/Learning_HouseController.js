@@ -16,13 +16,13 @@
         $scope.trustSrc = function(src) 
         {
             return $sce.trustAsResourceUrl(src);
-        }
+        };
         //function to show the video clip
         $scope.goShow = function(clip) 
         {    
             $scope.clip = clip;
         };
-    };
+    }
     app.controller('Learning_HouseController',Learning_HouseController);
  
 })( angular.module('diffSign'));

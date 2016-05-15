@@ -7,65 +7,65 @@ diffSign.config(function ($routeProvider) {
     $routeProvider
     // route for the home page
         .when('/', {
-            templateUrl : 'app/home/home.html',
+            templateUrl : 'home/home.html',
             controller  : 'homeController'
         })
         .when('/home', {
-            templateUrl : 'app/home/home.html',
+            templateUrl : 'home/home.html',
             controller  : 'homeController'
         })
 
         // route for the about page
 
         .when('/login', {
-            templateUrl : 'app/login/login.html',
+            templateUrl : 'login/login.html',
             controller  : 'loginController'
         })
 
 
         .when('/signUp', {
-            templateUrl : 'app/signUp/signUp.html',
+            templateUrl : 'signUp/signUp.html',
             controller  : 'signUpController'
         })
 
 
         // route for the contact page
         .when('/learningMode', {
-            templateUrl : 'app/learningMode/learningMode.html',
+            templateUrl : 'learningMode/learningMode.html',
             
         })
 
         .when('/contactUs', {
-            templateUrl : 'app/contactUs/contactUs.html',
+            templateUrl : 'contactUs/contactUs.html',
             controller  : 'contactUsController'
 
         })
 
         .when('/Learning_House', {
-            templateUrl : 'app/learningMode/house/Learning_House.html',
+            templateUrl : 'learningMode/house/Learning_House.html',
             controller  : 'Learning_HouseController'
 
         })
 
 
         .when('/Learning_Letters', {
-            templateUrl : 'app/learningMode/Letters/Learning_Letters.html',
+            templateUrl : 'learningMode/Letters/Learning_Letters.html',
             controller  : 'Learning_LettersController'
 
         })
         .when('/Learning_playground', {
-            templateUrl : 'app/learningMode/playground/Learning_playground.html',
+            templateUrl : 'learningMode/playground/Learning_playground.html',
             controller  : 'Learning_playgroundController'
 
         })
         .when('/Learning_General', {
-            templateUrl : 'app/learningMode/general/Learning_General.html',
+            templateUrl : 'learningMode/general/Learning_General.html',
             controller  : 'Learning_GeneralController'
 
         })
 
         .when('/games', {
-            templateUrl : 'app/games/trivia/trivia.html',
+            templateUrl : 'games/trivia/trivia.html',
             controller  : 'triviaController'
 
         });

@@ -27,7 +27,7 @@
     border: black solid 1px;
     
     background-color: white;
-    background-image:url(/app/learningMode/images/4.jpg);
+    background-image:url(images/4.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -40,7 +40,7 @@
     border: black solid 1px;
     
     background-color: white;
-    background-image:url(/app/learningMode/images/7.jpg);
+    background-image:url(images/7.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;    
@@ -53,7 +53,7 @@
     border: black solid 1px;
     
     background-color: white;
-    background-image:url(/app/learningMode/images/5.jpg);
+    background-image:url(images/5.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -66,7 +66,7 @@
     border: black solid 1px;
 
     background-color: white;
-    background-image:url(/app/learningMode/images/8.jpg);
+    background-image:url(images/8.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;     

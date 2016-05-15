@@ -4,6 +4,7 @@
 
 (function(){
 
+    var globalCurrClip;
     angular.module('diffSign').factory('triviaService', Service);
 
     function Service($http) {
@@ -18,14 +19,19 @@
         service.currObj = currObj; // the returned object
         service.setAnswers = setAnswers;
         service.mixArrayObjects = mixArrayObjects;
+        service.onUserChooseAnswer = onUserChooseAnswer;
+        //service.upLeftPicClick = upLeftPicClick;
+        //service.upRightPicClick = upRightPicClick;
+        //service.downLeftPicClick = downLeftPicClick;
+        //service.downRightPicClick = downRightPicClick;
 
         ///////////////return the object that have all the functions in this page that include all the logic//////
         return service;
 
 
-        var globalCurrClip;
+
         //method to choose array element that not choose yet
-        function currObj (clips) {
+        function currObj(clips) {
 
             while (1) {
                 var randClip = Math.floor((Math.random() * clips.length) );
@@ -36,7 +42,7 @@
                    return clips[randClip];
                 }
             }
-        };
+        }
 
 
 
@@ -44,7 +50,8 @@
         //this method set 4 random answers and mix answers play order
         function setAnswers(clips,answers){
 
-            answers[0]=globalCurrClip;
+            answers[0].triviaObj=globalCurrClip; // the clip
+            answers[0].isCorrect=true;
            // var isFound=false;
             for(var i=1 ; i < 4 ; i++)
             {
@@ -53,7 +60,7 @@
                 for(var j=0 ; j < answers.length; j++)
                 {
 
-                    if(clips[randClip] == answers[j]) // if we choose an existing object we will choose again
+                    if(clips[randClip] == answers[j].triviaObj) // if we choose an existing object we will choose again
                     {
                         i--;
                         isFound=true;
@@ -61,7 +68,10 @@
                     }
                 }
                 if(isFound == false)
-                    answers[i]= clips[randClip];
+                {
+                    answers.push({triviaObj:clips[randClip],isCorrect:false});
+
+                }
 
             }
             return answers;
@@ -72,16 +82,19 @@
         // this method mix the 4 answers positions
         function mixArrayObjects(array){
 
-            var tempArr=[{}];
+            var tempArr=[{triviaObj:"",isCorrect:false}];
             var randClip = Math.floor((Math.random() * array.length));
-            tempArr[0]= array[randClip];
+
+            tempArr[0].triviaObj= array[randClip].triviaObj;
+            tempArr[0].isCorrect = array[randClip].isCorrect;
+
             for(var i=1 ; i < array.length; i++)
             {
                 var randClip = Math.floor((Math.random() * array.length));
                 var isFound=false;
                 for(var j=0 ; j < tempArr.length; j++)
                 {
-                    if(array[randClip] == tempArr[j])// if we choose an existing object we will choose again
+                    if(array[randClip].triviaObj == tempArr[j].triviaObj)// if we choose an existing object we will choose again
                     {
                         i--;
                         isFound=true;
@@ -89,16 +102,100 @@
                     }
                 }
                 if(isFound == false)
-                    tempArr[i]= array[randClip];
+                    tempArr.push({triviaObj:array[randClip].triviaObj , isCorrect:array[randClip].isCorrect})
+
             }
 
-            for(var i=0 ; i < array.length; i++)
-                array[i]=tempArr[i];
+            for(var i=0 ; i < array.length; i++)// copy elements to the original array
+            {
+                array[i].triviaObj=tempArr[i].triviaObj;
+                array[i].isCorrect = tempArr[i].isCorrect;
+            }
+
 
             return array;
         }
+
+
+
+
+
+
+
+
+
+        //check user answer and react (on success and on wrong)
+        function onUserChooseAnswer(answers,elementId) {
+            if(elementId == "upLeft"){
+                if(answers[0].isCorrect ==true){
+                    console.log("perfect");
+                    return true;
+                }
+                else{
+                    console.log("wrong answer");
+                }
+            }
+
+            else if(elementId == "upRight"){
+                if(answers[1].isCorrect ==true){
+                    return true;
+                    console.log("perfect");
+                }
+                else{
+                    console.log("wrong answer");
+                    return false;
+                }
+            }
+
+            else if(elementId == "downLeft"){
+                if(answers[2].isCorrect ==true){
+                    return true;
+                    console.log("perfect");
+                }
+                else{
+                    console.log("wrong answer");
+                    return false;
+                }
+            }
+
+            else if(elementId == "downRight"){
+                if(answers[3].isCorrect ==true){
+                    return true;
+                    console.log("perfect");
+                }
+                else{
+                    console.log("wrong answer");
+                    return false;
+                }
+            }
+
+            else{
+                console.log("neviko something wrong");
+                return false;
+            }
+        }
+
+
+        function onWrongAnswer()
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 })();
+
+
+
 
 
 

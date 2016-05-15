@@ -32,7 +32,7 @@ diffSign.config(function ($routeProvider) {
         // route for the contact page
         .when('/learningMode', {
             templateUrl : 'app/learningMode/learningMode.html',
-            controller  : 'learningModeController'
+            
         })
 
         .when('/contactUs', {

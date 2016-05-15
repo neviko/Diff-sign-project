@@ -1,0 +1,16 @@
+</br><br>
+
+<h1 class="title">{{message}}</h1>
+</br><br>
+
+<form name="register" ng-submit="submit()" ng-controller="signUpController">
+    Enter text and hit enter:
+    <input type="text" ng-model="username" required placeholder="הזן כינוי"/>
+    <input type="password" ng-model="password" required placeholder="הזן סיסמה"/>
+    <input type="password" ng-model="confirmPassword" required placeholder="אמת סיסמה"/>
+    <input type="submit" id="submit" value="שלח" />
+
+</form>
+
+<h1>{{username}}</h1>
+<h1>{{password}}</h1>

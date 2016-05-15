@@ -1,0 +1,11 @@
+{
+	"db": {
+		"user": “diff”,
+		"password": “diff123”,
+		"db": "DiffSign_MongoDB",
+		"mongodb": {
+			"host": "ds042138.mlab.com",
+			"port": 42138
+		}
+	}
+}

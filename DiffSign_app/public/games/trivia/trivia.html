@@ -1,0 +1,63 @@
+<div class="container" id = "videoArea" >
+
+       <div class = "row text-center" >
+
+           <div id="gameInfo" class="col-lg-2">
+
+               <div class="row">פסילות: {{lives}} </div>
+               <div class="row">ניקוד: {{score}} </div>
+               <div class="row">זמן שנותר: {{timer}}</div>
+
+           </div>
+
+          <div class="col-lg-9 ">
+
+
+              <video ng-src='{{goTrust(currClip.clip_url)}}' width="550" height="300" controls
+                     autoplay='true' controls='true'>
+              </video>
+          </div>
+
+
+           <div class="col-lg-1" id="userNotes">
+               {{messageAfterAnswer}}
+           </div>
+
+       </div>
+
+
+</div>
+    <!----------------------------------------------------answers area----------------------------------------------->
+<div class="container">
+
+    <div class = "row text-center" >
+
+
+        <div class="col-lg-3 col-lg-offset-3">
+            <img class="answerImg" data-id="upLeft" src="{{ansArr[0].triviaObj.pic_url}}" ng-click="onUserPicClick($event)">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1" >
+            <img class="answerImg" data-id="upRight" src="{{ansArr[1].triviaObj.pic_url}}" ng-click="onUserPicClick($event)">
+        </div>
+
+
+    </div>
+
+
+    <div class = "row text-center" >
+
+
+        <div class="col-lg-3 col-lg-offset-3">
+            <img class="answerImg" data-id="buttomLeft" src="{{ansArr[2].triviaObj.pic_url}}" ng-click="onUserPicClick($event)">
+        </div>
+        <div class="col-lg-3 col-lg-offset-1" >
+            <img class="answerImg" data-id="buttomRight" src="{{ansArr[3].triviaObj.pic_url}}" ng-click="onUserPicClick($event)">
+        </div>
+
+
+    </div>
+
+
+</div>
+
+

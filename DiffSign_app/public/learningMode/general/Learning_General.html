@@ -1,0 +1,28 @@
+</br></br>
+<h1 class="title">{{message}}</h1>
+
+<div ng-controller="Learning_GeneralController as general">
+    <div class="container" id = "menu_learning_general">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" id="player">                
+
+                        <h1 >{{clip.name_heb}}</h1>
+            <video ng-src='{{goTrust(clip.clip_url)}}' width="350" height="300" controls 
+            autoplay='true' controls='true'>
+            </video>                
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="theWords">
+                <div ng-repeat="clip in clips">
+                    <a ng-href='#/Learning_General' ng-click='goShow(clip)' >{{clip.name_heb}}</a>
+                </div>    
+            </div>
+        </div>
+    </div> 
+    </br></br>
+</div>  
+
+
+<!-- 
+<video  width="280" height="300" controls html5-video='clipToShow'   autoplay='true' controls='true'></video>
+-->

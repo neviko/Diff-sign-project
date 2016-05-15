@@ -1,0 +1,40 @@
+</br><br>
+
+<div class = "body">
+    <h2 id="header" >  זיהיתם תוכן שגוי - עדכנו אותנו</h2>
+    </br><br>
+
+
+    <div>
+
+        <form>
+            <div id="fname">
+                <label for="name">שם</label>
+                <input  ng-model="name" type="text" placeholder="אנא רשום כאן את שמך">
+            </div>
+
+            
+            <div id="email">
+                <label for="email">Email</label>
+                <input ng-model="email" required type="email" placeholder="אנא רשמו כאן את כתובת המייל שלכם">
+            </div>
+        
+
+            <div>
+                <label for="text"> הערות</label>
+                <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם" >
+            </div>
+
+           
+            <div>
+                <input id="submit" ng-click="clicked()" type="submit" value="שלח">
+                <span id="thanks">{{message}}</span>  
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+</div>

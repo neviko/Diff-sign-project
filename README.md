@@ -11,7 +11,7 @@ The project developing the wab app for the "SHAY-PROJECT" organization that help
 
 [![Join the chat at https://gitter.im/robi-y/seproject-team-template](https://badges.gitter.im/robi-y/seproject-team-template.svg)](https://gitter.im/neviko/Different-sign)
 
-## [Issue Board](https://huboard.com/robi-y/seproject-team-template#/)
+## [Issue Board](https://huboard.com/neviko/Diff-sign-project/#/)
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.

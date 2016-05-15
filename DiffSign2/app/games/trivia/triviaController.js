@@ -68,7 +68,7 @@
             "isViewed": false
         }];
 
-    var triviaController = function ($scope, triviaService) {
+    var triviaController = function ($scope, triviaService,videoService) {
 
         $scope.score = 550;
         $scope.timer = 5;
@@ -106,6 +106,17 @@
 
         };
 
+
+        $scope.goTrust = function(src) // checking the video
+        {
+            return videoService.trustSrc(src);
+        };
+
+        //function to insert into the scope the clip to show
+        //$scope.goShow = function(clip) // call from html
+        //{
+        //    $scope.clip = clip;
+        //};
 
     };
 

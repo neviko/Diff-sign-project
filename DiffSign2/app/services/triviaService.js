@@ -147,7 +147,7 @@
                 }
             }
 
-            else if(elementId == "downLeft"){
+            else if(elementId == "buttomLeft"){
                 if(answers[2].isCorrect ==true){
                     return true;
                     console.log("perfect");
@@ -158,7 +158,7 @@
                 }
             }
 
-            else if(elementId == "downRight"){
+            else if(elementId == "buttomRight"){
                 if(answers[3].isCorrect ==true){
                     return true;
                     console.log("perfect");

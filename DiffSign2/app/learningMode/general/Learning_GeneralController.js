@@ -70,31 +70,14 @@
     {
         $scope.message='כללי';
         $scope.clips=clips;
-
-        $scope.clip = 
-        {
-            name_en: "",
-            name_heb: "",
-            category: "",
-            clip_url: "",
-            pic_url: ""
-        };
-
-        
-//        //function to repair the url to be trust
-//        $scope.trustSrc = function(src) 
-//        {
-//            return $sce.trustAsResourceUrl(src);
-//        }
-        //function to show the video clip
-        
-        
+       
+        // return a declaration that the url is trust
         $scope.goTrust = function(src)
         {
             return videoService.trustSrc(src);
         };
         
-        
+        //function to insert into the scope the clip to show        
         $scope.goShow = function(clip) 
         {    
             $scope.clip = clip;

@@ -9,7 +9,7 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 
 //get config json in order to connecting Mlab
-var config = require('config.json')('config/config.json');
+var config = require('./config/config.json');
 var db = config.db;
 var mongoAddr = db.mongodb;
 var mongoAddress = 'mongodb://' + db.user + ':' + db.password + mongoAddr.host + ':' + mongoAddr.port + '/' + db.appName;
@@ -29,7 +29,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/client')); //Static route for client side
+app.use('/modules', express.static(__dirname + '/node_modules')); //Static Route for node_modules
 
 app.use('/', routes);
 app.use('/users', users);
@@ -40,6 +41,15 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+
+// connect to Mlab
+MongoClient.connect(mongoAddress, function(err, db) {
+    assert.equal(null, err);
+    console.log('Connected to Mlab!!!');
+});
+
+
 
 // error handlers
 
@@ -63,13 +73,6 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
-});
-
-
-// connect to Mlab
-MongoClient.connect(mongoAddress, function(err, db) {
-    assert.equal(null, err);
-    console.log('Connected to Mlab!!!');
 });
 
 

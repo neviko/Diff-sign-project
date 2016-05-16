@@ -5,6 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
+
+//get config json in order to connecting Mlab
+var config = require('config.json')('config/config.json');
+var db = config.db;
+var mongoAddr = db.mongodb;
+var mongoAddress = 'mongodb://' + db.user + ':' + db.password + mongoAddr.host + ':' + mongoAddr.port + '/' + db.appName;
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -54,6 +63,13 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+});
+
+
+// connect to Mlab
+MongoClient.connect(mongoAddress, function(err, db) {
+    assert.equal(null, err);
+    console.log('Connected to Mlab!!!');
 });
 
 

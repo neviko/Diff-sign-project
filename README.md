@@ -4,9 +4,9 @@ DiffSign (Different Sign) - is a project that created to develop a web app that 
 
 The project developing the wab app for the "SHAY-PROJECT" organization that helps deaf and mute kids.
 
-![project logo (this one is taken from basecamp)](https://raw.githubusercontent.com/neviko/Diff-sign-project/master/app-icon.jpg)
+![project logo (this one is taken from basecamp)](https://github.com/neviko/Diff-sign-project/blob/master/wiki_documents/app-icon.jpg)
 
-## Please visit our [live application](https://demo.reactstarterkit.com/)
+## Please visit our [live application](http://shay-proj.azurewebsites.net/)
 - Alright, currently only a landing page...
 
 [![Join the chat at https://gitter.im/robi-y/seproject-team-template](https://badges.gitter.im/robi-y/seproject-team-template.svg)](https://gitter.im/neviko/Different-sign)
@@ -18,7 +18,7 @@ This project is developed as part of the requirements for a [software engineerin
 
 Please visit our wiki for furthur project info: 
 
-### [User Manual](../../wiki/user-manual) (empty)
+### [User Manual](../../wiki/user-manual)
 
 ### [Team Page](../../wiki/team-page)
 

@@ -1,6 +1,9 @@
 (function(app){
 
-    function homeController($scope) {
+    function homeController($scope)
+    {
+        
+        
     }
 
 

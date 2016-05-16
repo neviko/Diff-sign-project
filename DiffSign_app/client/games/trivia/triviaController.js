@@ -102,6 +102,7 @@
 
             else{
                 $scope.messageAfterAnswer="תשובה שגויה יה זלמה !...חבל";
+                $scope.a=2;
             }
 
         };

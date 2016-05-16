@@ -20,6 +20,7 @@
         service.setAnswers = setAnswers;
         service.mixArrayObjects = mixArrayObjects;
         service.onUserChooseAnswer = onUserChooseAnswer;
+        service.timerSet = timerSet;
         //service.upLeftPicClick = upLeftPicClick;
         //service.upRightPicClick = upRightPicClick;
         //service.downLeftPicClick = downLeftPicClick;
@@ -180,6 +181,12 @@
         {
 
         }
+        
+        function timerSet()
+        {
+            //make the timer set. the timer will restart when a clip change.
+        }
+        
 
 
 

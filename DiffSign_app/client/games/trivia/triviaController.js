@@ -70,9 +70,9 @@
 
     var triviaController = function ($scope, triviaService,videoService) {
 
-        $scope.score = 550;
+        $scope.score = 0;
         $scope.timer = 5;
-        $scope.lives = 3;
+        $scope.lives = 5;
         $scope.messageAfterAnswer="";
 
 
@@ -95,14 +95,24 @@
 
            var isCorrect= triviaService.onUserChooseAnswer(answers,elementId);
             if(isCorrect){
-                $scope.messageAfterAnswer="תשובה נכונה !";
+               $scope.score+=1; $scope.messageAfterAnswer="תשובה נכונה !";
 
             }
 
 
             else{
                 $scope.messageAfterAnswer="תשובה שגויה יה זלמה !...חבל";
-                $scope.a=2;
+                
+                if($scope.lives==0)
+                {
+                   $scope.messageAfterAnswer = "המשחק נגמר ! הניקוד שצברת הינו : " + $scope.score;  
+                }
+                else
+                {
+                    $scope.lives--;
+        
+                }
+                
             }
 
         };

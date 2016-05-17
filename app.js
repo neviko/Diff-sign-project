@@ -13,7 +13,7 @@ var assert = require('assert');
 var config = require('./config/config.json');
 var db = config.db;
 var mongoAddr = db.mongodb;
-var mongoAddress = 'mongodb://' + db.user + ':' + db.password + mongoAddr.host + ':' + mongoAddr.port + '/' + db.appName;
+var mongoAddress = 'mongodb://' + db.user + ':' + db.password + mongoAddr.host + ':' + mongoAddr.port + '/' + db.db_name;
 console.log('mongoAddress: '+mongoAddress);
 
 var routes = require('./routes/index');

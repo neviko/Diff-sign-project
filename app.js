@@ -30,7 +30,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(__dirname + '/client/')); //Static route for client side
+app.use(express.static(__dirname + '/client')); //Static route for client side
 app.use('/modules', express.static(__dirname + '/node_modules')); //Static Route for node_modules
 
 app.use('/', routes);

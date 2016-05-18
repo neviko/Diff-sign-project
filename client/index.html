@@ -1,101 +1,43 @@
-<!DOCTYPE html>
-
-<html>
-<head>
+<!doctype html> 
+<html class=no-js> <head> <meta charset=utf-8> 
     
+    <head>
+        <title>משחק שפת סימנים</title> 
+        <meta name=description> <meta name=viewport content="width=device-width">
 
+
+        
+        <!-- CSS-->    
+        <link rel=stylesheet href=styles/vendor.css>
+        <link rel=stylesheet href=styles/main.css>
+        <link rel=stylesheet href="views/dashboard/overview.css">           
+        <link rel=stylesheet href="views/dashboard/learningMode/learningMode.css">    
+        <link rel=stylesheet href="views/dashboard/learningMode/learningObject.css">
+        <link rel=stylesheet href="views/dashboard/learningMode/Letters/Learning_Letters.css"> 
+        <link rel=stylesheet href="views/dashboard/contactUs/contactUs.css">
+        <link rel=stylesheet href="views/dashboard/games/trivia/trivia.css">
+        
+
+        <!-- JAVASCRIPT-->
+        <script src=scripts/vendor.js></script>
+        <script src=scripts/app.js></script> 
+        <script src="views/dashboard/learningMode/general/Learning_GeneralController.js"></script>
+        <script src="views/dashboard/learningMode/house/Learning_HouseController.js"></script>
+        <script src="views/dashboard/learningMode/Letters/Learning_LettersController.js"></script>
+        <script src="views/dashboard/learningMode/playground/Learning_playgroundController.js"></script>
+        <script src="views/dashboard/contactUs/contactUsController.js"></script>
+        <script src="views/dashboard/games/trivia/triviaController.js"></script>
     
-    <!-- PERSONAL_CSS-->
-    <link href="home/home.css" rel="stylesheet"/>
-    <link href="signUp/signUp.css" rel="stylesheet"/>
-    <link href="login/login.css" rel="stylesheet"/>
-    <link href="learningMode/learningMode.css" rel="stylesheet"/>
-    <link href="contactUs/contactUs.css" rel="stylesheet"/>
-    <link href="learningMode/learningObject.css" rel="stylesheet"/>
-    <link href="learningMode/Letters/Learning_Letters.css" rel="stylesheet"/>
-    <link href="games/trivia/trivia.css" rel="stylesheet"/>
-
-    <!--TWITTER BOOTSTRAP-->
-    <!-- Latest compiled and minified CSS -->
-    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-    <!-- ANGULAR -->
-    <script src="../modules/angular/angular.min.js"></script>
-    <script src="../modules/angular-route/angular-route.min.js"></script>
-    <script src="../modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-    <script src="http://caitp.github.io/ng-media/ng-media.js"></script>
-    <script src="app.js"></script>
-    <script src="services/triviaService.js"></script>
-    <script src="services/videoService.js"></script>
-
-    <script src="home/homeController.js"></script>
-    <script src="login/loginController.js"></script>
-    <script src="signUp/signUpController.js"></script>
-    <script src="contactUs/contactUsController.js"></script>
-    <script src="games/trivia/triviaController.js"></script>
-    <script src="learningMode/Letters/Learning_LettersController.js"></script>
-    <script src="learningMode/house/Learning_HouseController.js"></script>
-    <script src="learningMode/general/Learning_GeneralController.js"></script>
-    <script src="learningMode/playground/Learning_playgroundController.js"></script>
-
-
+        <!-- SERVICES-->
+        <script src="services/videoService.js"></script>
+        <script src="services/userService.js"></script>    
+        <script src="services/triviaService.js"></script>
     
-</head>
-
-<body ng-app="diffSign" id="theBody">
-    <div class="container-fluid">
-    
-       <!-- Nav tabs -->
-    <ul class="nav nav-tabs pull-right" role="tablist">
-      <li class="active">
-          <a href="#home" role="tab" data-toggle="tab">
-              דף הבית
-          </a>
-      </li>
-      <li><a href="#login" role="tab" data-toggle="tab">
-          כניסה
-          </a>
-      </li>
-      <li>
-          <a href="#signUp" role="tab" data-toggle="tab">
-              הרשמה
-          </a>
-      </li>
-      <li>
-          <a href="#learningMode" role="tab" data-toggle="tab">
-              מצב למידה
-          </a>
-      </li>
-     <li>
-          <a href="#games" role="tab" data-toggle="tab">
-              משחקים
-          </a>
-      </li>
-     <li>
-          <a href="#contactUs" role="tab" data-toggle="tab">
-              צור קשר
-          </a>
-      </li>         
-    </ul>
+    </head>
     
     
-     <!-- Tab panes -->
-    <div class="tab-content">
-      <div class="tab-pane fade active in">
-          <div ng-view></div>
-      </div>
-      
-    </div>
     
-    </div>
-
-</body>
-</html>
+    <body ng-app=diffSign>
+        <div ui-view></div>
+    </body> 
+</html> 

@@ -1,0 +1,39 @@
+#menu_learning
+{
+    width:80%;
+	margin:auto;
+    padding-bottom: 2%;
+    margin-top: -1%;
+    font-size: 20px;
+}
+#theWords
+{
+    margin-top: 8%;
+    font-family: fantasy;
+    font-size: 2vmax;
+    direction: rtl;
+    color:white;
+    height: 500px;
+    
+    
+    overflow:auto;
+    word-wrap:break-word;  
+}
+
+#player
+{
+    margin-top: -15%;
+    text-align: center;
+    height: 500px;
+
+}
+
+#nameClip
+{
+    margin-top: 15%;
+}
+
+#my-page
+{
+    margin-top: -5%;
+}

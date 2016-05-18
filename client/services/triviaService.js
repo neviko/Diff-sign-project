@@ -120,11 +120,6 @@
 
 
 
-
-
-
-
-
         //check user answer and react (on success and on wrong)
         function onUserChooseAnswer(answers,elementId) {
             if(elementId == "upLeft"){
@@ -187,17 +182,6 @@
             //make the timer set. the timer will restart when a clip change.
         }
         
-
-
-
-
-
-
-
-
-
-
-
     }
 })();
 

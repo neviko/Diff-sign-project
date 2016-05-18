@@ -46,10 +46,10 @@ app.use(function(req, res, next) {
 
 
 // connect to Mlab
-MongoClient.connect(mongoAddress, function(err, db) {
-    assert.equal(null, err);
-    console.log('Connected to Mlab!!!');
-});
+//MongoClient.connect(mongoAddress, function(err, db) {
+//    assert.equal(null, err);
+//    console.log('Connected to Mlab!!!');
+//});
 
 
 

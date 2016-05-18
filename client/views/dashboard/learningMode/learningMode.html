@@ -1,0 +1,83 @@
+<div> 
+    <snap-drawer>
+        <div class=snap-menu>
+            <div class="sidebar-header text-center">
+                <img src=images/flat-avatar.png class="sidebar-img img-circle">
+            </div> 
+            <ul class=snap-ul> 
+                <li ng-class="{active: $state.includes('overview')}">
+                    <a ui-sref=overview>דף הבית</a>
+                </li>
+                
+                <li ng-class="{active: $state.includes('learningMode')}">
+                    <a ui-sref=learningMode>מצב למידה</a>
+                </li>
+                
+                <li ng-class="{active: $state.includes('game')}">
+                     <a ui-sref=game>משחק</a>
+                </li>
+                
+                <li ng-class="{active: $state.includes('login')}">
+                    <a ui-sref=login>התנתק</a>
+                </li>
+                
+                <li ng-class="{active: $state.includes('contactUs')}">
+                    <a ui-sref=contactUs>צור קשר</a>
+                </li>
+            </ul>
+        </div>
+    </snap-drawer>
+ 
+    <snap-content snap-opt-tap-to-close=false class=bg-dark> 
+        <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
+            <span class=menutoggle> 
+                <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
+                <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
+            </span> 
+        </a> 
+
+        <span class="glyphicon glyphicon-dashboard bg-fade"></span> 
+        <div class=jumbotron>
+            <p> <a class="btn btn-primary btn-lg btn-white" ui-sref=overview>חזרה לדף בית</a> </p>
+
+            <div class=container> <h1>מצב למידה</h1>  
+                
+                
+                
+                <div class="container" id = "menu_learning">
+                    <div class="row" >
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_General">
+                            <a class = "link_learning"  ui-sref=learn_General></a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_Letters">
+                            <a class = "link_learning" ui-sref=learn_Letters></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_House">
+                            <a class = "link_learning" ui-sref=learn_House></a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_playground">
+                            <a class = "link_learning" ui-sref=learn_Playground></a>
+                        </div>
+                    </div>
+    
+                </div>
+
+            </div>
+        </div> 
+        
+        
+
+    </snap-content> 
+    
+</div>
+
+
+
+
+
+</br><br>
+
+
+

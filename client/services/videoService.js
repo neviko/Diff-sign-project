@@ -2,7 +2,8 @@
     
     angular.module('diffSign').factory('videoService', Service); 
     
-    function Service($http,$sce) {
+    function Service($http,$sce) 
+    {
         var service = {}; // the returned element
         
         service.trustSrc =trustSrc;

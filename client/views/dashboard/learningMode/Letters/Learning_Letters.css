@@ -1,10 +1,12 @@
 #bodyLearningLetters
 {
     background: white;
+    width: 85%;
+    margin: auto;
 }
 
 #pictLetters
 {
-    height: 300px;
-    width: 300px;
+    height: 70%;
+    width: 70%;
 }

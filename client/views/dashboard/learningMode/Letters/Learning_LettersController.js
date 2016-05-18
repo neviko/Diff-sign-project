@@ -1,6 +1,5 @@
 function Learning_LettersController($scope,$http) 
 {
-
     $scope.message='מאגר האותיות';
             
     var picts = [
@@ -18,6 +17,9 @@ function Learning_LettersController($scope,$http)
         },
         {
             "url": "https://diffsign.blob.core.windows.net/pics/letter/05-dalet.jpg",
+        },
+        {
+            "url": "https://diffsign.blob.core.windows.net/pics/letter/06-hey.jpg",
         },
         {
             "url": "https://diffsign.blob.core.windows.net/pics/letter/07-vav.jpg",

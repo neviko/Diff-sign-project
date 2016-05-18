@@ -1,6 +1,6 @@
 function Learning_GeneralController($scope,$http,videoService) 
 {
-    $scope.message='מילים כללים';
+    $scope.message='מילים כלליות';
     $scope.clips=  [
         {
             "_id": 

@@ -68,12 +68,28 @@
             "isViewed": false
         }];
 
-    var triviaController = function ($scope, triviaService,videoService) {
+    var triviaController = function ($scope, triviaService,videoService , $interval) {
 
+        
+
+       var startCountDown = function() {
+        console.log("////////////IN startCountDown//////////////// ");
+        $interval(decrementTimer,1000,20);
+       };
+
+         var decrementTimer = function() {
+        console.log("////////////IN decrementTimer//////////////// ")
+        $scope.timer-=1;
+        if($scope.timer==0){
+            $scope.messageAfterAnswer= "TIME OUT MOTHER FUCKER !"
+        }
+    };
+           
         $scope.score = 0;
-        $scope.timer = 5;
+        $scope.timer = 20;
         $scope.lives = 5;
         $scope.messageAfterAnswer="";
+        startCountDown();
 
 
 
@@ -87,8 +103,11 @@
         $scope.ansArr=answers;
 
 
+     
+        
+        
         //this function bind the dom with the trivia service because on ng-click we must call to function in $scope controller!
-        $scope.onUserPicClick = function (e) {
+        $scope.onUserWordClick = function (e) {
 
 
             var elementId = $(e.target).data('id'); // get the element id from dom
@@ -122,12 +141,15 @@
         {
             return videoService.trustSrc(src);
         };
+        
+        
+       
 
 
     };
 
 
-    app.controller('triviaController', triviaController); // declare on the controller and run loginController
+    app.controller('triviaController', ["$scope", "triviaService","videoService" , "$interval",triviaController]); // declare on the controller and run loginController
 
 
 })(angular.module('diffSign'));

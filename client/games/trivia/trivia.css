@@ -9,11 +9,6 @@
     padding: 30px 30px 30px 50px;
 }
 
-.answerImg{
-    width: 80%;
-    height:80%;
-    padding-bottom: 30px;
-}
 
 #gameInfo{
     padding-bottom: 2%;
@@ -39,5 +34,30 @@
     text-align: center;
     font-size: xx-large;
 
+
+}
+
+.answer_words
+{
+    padding-bottom: 15%;
+    padding-top: 15%;
+    font-size: xx-large;
+    font-family: monospace;
+    border:10px black solid;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+ 
+    
+    
+}
+
+
+.ans_container{
+    background-color: black;
+     width:50%;;
+    height:10%px;
+    margin:50px auto;
+    border: 3px red solid;
+    
+    
 
 }

@@ -202,8 +202,8 @@
                     },
                     "name_en": "ground",
                     "name_heb": "אדמה",
-                    "category": "general",
-                    "clip_url": "https://diffsign.blob.core.windows.net/clips/general/ground.MOV",
+                    "category": "playground",
+                    "clip_url": "https://diffsign.blob.core.windows.net/clips/playground/ground.MOV",
                     "pic_url": "games/trivia/imagesTemp/2.jpg",
                     "isViewed": false
 
@@ -215,7 +215,7 @@
                     "name_en": "dinner",
                     "name_heb": "ארוחת_ערב",
                     "category": "house",
-                    "clip_url": "https://diffsign.blob.core.windows.net/clips/general/dinner.MOV",
+                    "clip_url": "https://diffsign.blob.core.windows.net/clips/house/dinner.MOV",
                     "pic_url": "games/trivia/imagesTemp/3.jpg",
                     "isViewed": false
                 },
@@ -247,8 +247,8 @@
                     },
                     "name_en": "lunch",
                     "name_heb": "ארוחת_צהריים",
-                    "category": "general",
-                    "clip_url": "https://diffsign.blob.core.windows.net/clips/general/lunch.MOV",
+                    "category": "house",
+                    "clip_url": "https://diffsign.blob.core.windows.net/clips/house/lunch.MOV",
                     "pic_url": "games/trivia/imagesTemp/4.png",
                     "isViewed": false
                 }];

@@ -18,10 +18,10 @@ function Learning_HouseController($scope,$http,videoService)
             {
                 "$oid": "572798fec80eb653c3020a79"
             },
-            "name_en": "ground",
+            "name_en": "soil",
             "name_heb": "אדמה",
-            "category": "general",
-            "clip_url": "https://diffsign.blob.core.windows.net/clips/general/ground.MOV",
+            "category": "playground",
+            "clip_url": "https://diffsign.blob.core.windows.net/clips/playground/soil.MOV",
             "pic_url": ""
         },
         {
@@ -32,7 +32,7 @@ function Learning_HouseController($scope,$http,videoService)
             "name_en": "dinner",
             "name_heb": "ארוחת_ערב",
             "category": "house",
-            "clip_url": "https://diffsign.blob.core.windows.net/clips/general/dinner.MOV",
+            "clip_url": "https://diffsign.blob.core.windows.net/clips/house/dinner.MOV",
             "pic_url": ""
         },
         {
@@ -64,8 +64,8 @@ function Learning_HouseController($scope,$http,videoService)
             },
             "name_en": "lunch",
             "name_heb": "ארוחת_צהריים",
-            "category": "general",
-            "clip_url": "https://diffsign.blob.core.windows.net/clips/general/lunch.MOV",
+            "category": "house",
+            "clip_url": "https://diffsign.blob.core.windows.net/clips/house/lunch.MOV",
             "pic_url": ""
         }
     ];

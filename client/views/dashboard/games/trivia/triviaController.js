@@ -91,8 +91,9 @@
 
 
 
-       function aabb(){
-            state.reload();
+       $scope.aabb = function(){
+           console.log("reloadPage");
+            location.reload();
         }
 
 

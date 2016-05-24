@@ -2,12 +2,6 @@
     text-align:center;
 }
 
-#img{
-    width: 80%;
-    height:80%;
-    /*text-align:center;*/
-    padding: 30px 30px 30px 50px;
-}
 
 
 #gameInfo{
@@ -17,7 +11,7 @@
     padding-right: 4.5%;
     border: dotted;
     font-family: "Century Gothic";
-    color: crimson;
+    color: white;
     background-color: black;
     text-align: right;
     font-size: x-large;
@@ -43,21 +37,9 @@
     padding-top: 15%;
     font-size: xx-large;
     font-family: monospace;
-    border:10px black solid;
-    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
- 
-    
-    
+/*    border:10px black solid;*/
 }
 
 
-.ans_container{
-    background-color: black;
-     width:50%;;
-    height:10%px;
-    margin:50px auto;
-    border: 3px red solid;
-    
-    
 
-}
+

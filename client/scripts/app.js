@@ -37,25 +37,5 @@ diffSign.config(["$stateProvider","$urlRouterProvider",
            
         );
 
-//,controller:"contactUsController"
-
-//Login controller
-
-
-diffSign.controller("LoginCtrl",["$scope","$location",
-                             function(r,t)
-                             {
-                                 r.submit=function()
-                                {
-                                     return t.path("/dashboard"),!1
-                                }
-                             }
-                            
-                            ]
-               );
-
-
 //Dashboard
 diffSign.controller("DashboardCtrl",["$scope","$state",function(r,t){r.$state=t}]);
-
-

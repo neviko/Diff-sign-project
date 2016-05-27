@@ -1,0 +1,51 @@
+
+.blocRegister
+{
+    color: black;
+    border: 1px solid;
+    width:60%;
+
+}
+.messagePassword
+{
+    text-align: center;
+    margin-left: 22%;
+
+    color:red;
+}
+
+
+.registerButton
+{
+    color:black;
+    margin-left: 32%;
+}
+
+
+.labelRegister
+{
+    float:right;
+    color: blue;
+}
+
+
+
+.btn55 
+{
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Georgia;
+  text-shadow: 1px 1px 3px #72b888;    
+  color: #ffffff;
+  font-size: 14px;
+  background: #F0C300;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn55:hover
+{
+  background: #3cfc89;
+  text-decoration: none;
+}

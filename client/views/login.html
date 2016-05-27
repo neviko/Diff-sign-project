@@ -8,24 +8,40 @@
     <div class=form-content>
         <div class=pro-link> 
             <a href="http://www.google.com">לאתר של הארגון</a>
-        </div> <form role=form class=bottom-75 ng-submit=submit()>
-        <div class=table-form> 
-            <div class=form-groups> 
-                <div class=form-group> <input type=text class="form-control input-lg" placeholder=EMAIL> 
-                </div> 
-                <div class=form-group> <input type=password class="form-control input-lg" placeholder=PASSWORD>
+        </div> 
+        <form role=form class=bottom-75 ng-submit=submit()>
+            <div class=table-form> 
+                <div class=form-groups> 
+                    <div class=form-group> <input type=text class="form-control input-lg" placeholder=שם-משתמש > 
+                    </div> 
+                    <div class=form-group> <input type=password class="form-control input-lg" placeholder=סיסמה>
+                    </div>
                 </div>
+                <div class=button-container>
+                    <button ng-click="connect()"  class="btn btn-default login">
+                        <img src=images/arrow.png>
+                    </button>
+                </div> 
             </div>
-            <div class=button-container>
-                <button type=submit class="btn btn-default login">
-                    <img src=images/arrow.png>
-                </button>
-            </div> 
-        </div>
-        <div class=remember> 
-            <label class=checkbox1 for=Option> <input id=Option type=checkbox>
-                <span>
-                </span> 
-            </label> remember me <span class=pass> forgot password?</span> </div> </form>
+            <div class=remember> 
+                <label class=checkbox1 for=Option> <input id=Option type=checkbox>
+                    <span></span>
+                </label> הישאר מחובר <span class=pass> שכחתי את הסיסמה</span> 
+            </div>   
+
+            <button class = "btn55" ng-click="toggle()">הרשמה</button>
+
+            <p ng-show="myVar" class="blocRegister" >
+                <label class ="labelRegister">שם משתמש</label><input id="userName" ng-model="userName" ><br>
+                <label class ="labelRegister">דוא"ל   </label><input id="theEmail" type=email ng-model="theEmail" ><br>
+                <label class ="labelRegister">סיסמה</label><input id="password" type=password ng-model="password" ><br>
+                <label class ="labelRegister">סיסמה</label><input id="validatePassword" type=password ng-model="validatePassword"><br>
+                <span class= "messagePassword">{{messagePassword}}</span>
+                <br>
+                <button class="registerButton"  ng-click="register()">הרשמה</button>
+
+                    
+            </p>
+         </form>
     </div> 
 </div> 

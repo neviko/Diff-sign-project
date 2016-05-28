@@ -4,9 +4,7 @@
     
 app.controller("LoginCtrl",["$scope","$location",
     function(r,t)
-    {
-
-        
+    {     
         r.connect = function()
         {
             return t.path("/dashboard"),!1

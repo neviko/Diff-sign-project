@@ -10,7 +10,7 @@
         $scope.showAnswers=false;
         $scope.isGameOver = false;
         $scope.showNextQuesBtn=false;
-        $scope.customStyle = {}; // styled user message
+        $scope.myStyle; // styled user message
         $scope.messageAfterAnswer="";
         $scope.returnInterval;
 
@@ -67,7 +67,7 @@
 
             var isCorrect= triviaService.onUserChooseAnswer(answers,elementId);
             if(isCorrect){
-                $scope.turnGreen();
+                turnGreen();
                 $scope.score+=10*($scope.timer);
                 $scope.messageAfterAnswer="תשובה נכונה !";
             }
@@ -75,7 +75,7 @@
 
             else{
                 $scope.lives--;
-                $scope.turnRed();
+                turnRed();
                 $scope.messageAfterAnswer="תשובה שגויה יה זלמה !...חבל";
 
                 if($scope.lives==0)
@@ -86,8 +86,6 @@
 
             }
 
-
-            //$scope.messageAfterAnswer="";
             $scope.onUserButtonClick;
         };
 
@@ -116,6 +114,7 @@
                 {
                     $scope.lives--;
                     $interval.cancel(returnInterval); // stop the timer
+                    turnRed();
                     $scope.messageAfterAnswer="לא הספקת לענות..חבל";
                     $scope.showAnswers=false;
                     $scope.showNextQuesBtn=true;
@@ -124,17 +123,13 @@
         };
 
 
+        function turnGreen(){
+            $scope.myStyle = {color: "green", fontSize:"70px"};
+        }
 
-
-
-        $scope.turnGreen = function (){
-            //what to do here?
-            $scope.messageAfterAnswer.fontcolor("green");
-        };
-
-        $scope.turnRed = function() {
-            $scope.messageAfterAnswer.colorClass="red";
-        };
+        function turnRed() {
+            $scope.myStyle = {color: "red", fontSize:"70px"};
+        }
 
 
     };

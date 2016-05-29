@@ -1,6 +1,6 @@
 (function(){
     
-    angular.module('diffSign').factory('restService', Service); 
+    angular.module('diffSign').factory('dbService', Service); 
     
     function Service($http, $sce, $q) {
         var service = {}; // the returned element
@@ -11,13 +11,12 @@
         function get_table(category) {
             var table;
             var defer = $q.defer();
-            console.log('in get_table func, category: '+category);
             $http.get('/get_table',{params:{category}})
                 .then(function successCallback(res) {
-                    console.log('in successCallback, res: '+res.data);
+                    console.log('in successCallback, res: '+res);
                     defer.resolve(res);
                 }, function errorCallback(res) {
-                    console.log('in errorCallback, res: '+res.data);
+                    console.log('in errorCallback, res: '+res);
                 });
             
             return defer.promise;

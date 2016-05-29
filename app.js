@@ -14,7 +14,6 @@ var config = require('./config/config.json');
 var db = config.db;
 var mongoAddr = db.mongodb;
 var mongoAddress = 'mongodb://' + db.user + ':' + db.password + mongoAddr.host + ':' + mongoAddr.port + '/' + db.db_name;
-console.log('mongoAddress: '+mongoAddress);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -34,8 +33,9 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/client')); //Static route for client side
 app.use('/modules', express.static(__dirname + '/node_modules')); //Static Route for node_modules
 
-app.use('/', routes);
+//app.use('/', routes);
 app.use('/users', users);
+app.use('/get_table', require('./routes/db'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,10 +46,11 @@ app.use(function(req, res, next) {
 
 
 // connect to Mlab
-//MongoClient.connect(mongoAddress, function(err, db) {
-//    assert.equal(null, err);
-//    console.log('Connected to Mlab!!!');
-//});
+MongoClient.connect(mongoAddress, function(err, db) {
+    assert.equal(null, err);
+    console.log('Connected to Mlab!!!');
+    exports.db = db;
+});
 
 
 

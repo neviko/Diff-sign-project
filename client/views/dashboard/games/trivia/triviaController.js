@@ -4,8 +4,8 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
 
 
     $scope.score = 0;
-    $scope.timer = 3;
-    $scope.lives = 2;
+    $scope.timer = 20;
+    $scope.lives = 5;
     $scope.isRunning = true;
     $scope.showAnswers = false;
     $scope.isGameOver = false;
@@ -50,7 +50,7 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
         $scope.messageAfterAnswer = "";
         $scope.showAnswers = true;
         $scope.showNextQuesBtn = false;
-        $scope.timer = 3;
+        $scope.timer = 20;
         $scope.showAnswers = false;
         $scope.onUserButtonClick = function (e){
             loadQuestion();
@@ -133,6 +133,21 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
 
 
     var vid = document.getElementById("videoId");
+    
+        //download the video from the server
+    vid.onloadstart= function(){
+        console.log("video is loading...");
+//        $scope.watingForLoading=false;  
+    };
+    //finished to download.. now it can be play.
+    vid.oncanplay = function(){
+//        $scope.watingForLoading=true;
+        console.log("video is WORKING");
+        
+    };
+    
+    
+    
     vid.onpause = function() {
 
         $scope.showAnswers = true;

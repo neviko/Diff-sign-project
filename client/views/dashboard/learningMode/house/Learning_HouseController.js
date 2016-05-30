@@ -2,6 +2,7 @@ function Learning_HouseController($scope,$http,$interval,videoService,dbService)
 {
     $scope.message='כלי בית';
     $scope.clips =  [];
+    var visited = 0;
     
     //----------- Get the db table
     var category = 'house';
@@ -24,8 +25,16 @@ function Learning_HouseController($scope,$http,$interval,videoService,dbService)
     //function to insert into the scope the clip to show        
     $scope.goShow = function(clip) 
     {    
-        $scope.clip = clip;
+        $scope.clip = clip;       
+        var visiting = document.getElementById(clip._id);
+        $(visiting).removeClass("colorVisited");
+        $(visiting).addClass("colorVisiting");
+        $(visited).addClass("colorVisited");
+        visited = visiting; 
     };
+    
+    
+
         
 };
 angular.module('diffSign').controller('Learning_HouseController',Learning_HouseController);

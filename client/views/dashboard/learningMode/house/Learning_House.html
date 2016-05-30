@@ -39,21 +39,19 @@
         <div class=fr> <h2>לימודים</h2> </div>
 
         <div id="my-page">    
-            <div class=jumbotron> 
-                <div class=container><h1 id="titlee">{{message}}</h1></div>
-            </div>
             <div class="container" id = "menu_learning">
-        
+
                 <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8" id="player">                
-                        <div id="nameClip">{{clip.name_heb}}</div>
+                        <h1 id="titlee">{{message}}</h1>
+
+                    <div class="col-lg-7 col-md-7" id="player">                
                             <video ng-src='{{goTrust(clip.clip_url)}}' width="500" height="500" controls 
             autoplay='true' controls='true'>
                             </video>                
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4" id="theWords">
+                    <div class="col-lg-5 col-md-5" id="theWords">
                         <div ng-repeat="clip in clips">
-                            <a ng-click='goShow(clip)' >{{clip.name_heb}}</a>
+                            <a id = "{{clip._id}}" ng-click='goShow(clip)' >{{clip.name_heb}}</a>
                         </div>    
                     </div>
                 </div>

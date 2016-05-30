@@ -4,8 +4,8 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
 
 
     $scope.score = 0;
-    $scope.timer = 10;
-    $scope.lives = 3;
+    $scope.timer = 3;
+    $scope.lives = 2;
     $scope.isRunning = true;
     $scope.showAnswers = false;
     $scope.isGameOver = false;
@@ -42,10 +42,15 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     var answers = [];
 
     function loadQuestion() {
+//        if($scope.timer==0)
+//        {
+//            
+//                
+//        }
         $scope.messageAfterAnswer = "";
         $scope.showAnswers = true;
         $scope.showNextQuesBtn = false;
-        $scope.timer = 10;
+        $scope.timer = 3;
         $scope.showAnswers = false;
         $scope.onUserButtonClick = function (e){
             loadQuestion();
@@ -102,6 +107,8 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
             {
                 $scope.messageAfterAnswer = "המשחק נגמר ! הניקוד שצברת הינו : " + $scope.score;
                 $scope.isRunning = false;
+                $scope.isGameOver = true;
+                
             }
 
         }
@@ -136,11 +143,20 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
                 $scope.lives--;
                 $interval.cancel(returnInterval); // stop the timer
                 turnRed();
+                if($scope.lives==0)
+                    {
+                         $scope.isRunning = false;
+                        $scope.isGameOver = true;
+                        return;
+                    }
                 $scope.messageAfterAnswer = "לא הספקת לענות..חבל";
                 $scope.showAnswers = false;
                 $scope.showNextQuesBtn = true;
+                
             }
+         
         }, 1000);
+          
     };
 
 

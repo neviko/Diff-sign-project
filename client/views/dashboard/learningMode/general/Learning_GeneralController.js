@@ -1,4 +1,4 @@
-function Learning_GeneralController($scope,$http,$timeout,$rootScope,videoService, dbService) 
+function Learning_GeneralController($scope,$http,$timeout,videoService, dbService) 
 {
     $scope.message='מילים כלליות';
     $scope.clips =  [];
@@ -14,9 +14,8 @@ function Learning_GeneralController($scope,$http,$timeout,$rootScope,videoServic
         if (table_list.$$state.status == 0) {
             $timeout(callAtTimeout, 25);
         }
-        // The server returned the table
+        // When server returned the table
         else {
-//            console.log('in controller, table: '+table_list.$$state.value.data);
             $scope.clips = table_list.$$state.value.data;
         }
     };

@@ -10,8 +10,7 @@ router.get('/',function(req, res){
     var db = app.db;
     var category = req.query.category;
     
-    var table = '';
-    var str_doc = '';
+    var table_list = [];
 
     // Get all the table
     if (category == undefined) {
@@ -25,19 +24,19 @@ router.get('/',function(req, res){
     colle.each(function(err, doc) {
         assert.equal(err, null);
         if (doc != null) {
-            str_doc = '{\n';
-            str_doc += '"_id":"' + doc._id + '",\n';
-            str_doc += '"name_en":"' + doc.name_en + '",\n';
-            str_doc += '"name_heb":"' + doc.name_heb + '",\n';
-            str_doc += '"category":"' + doc.category + '",\n';
-            str_doc += '"clip_url":"' + doc.clip_url + '",\n';
-            str_doc += '"pic_url":"' + doc.pic_url + '"\n},';
-            table += str_doc + '\n';
+            var json_doc = {};
+            json_doc["_id"] = doc._id;
+            json_doc["name_en"] = doc.name_en;
+            json_doc["name_heb"] = doc.name_heb;
+            json_doc["category"] = doc.category;
+            json_doc["clip_url"] = doc.clip_url;
+            json_doc["pic_url"] = doc.pic_url;
+            table_list.push(json_doc);
         } else {
-            res.send(table);
+            res.send(table_list);
         }
         if (err != null) {
-            console.log('error in findClips: \n'+err);
+            console.log('error in db.js: \n'+err);
             db.close();
         }
     });

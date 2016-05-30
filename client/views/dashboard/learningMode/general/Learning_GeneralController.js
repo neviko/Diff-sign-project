@@ -1,4 +1,4 @@
-function Learning_GeneralController($scope,$http,$interval,videoService, dbService) 
+function Learning_GeneralController($scope,$http,$interval,videoService,dbService) 
 {
     $scope.message='מילים כלליות';
     $scope.clips =  [];
@@ -13,12 +13,6 @@ function Learning_GeneralController($scope,$http,$interval,videoService, dbServi
             $interval.cancel(wait_db);
         }
     }, 50);
-
-    function callAtTimeout() {
-        console.log("Timeout occurred");
-        
-    };
-    
     
        
     // return a declaration that the url is trust

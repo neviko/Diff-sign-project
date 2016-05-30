@@ -40,7 +40,7 @@
             <h2>טריוויה</h2> </div>
         <div class=jumbotron>
 
-
+        <div ng-show="!gameInstructions">
             <div id="gamePage" ng-show="isRunning">
                 <div class="container">
 
@@ -131,6 +131,39 @@
 
 
             </div>
+            
+            
+        </div>
+         <!--            /////-->   
+            
+            <div ng-show="gameInstructions" class="instructions">
+                
+                    <h1>הוראות המשחק : </h1>
+                
+                    <h2>
+                    
+                        עליכם לענות במהירות האפשרית על השאלות.
+                        <br><br>
+                        
+                        מהרגע בו יפסיק להתנגן הסרטון, הזמן יתחיל לנוע לאחור.
+                        <br><br>
+                        ככל שתענו מהר יותר על שאלה, כך גם מספר הנקודות יהיה גבוה יותר.
+                        <br><br>
+                       אם אתם מתקשים, חזרו ללשונית "למידה" ואז חזרו מיומנים יותר.
+                        
+                        <br><br>
+                        בהצלחה :)
+                    
+                    
+                    </h2>
+                
+                
+                <button ng-click="startTheGame()">לחץ כאן כדיי להתחיל את המשחק!</button>
+            
+            
+            
+            </div>
+
 
             <div ng-show="!isRunning" class="text-center">
 

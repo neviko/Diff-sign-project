@@ -15,6 +15,14 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     $scope.returnInterval;
     $scope.currClip = undefined;
 
+    
+    $scope.gameInstructions = true;
+    
+    $scope.startTheGame = function() {
+        
+        $scope.gameInstructions = false;
+        
+    };
 
 //    var clips = triviaService.initQuststions();
                 

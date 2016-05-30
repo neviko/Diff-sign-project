@@ -83,3 +83,14 @@
 .red{
     color:red;
 }
+
+.instructions{
+    text-align: right;
+}
+
+.instructions button{
+    color:black;
+    font-size: 20px;
+    
+    
+}

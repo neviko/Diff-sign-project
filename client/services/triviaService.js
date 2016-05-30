@@ -35,6 +35,10 @@
         //method to choose array element that not choose yet
         function currObj(clips) {
 
+            if (clips.length == 0) {
+                return '';
+            }
+            
             while ( numOfQuestions < clips.length) {
                 var randClip = Math.floor((Math.random() * clips.length) );
                 if (clips[randClip].isViewed == false)
@@ -57,6 +61,9 @@
         //this method set 4 random answers and mix answers play order
         function setAnswers(clips,answers){
 
+            if (clips.length == 0) {
+                return answers;
+            }
             answers[0].triviaObj=globalCurrClip; // the clip
             answers[0].isCorrect=true;
            // var isFound=false;
@@ -87,7 +94,7 @@
 
 
         // this method mix the 4 answers positions
-        function mixArrayObjects(array){
+        function mixArrayObjects(array) {
 
             var tempArr=[{triviaObj:"",isCorrect:false}];
             var randClip = Math.floor((Math.random() * array.length));

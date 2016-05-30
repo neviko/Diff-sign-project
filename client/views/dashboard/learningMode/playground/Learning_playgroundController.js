@@ -27,9 +27,11 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
     {    
         $scope.clip = clip;       
         var visiting = document.getElementById(clip._id);
+        
         $(visiting).removeClass("colorVisited");
         $(visiting).addClass("colorVisiting");
-        $(visited).addClass("colorVisited");
+        if(visiting!=visited)
+            $(visited).addClass("colorVisited");
         visited = visiting; 
     };
     

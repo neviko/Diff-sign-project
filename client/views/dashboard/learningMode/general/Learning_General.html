@@ -44,12 +44,12 @@
                 <div class="row">
                         <h1 id="titlee">{{message}}</h1>
 
-                    <div class="col-lg-7 col-md-7" id="player">                
+                    <div class="col-lg-7 col-md-7 col-sm-7" id="player">                
                             <video ng-src='{{goTrust(clip.clip_url)}}' width="500" height="500" controls 
             autoplay='true' controls='true'>
                             </video>                
                     </div>
-                    <div class="col-lg-5 col-md-5" id="theWords">
+                    <div class="col-lg-5 col-md-5 col-sm-5" id="theWords">
                         <div ng-repeat="clip in clips">
                             <a id = "{{clip._id}}" ng-click='goShow(clip)' >{{clip.name_heb}}</a>
                         </div>    

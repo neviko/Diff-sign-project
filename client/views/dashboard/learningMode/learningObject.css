@@ -19,7 +19,7 @@
     
     overflow-y:scroll ;
     width: 300px;
-    margin-left: 10%;
+    margin-left: 3%;
 
     
 }
@@ -28,7 +28,7 @@
 {
     text-align: center;
     height: 500px;
-    padding-left: 20%;
+    padding-left: 14%;
 
 }
 
@@ -56,4 +56,17 @@ a.colorVisiting
 a.colorVisited
 {
     color: grey;
+}
+
+
+a:link 
+{ 
+ text-decoration:none; 
+} 
+
+a:hover, a:focus, a:active 
+{
+  text-decoration: none;
+  color:inherit;
+
 }

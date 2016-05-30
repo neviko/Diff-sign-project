@@ -27,9 +27,11 @@ function Learning_GeneralController($scope,$http,$interval,videoService,dbServic
     {    
         $scope.clip = clip;       
         var visiting = document.getElementById(clip._id);
+        
         $(visiting).removeClass("colorVisited");
         $(visiting).addClass("colorVisiting");
-        $(visited).addClass("colorVisited");
+        if(visiting!=visited)
+            $(visited).addClass("colorVisited");
         visited = visiting; 
     };
     

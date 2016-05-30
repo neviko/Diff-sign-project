@@ -27,9 +27,11 @@ function Learning_HouseController($scope,$http,$interval,videoService,dbService)
     {    
         $scope.clip = clip;       
         var visiting = document.getElementById(clip._id);
+        
         $(visiting).removeClass("colorVisited");
         $(visiting).addClass("colorVisiting");
-        $(visited).addClass("colorVisited");
+        if(visiting!=visited)
+            $(visited).addClass("colorVisited");
         visited = visiting; 
     };
     

@@ -1,4 +1,4 @@
-function Learning_GeneralController($scope,$http,$timeout,videoService, dbService) 
+function Learning_GeneralController($scope,$http,$interval,videoService, dbService) 
 {
     $scope.message='מילים כלליות';
     $scope.clips =  [];
@@ -6,18 +6,17 @@ function Learning_GeneralController($scope,$http,$timeout,videoService, dbServic
     //----------- Get the db table
     var category = 'general';
     var table_list = dbService.get_table(category);
-    $timeout(callAtTimeout, 25);
+    var wait_db = $interval(function() {
+        // When server returned the table
+        if (table_list.$$state.status > 0) {
+            $scope.clips = table_list.$$state.value.data;
+            $interval.cancel(wait_db);
+        }
+    }, 50);
 
     function callAtTimeout() {
         console.log("Timeout occurred");
-        // If the server didn't return yet the table
-        if (table_list.$$state.status == 0) {
-            $timeout(callAtTimeout, 25);
-        }
-        // When server returned the table
-        else {
-            $scope.clips = table_list.$$state.value.data;
-        }
+        
     };
     
     

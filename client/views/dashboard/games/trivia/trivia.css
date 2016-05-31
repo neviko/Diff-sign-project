@@ -9,12 +9,15 @@
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 1%;
+    font-size: 20px;
+/*
     border: dotted;
     font-family: "Century Gothic";
-    color: lightcoral;
-    background-color: black;
+   border-color: red green blue yellow;
     text-align: right;
-    font-size: xx-large;
+    
+     border-radius: 25px;
+*/
 }
 
 
@@ -40,7 +43,7 @@
     font-size: xx-large;
     font-family: monospace;
     border-style: solid;
-    border-color: red green blue yellow;
+    border-color: black black black black;
     border-width: 7px;
     /*border-bottom-left-radius: 30px;*/
     /*border-bottom-right-radius: 30px;*/
@@ -53,7 +56,7 @@
     height: 60%;
     border-width: 15px;
     border-style: solid;
-    border-color: #ff9590 #741680 #9757ff #48ffc3;
+    border-color:  black black black black;
 }
 
 .nextQuesBtn{
@@ -92,7 +95,7 @@
     font-family: fantasy;
     width: 90%;
     border-style: solid;
-    border-color: blue blue blue blue;
+    border-color: black black black black;
     border-width: 7px;
     /*border-bottom-left-radius: 30px;*/
     /*border-bottom-right-radius: 30px;*/
@@ -103,6 +106,32 @@
     text-align: right;
 }
 
+
+.info{
+     width: 90%;
+    padding-bottom: 8%;
+    padding-top: 8%;
+    font-size: 20px;
+    font-family: monospace;
+    border-style: solid;
+    border-color: black blue black blue;
+    border-width: 7px;
+    background-color:blue;
+    /*border-bottom-left-radius: 30px;*/
+    /*border-bottom-right-radius: 30px;*/
+    border-radius: 25px;
+    
+}
+
+
+.informationButton{
+    border-style: solid;
+    border-color: palevioletred palevioletred palevioletred palevioletred;
+    border-width: 7px;
+    background-color:blue;
+    font-size: 20px;
+    
+}
 
 
 

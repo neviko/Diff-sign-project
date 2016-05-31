@@ -16,11 +16,12 @@
        * requests that are retried after having logged in.  This can be used for example
        * to add an authentication token.  It must return the request.
        */
-      loginConfirmed: function(data, configUpdater) {
-        var updater = configUpdater || function(config) {return config;};
-        $rootScope.$broadcast('event:auth-loginConfirmed', data);
-        httpBuffer.retryAll(updater);
-      },
+        loginConfirmed: function(data, configUpdater) 
+        {
+            var updater = configUpdater || function(config) {return config;};
+            $rootScope.$broadcast('event:auth-loginConfirmed', data);
+            httpBuffer.retryAll(updater);
+        },
 
       /**
        * Call this function to indicate that authentication should not proceed.
@@ -28,10 +29,11 @@
        * @param data an optional argument to pass on to $broadcast.
        * @param reason if provided, the requests are rejected; abandoned otherwise.
        */
-      loginCancelled: function(data, reason) {
-        httpBuffer.rejectAll(reason);
-        $rootScope.$broadcast('event:auth-loginCancelled', data);
-      }
+      loginCancelled: function(data, reason)
+        {
+            httpBuffer.rejectAll(reason);
+            $rootScope.$broadcast('event:auth-loginCancelled', data);
+        }
     };
   }])
 
@@ -43,7 +45,8 @@
    * and broadcasts 'event:auth-forbidden'.
    */
   .config(['$httpProvider', function($httpProvider) {
-    $httpProvider.interceptors.push(['$rootScope', '$q', 'httpBuffer', function($rootScope, $q, httpBuffer) {
+    $httpProvider.interceptors.push(['$rootScope', '$q', 'httpBuffer', function($rootScope, $q, httpBuffer) 
+    {
       return {
         responseError: function(rejection) {
           var config = rejection.config || {};

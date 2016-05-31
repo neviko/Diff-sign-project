@@ -153,11 +153,16 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     vid.onloadstart= function(){
         console.log("video is loading...");
 //        $scope.watingForLoading=false;  
+        $scope.messageAfterAnswer = "LOADING";
+        
     };
     //finished to download.. now it can be play.
     vid.oncanplay = function(){
 //        $scope.watingForLoading=true;
         console.log("video is WORKING");
+        $scope.messageAfterAnswer = "";
+
+        
         
     };
     

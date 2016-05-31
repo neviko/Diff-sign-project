@@ -35,8 +35,8 @@
 .answer_words
 {
     width: 90%;
-    padding-bottom: 15%;
-    padding-top: 15%;
+    padding-bottom: 8%;
+    padding-top: 8%;
     font-size: xx-large;
     font-family: monospace;
     border-style: solid;
@@ -84,13 +84,29 @@
     color:red;
 }
 
-.instructions{
+
+.instuctionStyle{
+   
+    text-align: right;
+    font-size: 10px;
+    font-family: fantasy;
+    width: 90%;
+    border-style: solid;
+    border-color: blue blue blue blue;
+    border-width: 7px;
+    /*border-bottom-left-radius: 30px;*/
+    /*border-bottom-right-radius: 30px;*/
+    border-radius: 25px;
+}
+
+#fff{
     text-align: right;
 }
 
-.instructions button{
-    color:black;
-    font-size: 20px;
-    
-    
-}
+
+
+
+
+
+
+

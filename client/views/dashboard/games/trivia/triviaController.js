@@ -14,15 +14,22 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     $scope.messageAfterAnswer = "";
     $scope.returnInterval;
     $scope.currClip = undefined;
-
-    
-    $scope.gameInstructions = true;
-    
-    $scope.startTheGame = function() {
+    $scope.showInstructions = false;
+    $scope.buttonText="הוראות";
         
-        $scope.gameInstructions = false;
-        
+    $scope.instructions = function() 
+    {
+        $scope.showInstructions = !$scope.showInstructions;
+        if($scope.showInstructions==false)
+            {
+                $scope.buttonText="הוראות"; 
+            }
+        else{
+            $scope.buttonText="הסתר";
+        }
     };
+    
+    
 
 //    var clips = triviaService.initQuststions();
                 

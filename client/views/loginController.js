@@ -1,41 +1,33 @@
-(function (app) 
- {
-    
-    
-app.controller("LoginCtrl",["$scope","$location",
-    function(r,t)
-    {     
-        r.connect = function()
-        {
-            return t.path("/dashboard"),!1
-        };
-        
-        
-        r.userName = document.getElementById("userName").value;
-        r.theEmail = document.getElementById("theEmail").value;
-        r.password = document.getElementById("password").value;
-        r.validatePassword = document.getElementById("validatePassword").value; 
-        r.messagePassword="";
+function LoginCtrl($scope,$location,authenticationService)
+{
 
-        r.myVar = false;
+    $scope.user ={};
+    $scope.connect = function()
+    {
+        return $location.path("/dashboard"),!1
+    };
         
-        r.toggle = function() 
-        {
-            r.myVar = !r.myVar;
-        };
+    $scope.messagePassword="";
+
+    $scope.myVar = false;
+    $scope.toggle = function() 
+    {
+        $scope.myVar = !$scope.myVar;
+    };
         
-        r.register = function()
-        {
-            if(r.password != r.validatePassword)
-                r.messagePassword = "הסיסמה שלך לא תקין";
+    $scope.register = function()
+    {
+        authenticationService.register(user)
+        .then(function(response){
+            //to get the response call response.data
+            //ex: server sent {id:'', text:""}
+            //do response.data.id
+        })
+        .catch(function(error){
+            return $location.path("/dashboard"),!1
+
             
-            else 
-                r.messagePassword = "";           
-        };
-        
+        })
     }
-                            
-                            ]
-    );
-
-})(angular.module('diffSign'));
+};
+angular.module('diffSign').controller('LoginCtrl',LoginCtrl);

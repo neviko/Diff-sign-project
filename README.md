@@ -21,6 +21,7 @@ Please visit our wiki for furthur project info:
 ### [User Manual](../../wiki/user-manual)
 
 ### [Team Page](../../wiki/team-page)
+![project logo (this one is taken from basecamp)](https://github.com/neviko/Diff-sign-project/blob/master/wiki_documents/team2.jpg)
 
 ### Project Documents
 - [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))

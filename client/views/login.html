@@ -33,12 +33,10 @@
 
             <p ng-show="myVar" class="blocRegister" >
                 <label class ="labelRegister">שם משתמש</label><input id="userName" ng-model="userName" ><br>
-                <label class ="labelRegister">דוא"ל   </label><input id="theEmail" type=email ng-model="theEmail" ><br>
-                <label class ="labelRegister">סיסמה</label><input id="password" type=password ng-model="password" ><br>
-                <label class ="labelRegister">סיסמה</label><input id="validatePassword" type=password ng-model="validatePassword"><br>
-                <span class= "messagePassword">{{messagePassword}}</span>
-                <br>
-                <button class="btn56"  ng-click="register()">הרשמה</button>
+                <label class ="labelRegister">דוא"ל   </label><input id="theEmail" type=email ng-model="user.email" ><br>
+                <label class ="labelRegister">סיסמה</label><input id="password" type=password ng-model="user.password" ><br>
+                <label class ="labelRegister">סיסמה</label><input id="validatePassword" ng-class="{'error': password!= validatePassword, 'success' : password== validatePassword}" type=password ng-model="validatePassword"><br>
+                <button class="btn56"  ng-click="(pass == passVal)&&register()">הרשמה</button>
 
                     
             </p>

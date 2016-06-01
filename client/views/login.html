@@ -7,7 +7,7 @@
     </div>
     <div class=form-content>
         <div class=pro-link> 
-            <a href="http://www.google.com">לאתר של הארגון</a>
+            <a href="http://shaiproject.org">לאתר של הארגון</a>
         </div> 
         <form role=form class=bottom-75 ng-submit=submit()>
             <div class=table-form> 
@@ -26,7 +26,11 @@
             <div class=remember> 
                 <label class=checkbox1 for=Option> <input id=Option type=checkbox>
                     <span></span>
-                </label> הישאר מחובר <span class=pass> שכחתי את הסיסמה</span> 
+                    השאר מחובר
+                </label> 
+<!--                הישאר מחובר <span class=pass> לכניסה ללא שם משתמש וסיסמא</span>-->
+                <div  class="noPassword"> <button ng-click="connect()" class ="buttonPassword"><span>לחץ כאן - לכניסה ללא שם משתמש וסיסמא </span></button></div>
+               
             </div>   
 
 <!--            <button class = "btn55" ng-click="toggle()">הרשמה</button>-->

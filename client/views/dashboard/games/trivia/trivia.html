@@ -1,4 +1,5 @@
 <div>
+    
     <snap-drawer>
         <div class=snap-menu>
             <div class="sidebar-header text-center">
@@ -37,27 +38,29 @@
             </span>
         </a>
         <div class=fr>
-            <h2>טריוויה</h2> </div>
-        <div class=jumbotron>
+            <h2>טריוויה</h2>
+        </div>
+
+        <div class=jumbotron id="bgImage2">
 
             <div id="gamePage" ng-show="isRunning">
                 <div class="container">
 
                     <div class="row">
 
-                        <div id="gameInfo" class="col-lg-2  col-md-12 col-xs-12 ">
+                        <div id="gameInfo" class="col-lg-2  ">
 
                             <div class="row">
-                                <div class="col-lg-12 col-md-12 col-xs-12">
-                                    {{lives}} :פסילות
+                                <div class="col-lg-12">
+                                   <label class="info"> {{lives}} :פסילות</label> 
                                 </div>
                                 <br><br>
-                                <div class="col-lg-12 col-md-12 col-xs-12">
-                                    {{score}} :ניקוד
+                                <div class="col-lg-12">
+                                    <label class="info"> {{score}} :ניקוד</label>
                                 </div>
                                 <br><br>
-                                <div class="col-lg-12 col-md-12 col-xs-12">
-                                    {{timer}}: זמן
+                                <div class="col-lg-12 ">
+                                    <label class="info"> {{timer}}: זמן</label>
                                 </div>
                                 <br><br>
 
@@ -67,18 +70,18 @@
 
                         </div>
                         <!---------------------------------------------->
-                        <div class=col-lg-10>
+                        <div class="col-lg-10" >
                             
                             
-                                <div class="col-lg-12 col-md-12 col-xs-12"  id="fff">
-                                    <button class = "btn55" ng-click="instructions()">{{buttonText}}</button>
+                                <div class="col-lg-12"  id="fff">
+                                    <button class = "informationButton" ng-click="instructions()">{{buttonText}}</button>
                                        <p ng-show="showInstructions" class="instuctionStyle" >
                                    
-                                            הוראות המשחק : בלה בלה בלה בלה
+                                        מטרת המשחק : לענות על כמה שיותר שאלות בזמן קצר.
                                            <br>
-                                           בלה בלה בלה בלה
+                                            אם אתם מתקשים, אנא חזרו למצב הלמידה ואחר כך חיזרו למשחק.
                                            <br>
-                                           בלה בלה בלה בלה
+                                           בהצלחה      :)     
                                 </div>
                             
                                 
@@ -91,7 +94,7 @@
               
                         
 
-                        <div class="col-lg-9 col-lg-offset-1 col-md-9 col-xs-9">
+                        <div class="col-lg-9 col-lg-offset-1">
                             <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()">
                             </video>
                         </div>
@@ -113,7 +116,7 @@
 
                 <!---------------------------the message to client area------------------------->
                 <div class="row text-center">
-                    <div class="col-lg-10 col-lg-offset-3 col-md-10 col-xs-10" id="userNotes">
+                    <div class="col-lg-10 col-lg-offset-3" id="userNotes">
                         <div ng-style="myStyle">{{messageAfterAnswer}}</div>
                     </div>
                 </div>
@@ -127,10 +130,10 @@
                     <div class="row text-center">
 
 
-                        <div class="col-lg-3 col-lg-offset-4 col-md-3 col-xs-3">
+                        <div class="col-lg-3 col-lg-offset-4 ">
                             <label class="answer_words" data-id="upLeft" ng-click="onUserWordClick($event)">א. {{ansArr[0].triviaObj.name_heb}}</label>
                         </div>
-                        <div class="col-lg-3 col-lg-offset-1 col-md-3 col-xs-3">
+                        <div class="col-lg-3 col-lg-offset-1 ">
                             <label class="answer_words" data-id="upRight" ng-click="onUserWordClick($event)">ב. {{ansArr[1].triviaObj.name_heb}} </label>
                         </div>
 
@@ -141,10 +144,10 @@
                     <div class="row text-center">
 
 
-                        <div class="col-lg-3 col-lg-offset-4 col-md-3 col-xs-3">
+                        <div class="col-lg-3 col-lg-offset-4 ">
                             <label class="answer_words" data-id="buttomLeft" ng-click="onUserWordClick($event)">ג. {{ansArr[2].triviaObj.name_heb}} </label>
                         </div>
-                        <div class="col-lg-3 col-lg-offset-1 col-md-3 col-xs-3">
+                        <div class="col-lg-3 col-lg-offset-1">
                             <label class="answer_words" data-id="buttomRight" ng-click="onUserWordClick($event)">ד. {{ansArr[3].triviaObj.name_heb}} </label>
                         </div>
 
@@ -158,7 +161,7 @@
 
                 <!--button area-->
                 <div class="row text-center" ng-show="showNextQuesBtn">
-                    <div class="col-lg-10 col-lg-offset-3 col-md-10 col-xs-10">
+                    <div class="col-lg-10 col-lg-offset-3">
                         <button class="nextQuesBtn" ng-click="onUserButtonClick($event)">לשאלה הבאה</button>
                     </div>
                 </div>

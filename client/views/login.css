@@ -117,3 +117,14 @@
 	position:relative;
 	top:1px;
 }
+
+.noPassword{
+    text-align: right;
+}
+
+.buttonPassword{
+    color: white;
+    border-radius: 25px;
+    border-color: black black black black;
+    background-color: darkblue;
+}

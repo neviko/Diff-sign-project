@@ -10,7 +10,7 @@
                 </li>
                 
                 <li ng-class="{active: $state.includes('learningMode')}">
-                    <a ui-sref=learningMode>מצב למידה</a>
+                    <a ui-sref=learningMode>לימוד שפת הסימנים</a>
                 </li>
                 
                 <li ng-class="{active: $state.includes('game')}">
@@ -35,39 +35,39 @@
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
             </span> 
         </a> 
-
+        <div class=fr> <h2>לימוד שפת הסימנים</h2> </div>
         <span class="glyphicon glyphicon-dashboard bg-fade"></span> 
         <div class=jumbotron>
 <!--     Unnecessary 'home' botten    
         <p> <a class="btn btn-primary btn-lg btn-white" ui-sref=overview>חזרה לדף בית</a> </p>
 -->
 
-            <div class=container> <h1>מצב למידה</h1>  
+             
                 
                 
                 
-                <div class="container" id = "menu_learning">
-                    <div class="row" >
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_General">
-                            <a class = "link_learning"  ui-sref=learn_General></a>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_Letters">
-                            <a class = "link_learning" ui-sref=learn_Letters></a>
-                        </div>
+            <div class="container" id = "menu_learning">
+                <div class="row" >
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_General">
+                        <a class = "link_learning"  ui-sref=learn_General></a>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_House">
-                            <a class = "link_learning" ui-sref=learn_House></a>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_playground">
-                            <a class = "link_learning" ui-sref=learn_Playground></a>
-                        </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_Letters">
+                        <a class = "link_learning" ui-sref=learn_Letters></a>
                     </div>
-    
                 </div>
-
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_House">
+                        <a class = "link_learning" ui-sref=learn_House></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="Learning_playground">
+                        <a class = "link_learning" ui-sref=learn_Playground></a>
+                    </div>
+                </div>
+    
             </div>
-        </div> 
+
+        </div>
+         
         
         
 

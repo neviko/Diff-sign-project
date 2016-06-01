@@ -10,7 +10,7 @@
                 </li>
                 
                 <li ng-class="{active: $state.includes('learningMode')}">
-                    <a ui-sref=learningMode>מצב למידה</a>
+                    <a ui-sref=learningMode>לימוד שפת הסימנים</a>
                 </li>
                 
                 <li ng-class="{active: $state.includes('game')}">
@@ -36,10 +36,11 @@
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
             </span>
         </a>
-        <div class=fr> <h2>דף הבית</h2> </div>
+        <div class=fr> <h2>צור קשר</h2> </div>
         <div class=jumbotron> 
-            <div class=container> <h1>{{message}}</h1>
-                <br><br> 
+           <div class=container>
+               <!-- <h1>{{message}}</h1>
+                <br><br> -->
                 <div class="container">
                     
                 
@@ -65,12 +66,14 @@
                             <input id="submit" ng-click="clicked()" type="submit" value="שלח">
                         </div>
                     </form>
+<!--    unnecessary 'home' botten
                     
                 </div> 
                 
                 <br>
                 <a class="btn btn-primary btn-lg btn-white" ui-sref=overview>חזרה לדף הבית</a>
-
+            </div>
+-->
         </div> 
     </snap-content> 
 </div>

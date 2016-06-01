@@ -97,13 +97,17 @@
     border-style: solid;
     border-color: black black black black;
     border-width: 7px;
+    background-color: black;
+    color: white;
     /*border-bottom-left-radius: 30px;*/
     /*border-bottom-right-radius: 30px;*/
     border-radius: 25px;
+    
 }
 
 #fff{
     text-align: right;
+
 }
 
 
@@ -126,7 +130,7 @@
 
 .informationButton{
     border-style: solid;
-    border-color: palevioletred palevioletred palevioletred palevioletred;
+    border-color: blue blue blue blue;
     border-width: 7px;
     background-color:blue;
     font-size: 20px;

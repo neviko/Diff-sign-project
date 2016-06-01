@@ -134,33 +134,33 @@
 }
 
 
-// Creates a wrapper for a series of columns
+/*// Creates a wrapper for a series of columns*/
 .make-row(@gutter: @grid-gutter-width) {
-  // Then clear the floated columns
-  .clearfix();
+/*  // Then clear the floated columns*/
+/*  .clearfix();*/
 
   @media (min-width: @screen-sm-min) {
     margin-left:  (@gutter / -2);
     margin-right: (@gutter / -2);
   }
 
-  // Negative margin nested rows out to align the content of columns
-  .row {
+/*  // Negative margin nested rows out to align the content of columns*/
+ .row {
     margin-left:  (@gutter / -2);
     margin-right: (@gutter / -2);
   }
 }
 
-// Generate the extra small columns
+/*// Generate the extra small columns*/
 .make-xs-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+/*  // Prevent columns from collapsing when empty*/
   min-height: 1px;
-  // Inner gutter via padding
+/*  // Inner gutter via padding*/
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+/*  // Calculate width based on number of columns available*/
   @media (min-width: @grid-float-breakpoint) {
     float: left;
     width: percentage((@columns / @grid-columns));
@@ -170,13 +170,13 @@
 // Generate the small columns
 .make-sm-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+/*  // Prevent columns from collapsing when empty*/
   min-height: 1px;
-  // Inner gutter via padding
+/*  // Inner gutter via padding*/
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+/*  // Calculate width based on number of columns available*/
   @media (min-width: @screen-sm-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
@@ -203,13 +203,13 @@
 // Generate the medium columns
 .make-md-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+/*  // Prevent columns from collapsing when empty*/
   min-height: 1px;
-  // Inner gutter via padding
+/*  // Inner gutter via padding*/
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+/*  // Calculate width based on number of columns available*/
   @media (min-width: @screen-md-min) {
     float: left;
     width: percentage((@columns / @grid-columns));
@@ -236,13 +236,13 @@
 // Generate the large columns
 .make-lg-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
-  // Prevent columns from collapsing when empty
+/*  // Prevent columns from collapsing when empty*/
   min-height: 1px;
-  // Inner gutter via padding
+/*  // Inner gutter via padding*/
   padding-left:  (@gutter / 2);
   padding-right: (@gutter / 2);
 
-  // Calculate width based on number of columns available
+/*  // Calculate width based on number of columns available*/
   @media (min-width: @screen-lg-min) {
     float: left;
     width: percentage((@columns / @grid-columns));

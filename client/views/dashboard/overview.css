@@ -45,3 +45,9 @@
     border: black solid 1px;
 }
 
+#bgImage
+{
+    background-image:url(../../images/bg/123.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}

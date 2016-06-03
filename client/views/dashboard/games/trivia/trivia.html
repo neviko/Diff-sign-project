@@ -48,18 +48,18 @@
 
                     <div class="row">
 
-                        <div id="gameInfo" class="col-lg-2  ">
+                        <div id="gameInfo" class="col-md-2  ">
 
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-md-12">
                                    <label class="info"> {{lives}} :פסילות</label> 
                                 </div>
                                 <br><br>
-                                <div class="col-lg-12">
+                                <div class="col-md-12">
                                     <label class="info"> {{score}} :ניקוד</label>
                                 </div>
                                 <br><br>
-                                <div class="col-lg-12 ">
+                                <div class="col-md-12 ">
                                     <label class="info"> {{timer}}: זמן</label>
                                 </div>
                                 <br><br>
@@ -70,10 +70,10 @@
 
                         </div>
                         <!---------------------------------------------->
-                        <div class="col-lg-10" >
+                        <div class="col-md-10" >
                             
                             
-                                <div class="col-lg-12"  id="fff">
+                                <div class="col-md-12"  id="fff">
                                     <button class = "informationButton" ng-click="instructions()">{{buttonText}}</button>
                                        <p ng-show="showInstructions" class="instuctionStyle" >
                                    
@@ -94,7 +94,7 @@
               
                         
 
-                        <div class="col-lg-9 col-lg-offset-1">
+                        <div class="col-md-9 col-md-offset-1">
                             <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()">
                             </video>
                         </div>
@@ -116,7 +116,7 @@
 
                 <!---------------------------the message to client area------------------------->
                 <div class="row text-center">
-                    <div class="col-lg-10 col-lg-offset-3" id="userNotes">
+                    <div class="col-md-10 col-md-offset-3" id="userNotes">
                         <div ng-style="myStyle">{{messageAfterAnswer}}</div>
                     </div>
                 </div>
@@ -130,10 +130,10 @@
                     <div class="row text-center">
 
 
-                        <div class="col-lg-3 col-lg-offset-4 ">
+                        <div class="col-md-3 col-md-offset-4 ">
                             <label class="answer_words" data-id="upLeft" ng-click="onUserWordClick($event)">א. {{ansArr[0].triviaObj.name_heb}}</label>
                         </div>
-                        <div class="col-lg-3 col-lg-offset-1 ">
+                        <div class="col-md-3 col-md-offset-1 ">
                             <label class="answer_words" data-id="upRight" ng-click="onUserWordClick($event)">ב. {{ansArr[1].triviaObj.name_heb}} </label>
                         </div>
 
@@ -144,10 +144,10 @@
                     <div class="row text-center">
 
 
-                        <div class="col-lg-3 col-lg-offset-4 ">
+                        <div class="col-md-3 col-md-offset-4 ">
                             <label class="answer_words" data-id="buttomLeft" ng-click="onUserWordClick($event)">ג. {{ansArr[2].triviaObj.name_heb}} </label>
                         </div>
-                        <div class="col-lg-3 col-lg-offset-1">
+                        <div class="col-md-3 col-md-offset-1">
                             <label class="answer_words" data-id="buttomRight" ng-click="onUserWordClick($event)">ד. {{ansArr[3].triviaObj.name_heb}} </label>
                         </div>
 
@@ -161,7 +161,7 @@
 
                 <!--button area-->
                 <div class="row text-center" ng-show="showNextQuesBtn">
-                    <div class="col-lg-10 col-lg-offset-3">
+                    <div class="col-md-10 col-md-offset-3">
                         <button class="nextQuesBtn" ng-click="onUserButtonClick($event)">לשאלה הבאה</button>
                     </div>
                 </div>

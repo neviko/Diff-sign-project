@@ -1,7 +1,5 @@
 function learningModeController($scope,$http,$interval,videoService,dbService) 
 {
-    $scope.changeSlide=function()
-    {
         // Activate Carousel
         $("#myCarousel").carousel();
     
@@ -36,8 +34,6 @@ function learningModeController($scope,$http,$interval,videoService,dbService)
         {
             $("#myCarousel").carousel("next");
         });
-
-    }
         
 };
 angular.module('diffSign').controller('learningModeController',learningModeController);

@@ -21,7 +21,7 @@ diffSign.config(["$stateProvider","$urlRouterProvider",
                 state("login",{url:"/login",parent:"base",templateUrl:"views/login.html",controller:"LoginCtrl"}).
                 state("dashboard",{url:"/dashboard",parent:"base",templateUrl:"views/dashboard.html",controller:"DashboardCtrl"}).
                 state("overview",{url:"/overview",parent:"dashboard",templateUrl:"views/dashboard/overview.html"}).
-                state("learningMode",{url:"/learningMode",parent:"dashboard",templateUrl:"views/dashboard/learningMode/learningMode.html"}).
+                state("learningMode",{url:"/learningMode",parent:"dashboard",templateUrl:"views/dashboard/learningMode/learningMode.html",controller:"learningModeController"}).
                 state("learn_General",{url:"/learn_General",parent:"dashboard",templateUrl:"views/dashboard/learningMode/general/Learning_General.html",controller:"Learning_GeneralController"}).
                 state("learn_Letters",{url:"/learn_Letters",parent:"dashboard",templateUrl:"views/dashboard/learningMode/Letters/Learning_Letters.html",controller:"Learning_LettersController"}).
                 state("learn_Playground",{url:"/learn_Playground",parent:"dashboard",templateUrl:"views/dashboard/learningMode/playground/Learning_playground.html",controller:"Learning_playgroundController"}).

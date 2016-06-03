@@ -67,4 +67,15 @@
 
 }
 
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img 
+{
+    width: 60%;
+    margin: auto;
+}
 
+#myCarouselColor
+{
+    color:black;
+    text-align: center;
+}

@@ -52,7 +52,7 @@ text-align: right;
   position: absolute;
   right: 20px;
   bottom: 20px;
-  background: #09C;
+  background: black;
   color: #fff;
   font-family: Tahoma, Geneva, sans-serif;
   height: 30px;
@@ -67,10 +67,13 @@ input.submit:hover {
   color: #09C;
 }
 
-
-#email{
-  padding-top: 4%;
-  padding-bottom: 4%
+.labels{
+    
+    border-style: double;
+    border-radius: 10px;
+    border-color: black;
+    background-color: black;
+    color: white;
 }
 
 

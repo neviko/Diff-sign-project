@@ -1,6 +1,8 @@
 <?php
- 
-if(isset($_POST['email'])) {
+header('Content-Type: application/json');
+$rest_json = file_get_contents("php://input");
+$_POST = json_decode($rest_json, true);
+if(isset($_POST)) {
  
      
  
@@ -8,9 +10,9 @@ if(isset($_POST['email'])) {
  
     $email_to = "testing040404@gmail.com";
  
-    $email_subject = "Your email subject line";
+    $email_subject = "Form Enquiry";
  
-     
+   
  
      
  
@@ -32,71 +34,26 @@ if(isset($_POST['email'])) {
  
      
  
-    // validation expected data exists
+    $firstName = $_POST['firstName'];
  
-    if(!isset($_POST['first_name']) ||
+    $lastName = $_POST['lastName'];
  
-        !isset($_POST['last_name']) ||
+    $email_from = $_POST['email'];
  
-        !isset($_POST['email']) ||
+    $telephone = $_POST['telephone'];
  
-        !isset($_POST['telephone']) ||
- 
-        !isset($_POST['comments'])) {
- 
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
- 
-    }
- 
-     
- 
-    $first_name = $_POST['first_name']; // required
- 
-    $last_name = $_POST['last_name']; // required
- 
-    $email_from = $_POST['email']; // required
- 
-    $telephone = $_POST['telephone']; // not required
- 
-    $comments = $_POST['comments']; // required
- 
-     
- 
-    $error_message = "";
- 
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
- 
-  if(!preg_match($email_exp,$email_from)) {
- 
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
- 
-  }
- 
-    $string_exp = "/^[A-Za-z .'-]+$/";
- 
-  if(!preg_match($string_exp,$first_name)) {
- 
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
- 
-  }
- 
-  if(!preg_match($string_exp,$last_name)) {
- 
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
- 
-  }
- 
-  if(strlen($comments) < 2) {
- 
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
- 
-  }
- 
-  if(strlen($error_message) > 0) {
- 
-    died($error_message);
- 
-  }
+    $startDate = substr($_POST['startDate'], 0, strpos($_POST['startDate'], "T"));
+    $startDate = date('Y-m-d H:i:s', strtotime($startDate . ' + 1 day'));
+    $startDate = str_replace(' 00:00:00', '', $startDate);
+    $endDate = substr($_POST['endDate'], 0, strpos($_POST['endDate'], "T"));
+    $endDate = date('Y-m-d H:i:s', strtotime($endDate . ' + 1 day'));
+    $endDate = str_replace(' 00:00:00', '', $endDate);
+    $totalDays = $_POST['totalDays'];
+    $groupSize = $_POST['groupSize'];
+    $mealType = $_POST['mealType'];
+    $messageDetails = $_POST['message'];
+    $percentage = number_format($_POST['percentage'], 2, '.', ',');
+    $total = number_format($_POST['total'], 2, '.', ',');
  
     $email_message = "Form details below.\n\n";
  
@@ -112,15 +69,22 @@ if(isset($_POST['email'])) {
  
      
  
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
+    $email_message .= "First Name: ".clean_string($firstName)."\n";
  
-    $email_message .= "Last Name: ".clean_string($last_name)."\n";
+    $email_message .= "Last Name: ".clean_string($lastName)."\n";
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
     $email_message .= "Telephone: ".clean_string($telephone)."\n";
  
-    $email_message .= "Comments: ".clean_string($comments)."\n";
+    $email_message .= "Start Date: ".clean_string($startDate)."\n";
+    $email_message .= "End Date: ".clean_string($endDate)."\n";
+    $email_message .= "Total Days: ".clean_string($totalDays)."\n";
+    $email_message .= "Group Size: ".clean_string($groupSize)."\n";
+    $email_message .= "Meal Type: ".clean_string($mealType)."\n";
+    $email_message .= "Message Details: ".clean_string($messageDetails)."\n";
+    $email_message .= "Discount: $".clean_string($percentage)."\n";
+    $email_message .= "Total: $".clean_string($total)."\n";
  
      
  
@@ -134,22 +98,26 @@ $headers = 'From: '.$email_from."\r\n".
  
 'X-Mailer: PHP/' . phpversion();
  
-@mail($email_to, $email_subject, $email_message, $headers);  
+/*----
+Un-comment to enable email sending
+----*/
+// mail($email_to, $email_subject, $email_message, $headers); 
  
 ?>
- 
- 
- 
-<!-- include your own success html here -->
- 
- 
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
- 
+{
+    <!-- console degugger check to see if the form submitted correctly -->
+    "success": true,
+} 
  
 <?php
  
+} else {
+?>   
+{
+    "success": false
+} 
+
+<?php
 }
  
 ?>

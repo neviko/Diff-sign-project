@@ -20,7 +20,7 @@
         };
         
             $scope.handleFormSubmit = function () {
-             $http.post('./scripts/action.php').success(function (data, status) {
+             $http.post('./scripts/send_form_email.php').success(function (data, status) {
 		         if (data.success) {
 		             $window.alert("Thank you! Your message has been sent.");
 		           

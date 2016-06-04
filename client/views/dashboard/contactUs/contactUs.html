@@ -43,15 +43,28 @@
                 <br><br> -->
                 <div class="container">
                     
-      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-<head>
-      <title>Contact us</title>
-</head>
-<body>
- 
+<?php
+//if "email" variable is filled out, send email
+  if (isset($_REQUEST['email']))  {
+  
+  //Email information
+  $admin_email = "someone@example.com";
+  $email = $_REQUEST['email'];
+  $subject = $_REQUEST['subject'];
+  $comment = $_REQUEST['comment'];
+  
+  //send email
+  mail($admin_email, "$subject", $comment, "From:" . $email);
+  
+  //Email response
+  echo "Thank you for contacting us!";
+  }
+  
+  //if "email" variable is not filled out, display the form
+  else  {
+?>
 
- <form action="email.php" method="post">
+ <form method="post">
   Email: <input name="email" type="text" /><br />
   Subject: <input name="subject" type="text" /><br />
   Message:<br />
@@ -59,6 +72,9 @@
   <input type="submit" value="Submit" />
   </form>
   
+<?php
+  }
+?>
 
  
 </body>

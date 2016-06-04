@@ -1,153 +1,40 @@
-<div> 
-    <snap-drawer>
-        <div class=snap-menu>
-            <div class="sidebar-header text-center">
-                <img src="./images/logo/Web-logo2.jpg">
-            </div> 
-            <ul class=snap-ul> 
-                <li ng-class="{active: $state.includes('overview')}">
-                    <a ui-sref=overview>דף הבית</a>
-                </li>
-                
-                <li ng-class="{active: $state.includes('learningMode')}">
-                    <a ui-sref=learningMode>לימוד שפת הסימנים</a>
-                </li>
-                
-                <li ng-class="{active: $state.includes('game')}">
-                     <a ui-sref=game>משחק</a>
-                </li>
-                
-                <li ng-class="{active: $state.includes('login')}">
-                    <a ui-sref=login>התנתק</a>
-                </li>
-                
-                <li ng-class="{active: $state.includes('contactUs')}">
-                    <a ui-sref=contactUs>צור קשר</a>
-                </li>
-            </ul>
-        </div>
-    </snap-drawer> 
-    <snap-dragger>
-    </snap-dragger>
-    <snap-content snap-opt-tap-to-close=false>
-        <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
-            <span class=menutoggle> 
-                <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
-                <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
-            </span>
-        </a>
-        <div class=fr> <h2>צור קשר</h2> </div>
-        <div class=jumbotron> 
-           <div class=container>
-               <!-- <h1>{{message}}</h1>
-                <br><br> -->
-                <div class="container">
-                    
-       <form name="contactform"  method="post" ng-submit="handleFormSubmit()">
- 
-<table width="450px">
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="first_name">First Name *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="first_name" maxlength="50" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="last_name">Last Name *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="last_name" maxlength="50" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="email">Email Address *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="email" maxlength="80" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="telephone">Telephone Number</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <input  type="text" name="telephone" maxlength="30" size="30">
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td valign="top">
- 
-  <label for="comments">Comments *</label>
- 
- </td>
- 
- <td valign="top">
- 
-  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
- 
- </td>
- 
-</tr>
- 
-<tr>
- 
- <td colspan="2" style="text-align:center">
- 
-  <input type="submit" value="Submit">   <a href="http://www.freecontactform.com/email_form.php">Email Form</a>
- 
- </td>
- 
-</tr>
- 
-</table>
- 
-</form>
-                    
-<!--    unnecessary 'home' botten
-                    
-                </div> 
-                
-                <br>
-                <a class="btn btn-primary btn-lg btn-white" ui-sref=overview>חזרה לדף הבית</a>
+</br><br>
+
+<div class = "body">
+    <h2 id="header" >  זיהיתם תוכן שגוי - עדכנו אותנו</h2>
+    </br><br>
+
+
+    <div>
+
+        <form>
+            <div id="fname">
+                <label for="name">שם</label>
+                <input  ng-model="name" type="text" placeholder="אנא רשום כאן את שמך">
             </div>
--->
-        </div>  
+
+            
+            <div id="email">
+                <label for="email">Email</label>
+                <input ng-model="email" required type="email" placeholder="אנא רשמו כאן את כתובת המייל שלכם">
+            </div>
+        
+
+            <div>
+                <label for="text"> הערות</label>
+                <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם" >
+            </div>
+
+           
+            <div>
+                <input id="submit" ng-click="clicked()" type="submit" value="שלח">
+                <span id="thanks">{{message}}</span>  
+            </div>
+
+
+
+        </form>
+
+    </div>
+
 </div>

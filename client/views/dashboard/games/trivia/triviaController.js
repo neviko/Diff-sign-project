@@ -16,6 +16,7 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     $scope.currClip = undefined;
     $scope.showInstructions = false;
     $scope.buttonText="הוראות";
+    $scope.isPaused=false;
         
     $scope.instructions = function() 
     {
@@ -67,6 +68,7 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
         $scope.showNextQuesBtn = false;
         $scope.timer = 20;
         $scope.showAnswers = false;
+        $scope.isPaused=false;
         $scope.onUserButtonClick = function (e){
             loadQuestion();
         };
@@ -170,6 +172,11 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     
     vid.onpause = function() {
 
+
+        if( $scope.isPaused==true) // promise that the video timer will not set up again
+            return;
+
+        $scope.isPaused=true;
         $scope.showAnswers = true;
         returnInterval = $interval(function() {
             $scope.timer--;

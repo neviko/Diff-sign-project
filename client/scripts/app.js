@@ -28,11 +28,7 @@ diffSign.config(["$stateProvider","$urlRouterProvider",
                 state("learn_House",{url:"/learn_House",parent:"dashboard",templateUrl:"views/dashboard/learningMode/house/Learning_House.html",controller:"Learning_HouseController"}).
                 state("game",{url:"/game",parent:"dashboard",templateUrl:"views/dashboard/games/trivia/trivia.html",controller:"triviaController"}).
                 
-                state("contactUs",{url:"/contactUs",parent:"dashboard",templateUrl:"views/dashboard/contactUs/contactUs.html",controller:"contactUsController"}).
-                
-                state("contact",{url:"/contact",templateUrl:"/envoi.html"}).
-                state("verif",{url:"/verif",templateUrl:"/verif.php"})
- 
+                state("contactUs",{url:"/contactUs",parent:"dashboard",templateUrl:"views/dashboard/contactUs/contactUs.html",controller:"contactUsController"}) 
              }
             ]
            

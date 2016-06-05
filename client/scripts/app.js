@@ -30,7 +30,8 @@ diffSign.config(["$stateProvider","$urlRouterProvider",
                 
                 state("contactUs",{url:"/contactUs",parent:"dashboard",templateUrl:"views/dashboard/contactUs/contactUs.html",controller:"contactUsController"}).
                 
-                state("contact",{url:"/contact",templateUrl:"/envoi.html"})
+                state("contact",{url:"/contact",templateUrl:"/envoi.html"}).
+                state("verif",{url:"/verif",templateUrl:"/verif.php"})
  
              }
             ]

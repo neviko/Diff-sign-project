@@ -1,0 +1,71 @@
+<div id="form_contact">
+    <form action="process.php" id="contact" method="POST">
+        <p>
+            <label for="nom" class="nom">Nom</label>
+            <br /><input id="nom" name="nom" type="text">
+            <span id="msg_nom"></span>
+        </p>
+        <p>
+            <label for="sujet" class="sujet">Sujet</label>
+            <br /><input id="sujet" name="sujet" type="text">
+            <span id="msg_sujet"></span>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <br /><input id="email" name="email" type="email">
+            <span id="msg_email"></span>
+        </p>
+        <p>
+            <label for="message">Message</label>
+            <br /><textarea id="message" name="message" rows="10" cols="80"></textarea>
+           <span id="msg_message"></span>
+        </p>
+        <p>
+            <input type="submit" value="Envoyer" />
+        </p>
+    </form>
+    <span id="msg_all"></span> 
+</div><!-- end of #form_contact -->
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        $("#contact").submit(function(event){
+            var nom        = $("#nom").val();
+            var sujet      = $("#sujet").val();
+            var email      = $("#email").val();
+            var message    = $("#message").val();
+            var dataString = nom + sujet + email + message;
+            var msg_all    = "Merci de remplir tous les champs";
+            var msg_alert  = "Merci de remplir ce champs";
+
+            if (dataString  == "") {
+                $("#msg_all").html(msg_all);
+            } else if (nom == "") {
+                $("#msg_nom").html(msg_alert);
+            } else if (sujet == "") {
+                $("#msg_sujet").html(msg_alert);
+            } else if (email == "") {
+                $("#msg_email").html(msg_alert);
+            } else if (message == "") {
+                $("#msg_message").html(msg_alert);
+            } else {
+                $.ajax({
+                    type : "POST",
+                    url: $(this).attr("action"),
+                    data: $(this).serialize(),
+                    success : function() {
+                        $("#contact").html("<p>Formulaire bien envoyé</p>");
+                    },
+                    error: function() {
+                        $("#contact").html("<p>Erreur d'appel, le formulaire ne peut pas fonctionner</p>");
+                    }
+                });
+            }
+
+            return false;
+        });
+    });
+</script>

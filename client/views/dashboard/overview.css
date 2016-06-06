@@ -6,7 +6,6 @@
     padding-bottom: 5%;
     width:80%;
 	margin:auto;
-    
     text-align: center;
 }
 
@@ -22,7 +21,7 @@
 {
     height: 200px;
     background-color: white;
-    
+
     background-image:url(images/Board-Game2.gif);
     background-repeat: no-repeat;
     background-size:contain;
@@ -50,4 +49,17 @@
     background-image:url(../../images/bg/123.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+}
+
+.title
+{
+    text-align: center;
+    margin-bottom: 10%;
+    /*font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;*/
+    /*color: #ac2925;*/
+    /*text-shadow: 4px 4px 3px rgba(255, 149, 144, 0.1);*/
+
+    font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+    color: #ac2925;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }

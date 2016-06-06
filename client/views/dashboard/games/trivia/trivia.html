@@ -42,7 +42,7 @@
         </div>
 
         <div class=jumbotron id="bgImage2">
-
+            <div id="TriviaTitle">T r i v i a</div> <!--header-->
             <div id="gamePage" ng-show="isRunning">
                 <div class="container">
 
@@ -52,15 +52,15 @@
 
                             <div class="row">
                                 <div class="col-md-12">
-                                   <label class="info"> {{lives}} :פסילות</label> 
+                                   <label class="info">{{lives}} :פסילות</label>
                                 </div>
                                 <br><br>
                                 <div class="col-md-12">
-                                    <label class="info"> {{score}} :ניקוד</label>
+                                    <label class="info">{{score}} :ניקוד</label>
                                 </div>
                                 <br><br>
                                 <div class="col-md-12 ">
-                                    <label class="info"> {{timer}}: זמן</label>
+                                    <label class="info">{{timer}} :זמן</label>
                                 </div>
                                 <br><br>
 
@@ -76,12 +76,12 @@
                                 <div class="col-md-12"  id="fff">
                                     <button class = "informationButton" ng-click="instructions()">{{buttonText}}</button>
                                        <p ng-show="showInstructions" class="instuctionStyle" >
-                                   
+
                                         מטרת המשחק : לענות על כמה שיותר שאלות בזמן קצר.
                                            <br>
                                             אם אתם מתקשים, אנא חזרו למצב הלמידה ואחר כך חיזרו למשחק.
                                            <br>
-                                           בהצלחה      :)     
+                                           בהצלחה      :)
                                 </div>
                             
                                 

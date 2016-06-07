@@ -69,15 +69,15 @@
 
 #menu_Carousel
 {
-    margin-top: 9%;
+    margin-top: 5%;
 }
 
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img 
 {
-    width: 40%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     margin: auto;
 }
 

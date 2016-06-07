@@ -1,8 +1,12 @@
 function Learning_HouseController($scope,$http,$interval,videoService,dbService) 
 {
-    $scope.message='כלי בית';
+    $scope.message='בית';
     $scope.clips =  [];
     var visited = 0;
+    var visiting = 0;
+    
+
+
     
     //----------- Get the db table
     var category = 'house';
@@ -15,7 +19,14 @@ function Learning_HouseController($scope,$http,$interval,videoService,dbService)
         }
     }, 50);
     
-       
+
+    //this is the code to capture the emited event
+    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) 
+    {
+        $scope.goShow($scope.clips[0]);
+    });
+    
+    
     // return a declaration that the url is trust
     $scope.goTrust = function(src)
     {
@@ -25,8 +36,10 @@ function Learning_HouseController($scope,$http,$interval,videoService,dbService)
     //function to insert into the scope the clip to show        
     $scope.goShow = function(clip) 
     {    
+
         $scope.clip = clip;       
-        var visiting = document.getElementById(clip._id);
+        visiting = document.getElementById(clip._id);
+        console.log('clip._id: '+clip._id)
         
         $(visiting).removeClass("colorVisited");
         $(visiting).addClass("colorVisiting");
@@ -36,7 +49,6 @@ function Learning_HouseController($scope,$http,$interval,videoService,dbService)
     };
     
     
-
         
 };
 angular.module('diffSign').controller('Learning_HouseController',Learning_HouseController);

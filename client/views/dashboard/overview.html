@@ -2,7 +2,7 @@
     <snap-drawer>
         <div class=snap-menu>
             <div class="sidebar-header text-center">
-                <img src="./images/logo/Web-logo2.jpg">
+                <img src="./images/logo/shai-logo.png" width="70%" height="70%">
             </div> 
             <ul class=snap-ul> 
                 <li ng-class="{active: $state.includes('overview')}">
@@ -38,27 +38,30 @@
             </span>
         </a>
         <div class=fr> <h2>דף הבית</h2> </div>
-        <div >
             <div class=container>
 
                 <div class="title">Just Sign</div>
 
                 <div class="container">
                     <div class="row" id = "menu_overview">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="game">
-                                <a class = "link_overview" ui-sref=game></a>
+                        <div class="col-lg-6 col-md-6 col-sm-6" >
+                            
+                <img src="../../images/overview/game_pic_main.jpg" width="100%" height ="100%" ui-sref=game>
+
+
                         </div>
                 
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="learningMode">
-                                <a class = "link_overview" ui-sref=learningMode></a>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <img src="../../images/overview/learning_pic_main.jpg" width="100%" height ="100%"  ui-sref=learningMode>
+
                         </div>
                     </div>
-<!--    Unnecessary logout botten
-                </div>  
-                <p> <a ui-sref=login class="btn btn-primary btn-lg btn-white">התנתק</a> </p> 
-            </div> 
--->
-        </div>
+                      
+                </div>
       </div>
+
     </snap-content> 
 </div>
+            <div id="the_footer">© 2016 Shai Project</div>
+
+</div>    

@@ -3,6 +3,10 @@ function Learning_GeneralController($scope,$http,$interval,videoService,dbServic
     $scope.message='מילים כלליות';
     $scope.clips =  [];
     var visited = 0;
+    var visiting = 0;
+    
+
+
     
     //----------- Get the db table
     var category = 'general';
@@ -11,11 +15,20 @@ function Learning_GeneralController($scope,$http,$interval,videoService,dbServic
         // When server returned the table
         if (table_list.$$state.status > 0) {
             $scope.clips = table_list.$$state.value.data;
+            
+            
             $interval.cancel(wait_db);
         }
     }, 50);
     
-       
+
+    //this is the code to capture the emited event
+    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) 
+    {
+        $scope.goShow($scope.clips[0]);
+    });
+    
+    
     // return a declaration that the url is trust
     $scope.goTrust = function(src)
     {
@@ -25,8 +38,10 @@ function Learning_GeneralController($scope,$http,$interval,videoService,dbServic
     //function to insert into the scope the clip to show        
     $scope.goShow = function(clip) 
     {    
+
         $scope.clip = clip;       
-        var visiting = document.getElementById(clip._id);
+        visiting = document.getElementById(clip._id);
+        console.log('clip._id: '+clip._id)
         
         $(visiting).removeClass("colorVisited");
         $(visiting).addClass("colorVisiting");
@@ -36,7 +51,6 @@ function Learning_GeneralController($scope,$http,$interval,videoService,dbServic
     };
     
     
-
         
 };
 angular.module('diffSign').controller('Learning_GeneralController',Learning_GeneralController);

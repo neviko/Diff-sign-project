@@ -2,47 +2,13 @@
 
 #menu_overview
 {
-    padding-top: 5%;
     padding-bottom: 5%;
-    width:80%;
+    width:90%;
 	margin:auto;
     text-align: center;
 }
 
-.link_overview
-{
-    display: block;
 
-    height:  100%;
-    width: 100%;
-}
-
-#game
-{
-    height: 200px;
-    background-color: white;
-
-    background-image:url(images/Board-Game2.gif);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center; 
-    
-    border: black solid 1px;
-}
-
-
-#learningMode
-{
-    height: 200px;
-    background-color: white;
-    
-    background-image:url(images/8b.jpg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;    
-    
-    border: black solid 1px;
-}
 
 #bgImage
 {
@@ -62,4 +28,15 @@
     font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
     color: #ac2925;
     text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+
+#the_footer
+{
+    color:white;
+    background-color: #831919;
+    text-align: center;
+    font-size: 2vmax;
+    width: 100%;
+    height: 10%;
+    
 }

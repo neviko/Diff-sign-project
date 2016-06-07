@@ -1,11 +1,15 @@
 function Learning_playgroundController($scope,$http,$interval,videoService,dbService) 
 {
-    $scope.message='גן ילדים';
+    $scope.message='גן משחקים';
     $scope.clips =  [];
     var visited = 0;
+    var visiting = 0;
+    
+
+
     
     //----------- Get the db table
-    var category = 'general';
+    var category = 'playground';
     var table_list = dbService.get_table(category);
     var wait_db = $interval(function() {
         // When server returned the table
@@ -14,8 +18,14 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
             $interval.cancel(wait_db);
         }
     }, 50);
+
+    //this is the code to capture the emited event
+    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) 
+    {
+        $scope.goShow($scope.clips[0]);
+    });
     
-       
+    
     // return a declaration that the url is trust
     $scope.goTrust = function(src)
     {
@@ -25,8 +35,10 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
     //function to insert into the scope the clip to show        
     $scope.goShow = function(clip) 
     {    
+
         $scope.clip = clip;       
-        var visiting = document.getElementById(clip._id);
+        visiting = document.getElementById(clip._id);
+        console.log('clip._id: '+clip._id)
         
         $(visiting).removeClass("colorVisited");
         $(visiting).addClass("colorVisiting");
@@ -35,6 +47,7 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
         visited = visiting; 
     };
     
-     
+    
+        
 };
 angular.module('diffSign').controller('Learning_playgroundController',Learning_playgroundController);

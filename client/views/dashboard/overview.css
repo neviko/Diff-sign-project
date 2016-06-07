@@ -2,47 +2,13 @@
 
 #menu_overview
 {
-    padding-top: 5%;
     padding-bottom: 5%;
-    width:80%;
+    width:90%;
 	margin:auto;
     text-align: center;
 }
 
-.link_overview
-{
-    display: block;
 
-    height:  100%;
-    width: 100%;
-}
-
-#game
-{
-    height: 200px;
-    background-color: white;
-
-    background-image:url(images/Board-Game2.gif);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center; 
-    
-    border: black solid 1px;
-}
-
-
-#learningMode
-{
-    height: 200px;
-    background-color: white;
-    
-    background-image:url(images/8b.jpg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;    
-    
-    border: black solid 1px;
-}
 
 #bgImage
 {

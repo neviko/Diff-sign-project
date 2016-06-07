@@ -38,26 +38,27 @@
         </a>
         <div class=fr> <h2>לימודים</h2> </div>
 
-        <div id="my-page">    
-            <div class="container" id = "menu_learning">
-
-                <div class="row">
-                        <h1 id="titlee">{{message}}</h1>
-
-                    <div class="col-lg-7 col-md-7" id="player">                
-                            <video ng-src='{{goTrust(clip.clip_url)}}' width="500" height="500" controls 
+        <div id = "my-learn_page">    
+            <div class="container">
+                <h1 id="title_learn">{{message}}</h1>
+                <hr id = "line_learn">
+                <div class = "row" id="menu_learn">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+    
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="player">
+                            <video id ="learn_video" ng-src='{{goTrust(clip.clip_url)}}' controls 
             autoplay='true' controls='true'>
                             </video>                
                     </div>
-                    <div class="col-lg-5 col-md-5" id="theWords">
-                        <div ng-repeat="clip in clips">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="theWords">
+                        <div ng-repeat="clip in clips" on-finish-render="callMyCustomMethod()">
                             <a id = "{{clip._id}}" ng-click='goShow(clip)' >{{clip.name_heb}}</a>
                         </div>    
                     </div>
                 </div>
             </div> 
             <a class="btn btn-primary btn-lg btn-black" ui-sref=learningMode>חזרה לדף הלמידה</a>
-
         </div> 
     </snap-content> 
-</div>    
+</div>

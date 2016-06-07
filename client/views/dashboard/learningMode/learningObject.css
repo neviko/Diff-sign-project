@@ -1,61 +1,12 @@
-#menu_learning
-{
-    width:80%;
-	margin:auto;
-    padding-bottom: 2%;
-    margin-top: -1%;
-    font-size: 20px;
-    
-}
-#theWords
-{
-    margin-top: 5%;
-    font-family: fantasy;
-    font-size: 2vmax;
-    color:white;
-    height: 500px;
-    
-    text-align: right;
-    
-    overflow-y:scroll ;
-    width: 300px;
-    margin-left: 3%;
-
-    
-}
-
-#player
-{
-    text-align: center;
-    height: 500px;
-    padding-left: 14%;
-
-}
-
-#nameClip
-{
-    text-align: center;
-}
-
-#my-page
-{
-    margin-top: -5%;
-}
-#titlee
-{
-    text-align: center;
-}
-
-
-
 a.colorVisiting
 {
-    color: blueviolet;
+    color: rgb(30, 93, 208);
+    font: bold;
 }
 
 a.colorVisited
 {
-    color: grey;
+    color: rgba(0, 0, 0, 0.18);
 }
 
 
@@ -64,9 +15,79 @@ a:link
  text-decoration:none; 
 } 
 
+
 a:hover, a:focus, a:active 
 {
   text-decoration: none;
-  color:inherit;
+}
+
+a.colorVisiting:hover, a.colorVisiting:focus, a.colorVisiting:active 
+{
+    color: rgb(30, 93, 208);
+    font: bold;
+}
+
+a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active 
+{
+    color: rgba(0, 0, 0, 0.37);
+}
+
+
+
+
+/*
+#my-learn_page
+{
+    width:100%;
+	margin:auto;
+    background-image:url(../../../images/bg/123.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
 
 }
+*/
+#title_learn
+{
+    text-align: center;
+}
+
+
+#menu_learn
+{
+    padding-top: 8%;
+}
+
+#theWords
+{
+    font-family: fantasy;
+    font-size: 2vmax;
+    color:white;
+    height: 26vmax;
+    
+    text-align: right;
+    
+    overflow-y:scroll ;
+    width: 100%;
+    
+    margin-top: -30%;
+}
+
+#learn_video
+{
+    height: 100%;
+    width :100%;
+}
+
+#player
+{
+    padding-top: 1%;
+}
+
+#line_learn
+{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+

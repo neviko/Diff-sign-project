@@ -93,5 +93,8 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
 #img_learn
 {
     float :left;
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-bottom: 2%;
 }
 

@@ -9,7 +9,7 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
 
     
     //----------- Get the db table
-    var category = 'general';
+    var category = 'playground';
     var table_list = dbService.get_table(category);
     var wait_db = $interval(function() {
         // When server returned the table

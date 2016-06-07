@@ -90,7 +90,8 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-#titleLearn
+#img_learn
 {
-        font: 100px 'Great Vibes', Helvetica, sans-serif;
+    float :left;
 }
+

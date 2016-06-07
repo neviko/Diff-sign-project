@@ -32,8 +32,7 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     
     
 
-//    var clips = triviaService.initQuststions();
-                
+
         
     //----------- Get the db table
     var clips = [];

@@ -33,19 +33,6 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
 }
 
 
-
-
-/*
-#my-learn_page
-{
-    width:100%;
-	margin:auto;
-    background-image:url(../../../images/bg/123.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-
-}
-*/
 #title_learn
 {
     text-align: center;
@@ -78,10 +65,6 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
     width :100%;
 }
 
-#player
-{
-    padding-top: 1%;
-}
 
 #line_learn
 {

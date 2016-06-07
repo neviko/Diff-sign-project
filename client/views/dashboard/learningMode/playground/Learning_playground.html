@@ -30,6 +30,7 @@
     <snap-dragger>
     </snap-dragger>
     <snap-content snap-opt-tap-to-close=false>
+      <div >
         <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
             <span class=menutoggle> 
                 <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
@@ -37,9 +38,12 @@
             </span>
         </a>
         <div class=fr> <h2>לימודים</h2> </div>
+            <div class=container>
+
+
+                <div class="container">
 
         <div id = "my-learn_page">    
-            <div class="container">
                 <h1 id="title_learn">{{message}}</h1>
                 <hr id = "line_learn">
                 <div class = "row" id="menu_learn">
@@ -57,10 +61,14 @@
                         </div>    
                     </div>
                 </div>
-            </div> 
             <div id ="img_learn">
-                <img src="../../../../images/learningMode/green-button_goBack.jpg" width="70%" height="70%" ui-sref=learningMode>
-            </div>
+                <img src="../../../../images/learningMode/green-button_goBack.jpg" width="70%" height="70%" <a ui-sref=learningMode></a>
+            </div> 
         </div> 
+                </div>
+      </div>
+
     </snap-content> 
+    <div id="the_footer">© 2016 Shai Project</div>
 </div>
+</div>    

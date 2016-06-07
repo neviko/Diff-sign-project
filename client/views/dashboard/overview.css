@@ -29,3 +29,14 @@
     color: #ac2925;
     text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }
+
+#the_footer
+{
+    color:white;
+    background-color: #831919;
+    text-align: center;
+    font-size: 2vmax;
+    width: 100%;
+    height: 10%;
+    
+}

@@ -67,13 +67,20 @@
 
 }
 
+#menu_Carousel
+{
+    margin-top: 8%;
+}
+
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img 
 {
     width: 40%;
-    height: 400px;
+    height: 40%;
     margin: auto;
 }
+
 
 #myCarouselColor
 {

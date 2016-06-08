@@ -22,8 +22,8 @@ router.post('/', function(req, res) {
  transporter.sendMail({
         from: 'elieraphm@gmail.com',
         to: data.contactEmail,
-        subject: "שי פרויקט",
-        text: '  ! הודעתך התקבלה ותטופל בקרוב. תודה על פנייתך'
+        subject: "פרויקט שי ",
+        text: 'הודעתך התקבלה ותטופל בקרוב. תודה על פנייתך ! '
     });
     res.end("OK");
 });

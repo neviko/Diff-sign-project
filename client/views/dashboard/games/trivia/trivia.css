@@ -119,15 +119,13 @@
     margin-top: 35%;
     padding-bottom: 8%;
     padding-top: 8%;
-    font-size: 180%;
+    font-size: 140%;
     font-family: monospace;
     border-style: solid;
     border-color: black #ac2925 black #ac2925;
     border-width:medium;
-    /*background-color:blue;*/
-    /*border-bottom-left-radius: 30px;*/
-    /*border-bottom-right-radius: 30px;*/
-    border-radius: 25px;
+    border-spacing: 40px;
+    border-radius: 30px;
     color:#ac2925;
     
 }
@@ -164,6 +162,13 @@
     font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
     color: #ac2925;
     text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+
+#uno{
+    font-size: 30px;
+    display: inline-table;
+    background-color: aquamarine;
+    text-align: center;
 }
 
 

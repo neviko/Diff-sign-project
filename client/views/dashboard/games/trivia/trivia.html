@@ -95,7 +95,8 @@
 
 
                         <div class="col-md-9 col-md-offset-1">
-                            <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()">
+                             <div id="uno" class="col-md-9 col-md-offset-1" ng-show = "isLoading" >{{loading}} </div>
+                            <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()"  >
                             </video>
                         </div>
 

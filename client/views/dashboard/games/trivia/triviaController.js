@@ -17,7 +17,8 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     $scope.showInstructions = false;
     $scope.buttonText="הוראות";
     $scope.isPaused=false;
-        
+    $scope.isLoading = true;
+    $scope.loading = "הסרטון בטעינה, אנא המתן";    
     $scope.instructions = function() 
     {
         $scope.showInstructions = !$scope.showInstructions;
@@ -69,6 +70,7 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
         $scope.showAnswers = false;
         $scope.isPaused=false;
         $scope.onUserButtonClick = function (e){
+             $scope.isLoading = true;
             loadQuestion();
         };
         
@@ -153,24 +155,40 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
         //download the video from the server
     vid.onloadstart= function(){
         console.log("video is loading...");
-//        $scope.watingForLoading=false;  
-        $scope.messageAfterAnswer = "LOADING";
+       
+        
+//        $scope.watingForLoading=false; 
+ 
         
     };
     //finished to download.. now it can be play.
     vid.oncanplay = function(){
 //        $scope.watingForLoading=true;
         console.log("video is WORKING");
-        $scope.messageAfterAnswer = "";
-
+        
+        
         
         
     };
     
+    vid.oncanplaythrough = function()
+    {
+        $scope.$apply(function(){
+             $scope.isLoading = false;
+        });
+       
+    }
     
+//    vid.ondurationchange = function(){
+//        console.log("video is changed");
+//        $scope.messageAfterAnswer = "LOADING";
+//        
+//        
+//    }
     
     vid.onpause = function() {
-
+        
+       
 
         if( $scope.isPaused==true) // promise that the video timer will not set up again
             return;
@@ -193,6 +211,7 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
                 $scope.messageAfterAnswer = "לא הספקת לענות..חבל";
                 $scope.showAnswers = false;
                 $scope.showNextQuesBtn = true;
+               
                 
             }
          
@@ -212,3 +231,5 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
 
 };
 angular.module('diffSign').controller('triviaController',triviaController);
+
+

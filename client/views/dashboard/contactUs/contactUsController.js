@@ -14,6 +14,7 @@
             .then(function(res)
             {                
                 $scope.message = " ההודעה שלך נשלח בהצלחה"
+                $scope.form={};
             })
             .catch(function(error)
             {

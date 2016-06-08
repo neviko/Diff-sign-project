@@ -39,49 +39,7 @@
         </a>
         <div class=fr> <h2>צור קשר</h2> </div>
             <div class=container>
-
-
-        <div class=jumbotron> 
-<!--
-           <div class=container>
-                <h1>{{message}}</h1>
-                <br><br> 
-                <div class="container">
-                    
-                
-                    <form id = "formContact">
-                        <div id="fname">
-                            <label class="labels" id="labelContact" for="name">שם</label>
-                            <input id ="allInput" ng-model="form.name" type="text" placeholder="אנא רשום כאן את שמך">
-                        </div>
-                        
-                        <div id="fname">
-                            <label class="labels" id="labelContact" for="name">מייל</label>
-                            <input id ="allInput" ng-model="form.contactEmail" type="text" placeholder="אנא רשום כאן את שמך">
-                        </div>
-        
-
-                        <div>
-                            <label class="labels" id="labelContact" for="text"> הערות</label>
-                            <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם"  ng-model="form.message">
-                        </div>
-
-           
-                        <div>
-                            <input id="submit" ng-click="clicked()" type="submit" value="שלח">
-                        </div>
-                        <div>{{message}}</div>
-                    </form>
-
-        </div> 
-    </snap-content> 
-</div>
--->
-    </div>
-                
-        <!-- ICI -->
-
-                
+  
         <div id="page-wrap">
 		
 		  <div id="contact-area">
@@ -92,7 +50,7 @@
 	
 	
 				<label id="labelContact" for="Email">:אמייל </label>
-				<input type="text" name="Email" id="Email" ng-model="form.contactEmail" required placeholder = "email"/>
+				<input type="email" name="Email" id="Email" ng-model="form.contactEmail" required placeholder = "email"/>
 				
 				<label id="labelContact" for="Message">:הודעה</label><br />
 				<textarea name="Message" rows="20" cols="20" id="Message" ng-model="form.message" required placeholder =" ההודעה שלך"></textarea>

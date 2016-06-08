@@ -88,3 +88,7 @@ textarea
 {
     resize: none;
 }
+#ret_mess
+{
+    border: 2px solid;
+}

@@ -44,7 +44,7 @@
 		
 		  <div id="contact-area">
 			
-			<form ng-submit="clicked()">
+			<form ng-submit="clicked()" ng-show = "m_sending">
 				<label id="labelContact" for="Name">:שם</label>
 				<input type="text" name="Name" id="Name" ng-model="form.name" required placeholder="שם"/>
 	
@@ -59,7 +59,12 @@
               </form>
 			
 			<div style="clear: both;"></div>
-				 <div id="returnMessage">{{message}}</div>
+                <div id="ret_mess" ng-show ="!m_sending">
+				    <div id="returnMessage">{{message}}</div>
+                    <div id="returnMessage">{{message2}}</div>
+              </div>    
+                    
+              
 
 		</div>
 

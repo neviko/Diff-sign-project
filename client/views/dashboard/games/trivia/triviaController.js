@@ -119,7 +119,7 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
         else{
             $scope.lives--;
             turnRed();
-            $scope.messageAfterAnswer = "תשובה שגויה יה זלמה !...חבל";
+            $scope.messageAfterAnswer = "תשובה שגויה ";
 
             if($scope.lives == 0)
             {

@@ -9,8 +9,9 @@
 	height: 500px;
 }
 
-#contact-area {
-	width: 80%;
+#contact-area 
+{
+	width: 60%;
 	margin-top: 10%;
 }
 
@@ -80,7 +81,7 @@
 
 #but_sub
 {
-	width:50%;
+    min-width: 46px;
 }
 
 textarea 

@@ -5,7 +5,9 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
     var visited = 0;
     var visiting = 0;
     
-
+    //Mute
+    var video = document.getElementById("learn_video");
+    video.muted= true;
 
     
     //----------- Get the db table

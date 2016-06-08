@@ -31,6 +31,9 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
         }
     };
     
+    ///Mute
+    var video = document.getElementById("videoId");
+    video.muted= true;
     
 
 

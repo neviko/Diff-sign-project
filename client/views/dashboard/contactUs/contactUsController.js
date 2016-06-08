@@ -12,31 +12,15 @@
             
             $http.post('/contact-us', data=$scope.form)
             .then(function(res)
-            {
-                
-                //alert(res.data);
-                
+            {                
                 $scope.message = " ההודעה שלך נשלח בהצלחה"
             })
-            .catch(function(error){
-                
+            .catch(function(error)
+            {
+                $scope.message = " השליחה נכשלה "
+
             });
-            
-//            window.location.href = "mailto:itairusso0@gmail.com?subject=Shai-Project&body="+$scope.body;
-//            $scope.isClicked=true;
-//            if($scope.name == "")
-//            {
-//                $scope.message = " תודה רבה ";
-//            }
-//
-//            else
-//            {
-//
-//                $scope.message = " תודה רבה " + $scope.name;
-//            }
-//            
-                        
-            
+                      
         };
 
     };

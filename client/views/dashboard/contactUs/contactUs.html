@@ -51,13 +51,18 @@
                     <form id = "formContact">
                         <div id="fname">
                             <label class="labels" id="labelContact" for="name">שם</label>
-                            <input id ="allInput" ng-model="name" type="text" placeholder="אנא רשום כאן את שמך">
+                            <input id ="allInput" ng-model="form.name" type="text" placeholder="אנא רשום כאן את שמך">
+                        </div>
+                        
+                        <div id="fname">
+                            <label class="labels" id="labelContact" for="name">מייל</label>
+                            <input id ="allInput" ng-model="form.contactMail" type="text" placeholder="אנא רשום כאן את שמך">
                         </div>
         
 
                         <div>
                             <label class="labels" id="labelContact" for="text"> הערות</label>
-                            <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם"  ng-model="body">
+                            <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם"  ng-model="form.text">
                         </div>
 
            

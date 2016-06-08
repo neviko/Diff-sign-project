@@ -43,10 +43,12 @@
 	border: 2px solid #900;
 }
 
-#contact-area input.submit-button {
+#contact-area input.submit-button 
+{
 	width: 15%;
 	float:center;
 	margin-left : 30%;
+	
 }
 
 #labelContact
@@ -78,5 +80,10 @@
 
 #but_sub
 {
-	width:100%;
+	width:50%;
+}
+
+textarea 
+{
+    resize: none;
 }

@@ -87,15 +87,15 @@
 		  <div id="contact-area">
 			
 			<form >
-				<label for="Name">:שם</label>
-				<input type="text" name="Name" id="Name" ng-model="form.name"/>
+				<label id="labelContact" for="Name">:שם</label>
+				<input type="text" name="Name" id="Name" ng-model="form.name" required placeholder="שם"/>
 	
 	
-				<label for="Email">:אמייל </label>
-				<input type="text" name="Email" id="Email" ng-model="form.contactEmail" />
+				<label id="labelContact" for="Email">:אמייל </label>
+				<input type="text" name="Email" id="Email" ng-model="form.contactEmail" required placeholder = "email"/>
 				
-				<label for="Message">:הודעה</label><br />
-				<textarea name="Message" rows="20" cols="20" id="Message" ng-model="form.message"></textarea>
+				<label id="labelContact" for="Message">:הודעה</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message" ng-model="form.message" required placeholder =" ההודעה שלך"></textarea>
 
 				<input type="submit" name="submit"  class="submit-button"  ng-click="clicked()"  />
 			</form>

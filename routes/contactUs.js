@@ -22,7 +22,7 @@ router.post('/', function(req, res) {
  transporter.sendMail({
         from: "DiffSign Mailer",
         to: data.contactEmail,
-        subject: "Your Message is Recieved",
+        subject: "Your Message is Received",
         text: 'Thank you for contacting us, we will review your message soon'
     });
     res.end("OK");

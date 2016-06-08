@@ -1,16 +1,4 @@
-/*
-* {
-	margin: 0;
-	padding: 0;
-}
-*/
 
-/*
-p {
-	font-size: 1.3em;
-	margin-bottom: 15px;
-}
-*/
 #page-wrap {
 	width: 660px;
 	background: white;
@@ -25,7 +13,19 @@ p {
 	margin-top: 25px;
 }
 
-#contact-area input, #contact-area textarea {
+#contact-area textarea 
+{
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+
+#contact-area input
+ {
 	padding: 5px;
 	width: 471px;
 	font-family: Helvetica, sans-serif;
@@ -48,7 +48,8 @@ p {
 	margin-left : 30%;
 }
 
-label {
+#labelContact
+{
 	float: right;
 	text-align: right;
 	margin-right: 15px;
@@ -62,5 +63,16 @@ label {
 {
 	text-align:center;
 	font-size:4vmax;
+}
+#Message
+{
+	text-align: right;
+
+}
+
+#Name
+{
+		text-align: right;
+
 }
 

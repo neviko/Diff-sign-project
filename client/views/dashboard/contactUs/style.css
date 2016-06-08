@@ -1,22 +1,23 @@
 
 #page-wrap {
-	width: 660px;
+	width: 90%;
 	background: white;
-	margin: 20px auto;
+	margin: 10% auto;
+	margin-left :20%;
 	min-height: 500px;
 	height: auto !important;
 	height: 500px;
 }
 
 #contact-area {
-	width: 600px;
-	margin-top: 25px;
+	width: 80%;
+	margin-top: 10%;
 }
 
 #contact-area textarea 
 {
 	padding: 5px;
-	width: 471px;
+	width: 80%;
 	font-family: Helvetica, sans-serif;
 	font-size: 1.4em;
 	margin: 0px 0px 10px 0px;
@@ -27,7 +28,7 @@
 #contact-area input
  {
 	padding: 5px;
-	width: 471px;
+	width: 80%;
 	font-family: Helvetica, sans-serif;
 	font-size: 1.4em;
 	margin: 0px 0px 10px 0px;
@@ -72,7 +73,6 @@
 
 #Name
 {
-		text-align: right;
-
+	text-align: right;
 }
 

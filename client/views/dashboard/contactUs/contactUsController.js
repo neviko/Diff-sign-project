@@ -2,6 +2,7 @@
 
     var contactUsController= function($scope,$http)
     {
+        $scope.message = "";
         $scope.isClicked=false;
         $scope.form = {};
 
@@ -10,8 +11,12 @@
             
             
             $http.post('/contact-us', data=$scope.form)
-            .then(function(res){
-                alert(res.data);
+            .then(function(res)
+            {
+                
+                //alert(res.data);
+                
+                $scope.message = " ההודעה שלך נשלח בהצלחה"
             })
             .catch(function(error){
                 

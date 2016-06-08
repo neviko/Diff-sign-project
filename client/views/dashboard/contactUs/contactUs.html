@@ -42,9 +42,10 @@
 
 
         <div class=jumbotron> 
+<!--
            <div class=container>
-               <!-- <h1>{{message}}</h1>
-                <br><br> -->
+                <h1>{{message}}</h1>
+                <br><br> 
                 <div class="container">
                     
                 
@@ -75,7 +76,42 @@
         </div> 
     </snap-content> 
 </div>
+-->
     </div>
+                
+        <!-- ICI -->
+
+                
+        <div id="page-wrap">
+		
+		  <div id="contact-area">
+			
+			<form >
+				<label for="Name">:שם</label>
+				<input type="text" name="Name" id="Name" ng-model="form.name"/>
+	
+	
+				<label for="Email">:אמייל </label>
+				<input type="text" name="Email" id="Email" ng-model="form.contactEmail" />
+				
+				<label for="Message">:הודעה</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message" ng-model="form.message"></textarea>
+
+				<input type="submit" name="submit"  class="submit-button"  ng-click="clicked()"  />
+			</form>
+			
+			<div style="clear: both;"></div>
+					
+		</div>
+	                       <div id="returnMessage">{{message}}</div>
+
+	</div>
+        
+                
+                
+                
+                
+                
       </div>
 
     </snap-content> 

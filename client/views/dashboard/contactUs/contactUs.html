@@ -44,7 +44,7 @@
 		
 		  <div id="contact-area">
 			
-			<form >
+			<form ng-submit="clicked()">
 				<label id="labelContact" for="Name">:שם</label>
 				<input type="text" name="Name" id="Name" ng-model="form.name" required placeholder="שם"/>
 	
@@ -55,7 +55,7 @@
 				<label id="labelContact" for="Message">:הודעה</label><br />
 				<textarea name="Message" rows="20" cols="20" id="Message" ng-model="form.message" required placeholder =" ההודעה שלך"></textarea>
 
-                    <input ng-click="clicked()" type="submit" value="שלח" name="submit"  class="submit-button">			
+                    <input  type="submit" value="שלח" name="submit"  class="submit-button">			
               </form>
 			
 			<div style="clear: both;"></div>

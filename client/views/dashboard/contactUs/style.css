@@ -187,6 +187,7 @@ label, input, textarea
 	-o-transition: background-color 0.5s;
 	transition: background-color 0.5s;
     width: 20%;
+    min-width: 80px;
     margin-left: 13%;
     text-align: center;
 }

@@ -1,18 +1,29 @@
 
-#page-wrap {
+#page-wrap 
+{
 	width: 90%;
 	background: white;
-	margin: 10% auto;
+	margin-top: 10% auto;
 	margin-left :20%;
-	min-height: 500px;
-	height: auto !important;
-	height: 500px;
+    height: auto;
+    margin-bottom: 4%;
+    margin-top: 6%;
+    margin-bottom: -1%;
+
 }
 
+#title_contact
+{
+    width: auto;
+    margin-bottom: 4%;
+    font: 4vmax 'Great Vibes', Helvetica, sans-serif;
+    color: #ac2925;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+    text-align: center;
+}
 #contact-area 
 {
 	width: 60%;
-	margin-top: 10%;
 }
 
 #contact-area textarea 
@@ -23,6 +34,7 @@
 	font-size: 1.4em;
 	margin: 0px 0px 10px 0px;
 	border: 2px solid #ccc;
+
 }
 
 
@@ -63,11 +75,7 @@
 }
 
 
-#returnMessage
-{
-	text-align:center;
-	font-size:4vmax;
-}
+
 #Message
 {
 	text-align: right;
@@ -91,4 +99,11 @@ textarea
 #ret_mess
 {
     border: 2px solid;
+    text-align:center;
+	font-size:4vmax;
+}
+
+#contact-area
+{
+    padding-bottom: 4%;
 }

@@ -40,10 +40,12 @@
             </span>
         </a>
         <div class=fr> <h2>צור קשר</h2> </div>
-            <div class=container>
   
-        <div id="page-wrap">
-		
+         <div id="title_contact">צור קשר עם שי פרויקט</div>
+                          <hr id = "line_learn">
+
+    <div id="page-wrap">
+
 		  <div id="contact-area">
 			
 			<form ng-submit="clicked()" ng-show = "m_sending">
@@ -60,26 +62,12 @@
                     <input id="but_sub" type="submit" value="שלח" name="submit" class="submit-button" >			
               </form>
 			
-			<div style="clear: both;"></div>
-                <div id="ret_mess" ng-show ="!m_sending">
-				    <div id="returnMessage">{{message}}</div>
-                    <div id="returnMessage">{{message2}}</div>
-              </div>    
-                    
-              
-
+            <div id="ret_mess" ng-show ="!m_sending">
+                <span >{{message}}<br>{{message2}}</span>
+            </div>    
 		</div>
-
-	</div>
-        
-                
-                <!---->
-                
-                
-                
-      </div>
-
+    </div>       
+              <div id="the_footer">© 2016 Shai Project</div>
     </snap-content> 
-    <div id="the_footer">© 2016 Shai Project</div>
 </div>
 </div>    

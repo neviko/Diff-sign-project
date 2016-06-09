@@ -16,7 +16,7 @@ var mongoAddress = 'mongodb://' + db.user + ':' + db.password + mongoAddr.host +
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var contactUs = require('./routes/contactUs');
 var app = express();
 
 // view engine setup
@@ -35,7 +35,7 @@ app.use('/modules', express.static(__dirname + '/node_modules')); //Static Route
 //app.use('/', routes);
 app.use('/users', users);
 app.use('/get_table', require('./routes/db'));
-
+app.use('/contact-us', contactUs);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

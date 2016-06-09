@@ -1,11 +1,9 @@
-
-
 #menu_overview
 {
-    padding-bottom: 5%;
     width:90%;
 	margin:auto;
     text-align: center;
+    margin-top: -9%;
 }
 
 
@@ -25,9 +23,13 @@
     /*color: #ac2925;*/
     /*text-shadow: 4px 4px 3px rgba(255, 149, 144, 0.1);*/
 
-    font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+    font: 6vmax 'Great Vibes', Helvetica, sans-serif;
     color: #ac2925;
     text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+#learn_image_button
+{
+    padding-top: 6%;
 }
 
 #the_footer

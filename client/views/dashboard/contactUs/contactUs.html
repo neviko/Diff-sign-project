@@ -39,38 +39,42 @@
         </a>
         <div class=fr> <h2>צור קשר</h2> </div>
             <div class=container>
+  
+        <div id="page-wrap">
+		
+		  <div id="contact-area">
+			
+			<form ng-submit="clicked()" ng-show = "m_sending">
+				<label id="labelContact" for="Name">:שם</label>
+				<input type="text" name="Name" id="Name" ng-model="form.name" required placeholder="שם"/>
+	
+	
+				<label id="labelContact" for="Email">:אמייל </label>
+				<input type="email" name="Email" id="Email" ng-model="form.contactEmail" required placeholder = "email"/>
+				
+				<label id="labelContact" for="Message">:הודעה</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message" ng-model="form.message" required placeholder =" ההודעה שלך"></textarea>
 
-
-        <div class=jumbotron> 
-           <div class=container>
-               <!-- <h1>{{message}}</h1>
-                <br><br> -->
-                <div class="container">
+                    <input id="but_sub" type="submit" value="שלח" name="submit" class="submit-button" >			
+              </form>
+			
+			<div style="clear: both;"></div>
+                <div id="ret_mess" ng-show ="!m_sending">
+				    <div id="returnMessage">{{message}}</div>
+                    <div id="returnMessage">{{message2}}</div>
+              </div>    
                     
-                
-                    <form id = "formContact">
-                        <div id="fname">
-                            <label class="labels" id="labelContact" for="name">שם</label>
-                            <input id ="allInput" ng-model="name" type="text" placeholder="אנא רשום כאן את שמך">
-                        </div>
+              
+
+		</div>
+
+	</div>
         
-
-                        <div>
-                            <label class="labels" id="labelContact" for="text"> הערות</label>
-                            <input id="text" type="text" placeholder="אנא רשמו כאן את הערתכם"  ng-model="body">
-                        </div>
-
-           
-                        <div>
-                            <input id="submit" ng-click="clicked()" type="submit" value="שלח">
-                        </div>
-                        <div>{{message}}</div>
-                    </form>
-
-        </div> 
-    </snap-content> 
-</div>
-    </div>
+                
+                <!---->
+                
+                
+                
       </div>
 
     </snap-content> 

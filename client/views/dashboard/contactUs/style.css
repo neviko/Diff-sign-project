@@ -1,0 +1,94 @@
+
+#page-wrap {
+	width: 90%;
+	background: white;
+	margin: 10% auto;
+	margin-left :20%;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+}
+
+#contact-area 
+{
+	width: 60%;
+	margin-top: 10%;
+}
+
+#contact-area textarea 
+{
+	padding: 5px;
+	width: 80%;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+
+#contact-area input
+ {
+	padding: 5px;
+	width: 80%;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button 
+{
+	width: 15%;
+	float:center;
+	margin-left : 30%;
+	
+}
+
+#labelContact
+{
+	float: right;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
+
+
+#returnMessage
+{
+	text-align:center;
+	font-size:4vmax;
+}
+#Message
+{
+	text-align: right;
+
+}
+
+#Name
+{
+	text-align: right;
+}
+
+#but_sub
+{
+    min-width: 46px;
+}
+
+textarea 
+{
+    resize: none;
+}
+#ret_mess
+{
+    border: 2px solid;
+}

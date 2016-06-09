@@ -1,33 +1,37 @@
 (function(app) {
 
-    var contactUsController= function($scope){
-         $scope.isClicked=false;
-        $scope.body="";
-        $scope.name = "";
-        $scope.email="";
+    var contactUsController= function($scope,$http)
+    {
+        $scope.message = "";
+        $scope.message2 = "";
 
-        $scope.clicked = function () {
+        $scope.isClicked=false;
+        $scope.form = {};
+        $scope.m_sending=true;
+
+        $scope.clicked = function ()
+        {
             
-            window.location.href = "mailto:itairusso0@gmail.com?subject=Shai-Project&body="+$scope.body;
-            $scope.isClicked=true;
-            if($scope.name == "")
+            
+            $http.post('/contact-us', data=$scope.form)
+            .then(function(res)
+            {                
+                $scope.message = " ההודעה שלך נשלח בהצלחה";
+                $scope.message2 = "תודה";
+                $scope.form={};
+                $scope.m_sending=false;
+            })
+            .catch(function(error)
             {
-                $scope.message = " תודה רבה ";
-            }
+                $scope.message = " השליחה נכשלה "
 
-            else
-            {
-
-                $scope.message = " תודה רבה " + $scope.name;
-            }
-            
-                        
-            
+            });
+                      
         };
 
     };
 
-    app.controller("contactUsController",contactUsController);
+    app.controller("contactUsController",["$scope","$http",contactUsController]);
 
 
 

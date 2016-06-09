@@ -3,7 +3,7 @@
     <snap-drawer>
         <div class=snap-menu>
             <div class="sidebar-header text-center">
-                <img src="./images/logo/Web-logo2.jpg">
+                <img src="./images/logo/shai-logo.png" width="70%" height="70%">
             </div>
             <ul class=snap-ul>
                 <li ng-class="{active: $state.includes('overview')}">
@@ -95,7 +95,8 @@
 
 
                         <div class="col-md-9 col-md-offset-1">
-                            <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()">
+                             <div id="uno" class="col-md-9 col-md-offset-1" ng-show = "isLoading" >{{loading}} </div>
+                            <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()"  >
                             </video>
                         </div>
 
@@ -184,5 +185,7 @@
             </div>
             <!-- END GAME PAGE -->
         </div>
+            <div id="the_footer">© 2016 Shai Project</div>
     </snap-content>
+
 </div>

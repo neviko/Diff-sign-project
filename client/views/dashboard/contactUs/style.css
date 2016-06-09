@@ -8,7 +8,6 @@
     height: auto;
     margin-bottom: 4%;
     margin-top: 6%;
-    margin-bottom: -1%;
 
 }
 
@@ -48,8 +47,9 @@
 	border: 2px solid #ccc;
 }
 
-#contact-area textarea {
-	height: 90px;
+#contact-area textarea 
+{
+	height: 13vmax;
 }
 
 #contact-area textarea:focus, #contact-area input:focus {
@@ -79,7 +79,6 @@
 #Message
 {
 	text-align: right;
-
 }
 
 #Name
@@ -101,9 +100,4 @@ textarea
     border: 2px solid;
     text-align:center;
 	font-size:4vmax;
-}
-
-#contact-area
-{
-    padding-bottom: 4%;
 }

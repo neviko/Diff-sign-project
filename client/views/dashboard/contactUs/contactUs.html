@@ -140,10 +140,10 @@
 
 <div class="formgroup" id="message-form">
     <label id="thelabel" for="message">הודעה</label>
-    <textarea class ="thetextarea" id="message" name="message"></textarea>
+    <textarea class ="thetextarea" id="message" name="message" ng-model="form.message"  placeholder =" ההודעה שלך"></textarea>
 </div>
 
-	<input class ="theinput" type="submit" value="שלח" ng-model="form.message"  placeholder =" ההודעה שלך" />
+	<input class ="theinput" type="submit" value="שלח"  />
     </div> 
     <div id="ret_mess" ng-show ="!m_sending">
         <div>{{message}}</div>

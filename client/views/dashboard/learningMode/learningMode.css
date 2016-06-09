@@ -1,89 +1,13 @@
 #menu_learning
 {
-    padding-top: 5%;
-    padding-bottom: 5%;
-
-    width:80%;
+    width:90%;
 	margin:auto;
-}
-
-.link_learning
-{
-    display: block;
-
-    height:  100%;
-    width: 100%;
-}
-
-#Learning_Letters
-{
-    height:200px;
-    border: black solid 1px;
-    
-    background-color: white;
-    background-image:url(images/4.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    text-align: center;
 
 }
 
-#Learning_General
-{
-    height:200px;
-    border: black solid 1px;
-    
-    background-color: white;
-    background-image:url(images/7.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;    
-
-}
-
-#Learning_House
-{
-    height:200px;
-    border: black solid 1px;
-    
-    background-color: white;
-    background-image:url(images/5.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-}
-
-#Learning_playground
-{
-    height:200px;
-    border: black solid 1px;
-
-    background-color: white;
-    background-image:url(images/8.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;     
-
-}
-
-#menu_Carousel
-{
-    margin-top: 5%;
-}
-
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img 
+#imLearn
 {
     width: 50%;
     height: 50%;
-    margin: auto;
-}
-
-
-#myCarouselColor
-{
-    color:black;
-    text-align: center;
 }

@@ -129,21 +129,21 @@
 
 <div  ng-show = "m_sending">    
 <div class="formgroup" id="name-form">
-    <label for="name">שם</label>
-    <input type="text" id="name" name="name" ng-model="form.name"  placeholder="שם" />
+    <label id="thelabel" for="name">שם</label>
+    <input class ="theinput" type="text" id="name" name="name" ng-model="form.name"  placeholder="שם" />
 </div>
 
 <div class="formgroup" id="email-form">
-    <label for="email">אמייל</label>
-    <input type="email" id="email" name="email" ng-model="form.contactEmail"  placeholder = "email" />
+    <label id="thelabel" for="email">אמייל</label>
+    <input class ="theinput" type="email" id="email" name="email" ng-model="form.contactEmail"  placeholder = "email" />
 </div>
 
 <div class="formgroup" id="message-form">
-    <label for="message">הודעה</label>
-    <textarea id="message" name="message"></textarea>
+    <label id="thelabel" for="message">הודעה</label>
+    <textarea class ="thetextarea" id="message" name="message"></textarea>
 </div>
 
-	<input type="submit" value="שלח" ng-model="form.message"  placeholder =" ההודעה שלך" />
+	<input class ="theinput" type="submit" value="שלח" ng-model="form.message"  placeholder =" ההודעה שלך" />
     </div> 
     <div id="ret_mess" ng-show ="!m_sending">
         <div>{{message}}</div>

@@ -112,7 +112,7 @@ label, input, textarea
 {
 	display: block;	
 }
-input, textarea
+.theinput
 {
 	width: 70%;	
 	border: none;
@@ -133,19 +133,47 @@ input, textarea
     text-align: right;
 	
 }
-input:focus, textarea:focus
+
+.thetextarea
+{
+    width: 70%;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+    text-align: right;
+}
+
+
+.theinput:focus
 {
 	border: solid 3px #77bde0;	
 }
 
-textarea
+.thetextarea:focus
+{
+   	border: solid 3px #77bde0;	 
+}
+
+.thetextarea
 {
 	height: 70%;	
 	resize: none; 
 	overflow: auto;
     text-align: right;
 }
-input[type="submit"]
+.theinput[type="submit"]
 {
 	background-color: #F90;
 	color: white;
@@ -162,12 +190,12 @@ input[type="submit"]
     margin-left: 13%;
     text-align: center;
 }
-input[type="submit"]:hover
+.theinput[type="submit"]:hover
 {
 	background-color: #e58f0e;
 	
 }
-label
+#thelabel
 {
 	font-size: 1.5em;
 	margin-top: 20px;

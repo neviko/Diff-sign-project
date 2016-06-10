@@ -7,9 +7,9 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
     $scope.timer = 20;
     $scope.lives = 5;
     $scope.isRunning = true;
-    $scope.showAnswers = true; ////////////////////////change to false
+    $scope.showAnswers = false;
     $scope.isGameOver = false;
-    $scope.showNextQuesBtn = true; ////////////////////////change to false
+    $scope.showNextQuesBtn = false;
     $scope.myStyle; // styled user message
     $scope.messageAfterAnswer = "";
     $scope.returnInterval;

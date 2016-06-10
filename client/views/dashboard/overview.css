@@ -1,9 +1,21 @@
+#backgroundAll
+{
+    background-color: #831919;
+}
+
+
 #menu_overview
 {
     width:90%;
 	margin:auto;
     text-align: center;
-    margin-top: -9%;
+}
+
+#gotoshai
+{
+    float:right;
+    width: 15%;
+    height: 15%;
 }
 
 
@@ -18,7 +30,6 @@
 .title
 {
     text-align: center;
-    margin-bottom: 10%;
     /*font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;*/
     /*color: #ac2925;*/
     /*text-shadow: 4px 4px 3px rgba(255, 149, 144, 0.1);*/
@@ -34,11 +45,12 @@
 
 #the_footer
 {
+    margin-top: 1%;
     color:white;
     background-color: #831919;
     text-align: center;
     font-size: 2vmax;
     width: 100%;
-    height: 10%;
+    height: 8%;
     
 }

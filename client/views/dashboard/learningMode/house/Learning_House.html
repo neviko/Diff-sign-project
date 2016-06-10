@@ -47,11 +47,12 @@
                 <div id="my-learn_page">
                     <h1 id="title_learn">{{message}}</h1>
                     <hr id="line_learn">
+                    
                     <div class="row" id="menu_learn">
+                        <div ng-show="isLoading" id="loading_learn_video" >{{loadingMessagee}}</div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6" ng-show="isLoading" id="loading"><h1>{{loadingMessagee}}</h1></div>
                         <div class="col-lg-6 col-md-6 col-sm-6" id="player">
                             <video id="learn_video" ng-src='{{goTrust(clip.clip_url)}}' controls autoplay='true' controls='true'>
                             </video>
@@ -62,6 +63,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div id="img_learn">
                         <img src="../../../../images/learningMode/green-button_goBack.jpg" width="70%" height="70%" <a ui-sref=learningMode></a>
                     </div>

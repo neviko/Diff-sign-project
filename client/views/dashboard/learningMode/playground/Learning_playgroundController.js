@@ -7,18 +7,23 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
          $scope.isLoading = true;
     $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן.";
     
-    //Mute
+    ///Mute
     var video = document.getElementById("learn_video");
     video.muted= true;
     
-         video.oncanplaythrough = function () {
-        $scope.$apply(function () {
+    //play flag video
+    video.oncanplaythrough = function ()
+     {
+        $scope.$apply(function () 
+        {
             $scope.isLoading = false;
         });
     };
     
-    video.onloadstart = function(){
-          $scope.$apply(function () {
+    video.onloadstart = function()
+    {
+        $scope.$apply(function () 
+        {
             $scope.isLoading = true;
         });
     }

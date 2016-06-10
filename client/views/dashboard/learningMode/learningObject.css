@@ -49,12 +49,12 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
     font-family: fantasy;
     font-size: 2vmax;
     color:white;
-    height: 23vmax;
+    height: 25vmax;
     
     text-align: right;
     
     overflow-y:scroll ;
-    width: 30%;
+    width: 24%;
     
     object-position: center;
     
@@ -89,4 +89,8 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
     padding-bottom: 2%;
 }
 
+#loading_learn_video
+{
+    text-align: center;
+}
 

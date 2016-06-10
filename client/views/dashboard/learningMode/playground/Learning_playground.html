@@ -1,75 +1,77 @@
-<div> 
+<div>
     <snap-drawer>
         <div class=snap-menu>
             <div class="sidebar-header text-center">
                 <img src="./images/logo/shai-logo.png" width="70%" height="70%">
-            </div> 
-            <ul class=snap-ul> 
+            </div>
+            <ul class=snap-ul>
                 <li ng-class="{active: $state.includes('overview')}">
                     <a ui-sref=overview>דף הבית</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('learningMode')}">
                     <a ui-sref=learningMode>לימוד שפת הסימנים</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('game')}">
-                     <a ui-sref=game>משחק</a>
+                    <a ui-sref=game>משחק</a>
                 </li>
-                
-<!--
+
+                <!--
                 <li ng-class="{active: $state.includes('login')}">
                     <a ui-sref=login>התנתק</a>
                 </li>
 -->
-                
+
                 <li ng-class="{active: $state.includes('contactUs')}">
                     <a ui-sref=contactUs>צור קשר</a>
                 </li>
             </ul>
         </div>
-    </snap-drawer> 
+    </snap-drawer>
     <snap-dragger>
     </snap-dragger>
     <snap-content snap-opt-tap-to-close=false>
-      <div >
-        <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
-            <span class=menutoggle> 
+        <div>
+            <a snap-toggle=left ng-click="menuOpen = !menuOpen">
+                <span class=menutoggle> 
                 <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
             </span>
-        </a>
-        <div class=fr> <h2>לימודים</h2> </div>
+            </a>
+            <div class=fr>
+                <h2>לימודים</h2> </div>
 
-                <div class="container">
+            <div class="container">
 
-        <div id = "my-learn_page">    
-                <h1 id="title_learn">{{message}}</h1>
-                <hr id = "line_learn">
-                <div class = "row" id="menu_learn">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-    
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6" ng-show="isLoading" id="loading"><h1>{{loadingMessagee}}</h1></div>
-                    <div class="col-lg-6 col-md-6 col-sm-6" id="player" >
-                            <video id ="learn_video" ng-src='{{goTrust(clip.clip_url)}}' controls 
-            autoplay='true' controls='true'>
-                            </video>                
-                    </div>
+                <div id="my-learn_page">
+                    <h1 id="title_learn">{{message}}</h1>
+                    <hr id="line_learn">
+                    
+                    <div class="row" id="menu_learn">
+                        <div ng-show="isLoading" id="loading_learn_video" >{{loadingMessagee}}</div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6" id="player">
+                            <video id="learn_video" ng-src='{{goTrust(clip.clip_url)}}' controls autoplay='true' controls='true'>
+                            </video>
+                        </div>
                         <div class="col-lg-4 col-md-4 col-sm-4" id="theWords">
-                        <div ng-repeat="clip in clips" on-finish-render="callMyCustomMethod()" >
-                            <a id = "{{clip._id}}" ng-click='goShow(clip)' >{{clip.name_heb}}</a>
-                        </div>    
+                            <div ng-repeat="clip in clips" on-finish-render="callMyCustomMethod()">
+                                <a id="{{clip._id}}" ng-click='goShow(clip)'>{{clip.name_heb}}</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="img_learn">
+                        <img src="../../../../images/learningMode/green-button_goBack.jpg" width="70%" height="70%" <a ui-sref=learningMode></a>
                     </div>
                 </div>
-            <div id ="img_learn">
-                <img src="../../../../images/learningMode/green-button_goBack.jpg" width="70%" height="70%" <a ui-sref=learningMode></a>
-            </div> 
-        </div> 
-                </div>
-    <div id="the_footer">© 2016 Shai Project</div>
+            </div>
+            <div id="the_footer">© 2016 Shai Project</div>
 
-    </snap-content> 
+    </snap-content>
+    </div>
+
 </div>
-
-</div>    

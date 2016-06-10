@@ -8,20 +8,24 @@ function Learning_HouseController($scope, $http, $interval, videoService, dbServ
 
     ///Mute
     var video = document.getElementById("learn_video");
-    video.oncanplaythrough = function () {
-        $scope.$apply(function () {
+    video.muted= true;
+    
+    //play flag video
+    video.oncanplaythrough = function ()
+     {
+        $scope.$apply(function () 
+        {
             $scope.isLoading = false;
         });
     };
     
-    video.onloadstart = function(){
-          $scope.$apply(function () {
+    video.onloadstart = function()
+    {
+        $scope.$apply(function () 
+        {
             $scope.isLoading = true;
         });
     }
-    video.muted = true;
-
-
 
     
 

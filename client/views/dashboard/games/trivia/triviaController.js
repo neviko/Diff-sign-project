@@ -7,9 +7,9 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
     $scope.timer = 20;
     $scope.lives = 5;
     $scope.isRunning = true;
-    $scope.showAnswers = false;
+    $scope.showAnswers = true; ////////////////////////change to false
     $scope.isGameOver = false;
-    $scope.showNextQuesBtn = false;
+    $scope.showNextQuesBtn = true; ////////////////////////change to false
     $scope.myStyle; // styled user message
     $scope.messageAfterAnswer = "";
     $scope.returnInterval;
@@ -70,10 +70,10 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
 //                
 //        }
         $scope.messageAfterAnswer = "";
-        $scope.showAnswers = true;
+        //$scope.showAnswers = true;
         $scope.showNextQuesBtn = false;
         $scope.timer = 20;
-        $scope.showAnswers = false;
+        //$scope.showAnswers = false;
         $scope.isPaused=false;
         $scope.onUserButtonClick = function (e){
              $scope.isLoading = true;
@@ -198,11 +198,6 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
 
         if( $scope.isPaused==true) // promise that the video timer will not set up again
             return;
-
-
-
-
-
 
         $scope.isPaused=true;
         $scope.showAnswers = true;

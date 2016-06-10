@@ -159,16 +159,21 @@
     /*color: #ac2925;*/
     /*text-shadow: 4px 4px 3px rgba(255, 149, 144, 0.1);*/
 
-    font: 8vmax 'Great Vibes', Helvetica, sans-serif;
+    font: 17vmax 'Great Vibes', Helvetica, sans-serif;
     color: #ac2925;
+
     text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }
 
 #uno{
-    font-size: 30px;
+    font-size: 220%;
     display: inline-table;
-    background-color: aquamarine;
+    //background-color: #ff9590;
     text-align: center;
+    color:#ac2925 ;
+    font-family: monospace;
+    font-style: italic;
+    font-weight: bolder;
 }
 
 

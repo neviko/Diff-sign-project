@@ -1,4 +1,4 @@
-function triviaController($scope,$interval,$timeout,triviaService,videoService,dbService)
+function triviaController($scope,$interval,triviaService,videoService,dbService,$location, $anchorScroll)
 {
     var timeOut;
 
@@ -18,7 +18,10 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     $scope.buttonText="הוראות";
     $scope.isPaused=false;
     $scope.isLoading = true;
-    $scope.loading = "הסרטון בטעינה, אנא המתן";    
+    $scope.loading = "הסרטון בטעינה, אנא המתן";
+    $scope.gotoBottom="";
+
+
     $scope.instructions = function() 
     {
         $scope.showInstructions = !$scope.showInstructions;
@@ -191,10 +194,15 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     
     vid.onpause = function() {
         
-       
+       $scope.gotoBottom();
 
         if( $scope.isPaused==true) // promise that the video timer will not set up again
             return;
+
+
+
+
+
 
         $scope.isPaused=true;
         $scope.showAnswers = true;
@@ -230,6 +238,17 @@ function triviaController($scope,$interval,$timeout,triviaService,videoService,d
     function turnRed() {
         $scope.myStyle = {color: "red", fontSize:"70px"};
     }
+
+
+    $scope.gotoBottom = function() {
+        // set the location.hash to the id of
+        // the element you wish to scroll to.
+        $location.hash('answersArea');
+
+        // call $anchorScroll()
+        $anchorScroll();
+    };
+
 
 
 };

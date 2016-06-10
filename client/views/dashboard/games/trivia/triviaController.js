@@ -4,14 +4,14 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
 
 
     $scope.score = 0;
-    $scope.timer = 20;
-    $scope.lives = 5;
+    $scope.timer = 10;
+    $scope.lives = 1;
     $scope.isRunning = true;
     $scope.showAnswers = false;
     $scope.isGameOver = false;
     $scope.showNextQuesBtn = false;
     $scope.myStyle; // styled user message
-    $scope.messageAfterAnswer = "";
+    $scope.messageAfterAnswer = "bkbjb ddc";
     $scope.returnInterval;
     $scope.currClip = undefined;
     $scope.showInstructions = false;
@@ -125,7 +125,7 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
         else{
             $scope.lives--;
             turnRed();
-            $scope.messageAfterAnswer = "תשובה שגויה ";
+            $scope.messageAfterAnswer = " תשובה שגויה.. ";
 
             if($scope.lives == 0)
             {

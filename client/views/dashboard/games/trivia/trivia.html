@@ -116,7 +116,7 @@
 
                     <!---------------------------the message to client area------------------------->
                     <div class="row text-center">
-                        <div class="col-md-10 col-md-offset-4 col-xs-9 col-xs-offset-3" id="userNotes">
+                        <div class="col-md-10 col-md-offset-2 col-xs-12" id="userNotes">
                             <div ng-style="myStyle">{{messageAfterAnswer}}</div>
                         </div>
                     </div>
@@ -178,9 +178,10 @@
 
                     <div class="gameOver"> GAME OVER </div>
                     <div class="gameOver"> {{score}} : הנקודות שצברת </div>
-                    <button class="nextQuesBtn" ng-click="reGame()">התחל משחק מחדש</button>
 
-
+                    <div class="row text-center">
+                         <button class="nextQuesBtn" ng-click="reGame()">התחל משחק מחדש</button>
+                    </div>
                 </div>
                 <!-- END GAME PAGE -->
             </div>

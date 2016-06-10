@@ -4,10 +4,25 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
     $scope.clips =  [];
     var visited = 0;
     var visiting = 0;
+         $scope.isLoading = true;
+    $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן.";
     
     //Mute
     var video = document.getElementById("learn_video");
     video.muted= true;
+    
+         video.oncanplaythrough = function () {
+        $scope.$apply(function () {
+            $scope.isLoading = false;
+        });
+    };
+    
+    video.onloadstart = function(){
+          $scope.$apply(function () {
+            $scope.isLoading = true;
+        });
+    }
+    
 
     
     //----------- Get the db table

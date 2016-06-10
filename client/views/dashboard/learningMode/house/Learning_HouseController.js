@@ -1,56 +1,69 @@
-function Learning_HouseController($scope,$http,$interval,videoService,dbService) 
-{
-    $scope.message='בית';
-    $scope.clips =  [];
+function Learning_HouseController($scope, $http, $interval, videoService, dbService) {
+    $scope.message = 'בית';
+    $scope.clips = [];
+    $scope.isLoading = true;
+    $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן.";
     var visited = 0;
     var visiting = 0;
-    
+
     ///Mute
     var video = document.getElementById("learn_video");
-    video.muted= true;
+    video.oncanplaythrough = function () {
+        $scope.$apply(function () {
+            $scope.isLoading = false;
+        });
+    };
+    
+    video.onloadstart = function(){
+          $scope.$apply(function () {
+            $scope.isLoading = true;
+        });
+    }
+    video.muted = true;
+
+
 
     
+
+
     //----------- Get the db table
     var category = 'house';
     var table_list = dbService.get_table(category);
-    var wait_db = $interval(function() {
+    var wait_db = $interval(function () {
         // When server returned the table
         if (table_list.$$state.status > 0) {
             $scope.clips = table_list.$$state.value.data;
             $interval.cancel(wait_db);
         }
     }, 50);
-    
+
 
     //this is the code to capture the emited event
-    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) 
-    {
+    $scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
         $scope.goShow($scope.clips[0]);
     });
-    
-    
+
+
     // return a declaration that the url is trust
-    $scope.goTrust = function(src)
-    {
+    $scope.goTrust = function (src) {
         return videoService.trustSrc(src);
     };
-        
-    //function to insert into the scope the clip to show        
-    $scope.goShow = function(clip) 
-    {    
 
-        $scope.clip = clip;       
+    //function to insert into the scope the clip to show        
+    $scope.goShow = function (clip) {
+
+        $scope.clip = clip;
         visiting = document.getElementById(clip._id);
-        console.log('clip._id: '+clip._id)
-        
+        console.log('clip._id: ' + clip._id)
+
         $(visiting).removeClass("colorVisited");
         $(visiting).addClass("colorVisiting");
-        if(visiting!=visited)
+        if (visiting != visited)
             $(visited).addClass("colorVisited");
-        visited = visiting; 
+        visited = visiting;
     };
-    
-    
-        
+
+
+
 };
-angular.module('diffSign').controller('Learning_HouseController',Learning_HouseController);
+angular.module('diffSign').controller('Learning_HouseController', Learning_HouseController);

@@ -50,6 +50,7 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
     
                     </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6" ng-show="isLoading" id="loading"><h1>{{loadingMessagee}}</h1></div>
                     <div class="col-lg-6 col-md-6 col-sm-6" id="player" >
                             <video id ="learn_video" ng-src='{{goTrust(clip.clip_url)}}' controls 
             autoplay='true' controls='true'>

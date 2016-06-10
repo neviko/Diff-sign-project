@@ -11,3 +11,16 @@
     width: 80%;
     height: 80%;
 }
+
+#loading {
+    
+        font-size: 220%;
+    display: inline-table;
+/*    background-color: #ff9590;*/
+    text-align: center;
+    color:#ac2925 ;
+    font-family: monospace;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: left;
+}

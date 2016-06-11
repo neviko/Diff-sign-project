@@ -11,7 +11,7 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
     $scope.isGameOver = false;
     $scope.showNextQuesBtn = false;
     $scope.myStyle; // styled user message
-    $scope.messageAfterAnswer = "bkbjb ddc";
+    $scope.messageAfterAnswer = "";
     $scope.returnInterval;
     $scope.currClip = undefined;
     $scope.showInstructions = false;
@@ -227,11 +227,11 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
 
 
     function turnGreen() {
-        $scope.myStyle = {color: "green", fontSize:"70px"};
+        $scope.myStyle = {color: "green", fontSize:"200%"};
     }
 
     function turnRed() {
-        $scope.myStyle = {color: "red", fontSize:"70px"};
+        $scope.myStyle = {color: "red", fontSize:"200%"};
     }
 
 

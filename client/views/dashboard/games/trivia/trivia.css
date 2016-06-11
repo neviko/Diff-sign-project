@@ -9,15 +9,9 @@
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 1%;
-    font-size: 20px;
-/*
-    border: dotted;
-    font-family: "Century Gothic";
-   border-color: red green blue yellow;
-    text-align: right;
-    
-     border-radius: 25px;
-*/
+    font-size: 140%;
+
+
 }
 
 
@@ -93,7 +87,7 @@
 .instuctionStyle{
    
     text-align: right;
-    font-size: 10px;
+    font-size: 80%;
     font-family: fantasy;
     width: 90%;
     border-style:groove;
@@ -103,7 +97,7 @@
     color: black;
     /*border-bottom-left-radius: 30px;*/
     /*border-bottom-right-radius: 30px;*/
-    border-radius: 20px;
+    border-radius: 15%;
     
     
 }
@@ -126,7 +120,7 @@
     border-color: black #ac2925 black #ac2925;
     border-width:medium;
     border-spacing: 40px;
-    border-radius: 30px;
+    border-radius: 15%;
     color:#ac2925;
     
 }
@@ -167,7 +161,7 @@
 }
 
 #uno{
-    font-size: 220%;
+    font-size: 200%;
     display: inline-table;
     //background-color: #ff9590;
     text-align: center;

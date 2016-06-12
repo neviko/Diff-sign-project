@@ -54,15 +54,20 @@
     border-color:  black black black black;
 }
 
-.nextQuesBtn{
+.nextQuesBtn
+{
     display: inline-block;
     margin: 5% 34% 0 0;
     padding: 2% 2%;
-    font-size: 250%;
+    font-size: 2vmax;
     color: #ac2925;
     font-family: "Bitter",serif;
     border-radius:10%;
     border-color: black ;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
 
 }
 
@@ -70,7 +75,7 @@
     font-family: "Century Gothic";
     /*background-color: lightgoldenrodyellow;*/
     text-align: center;
-    font-size: 1000%;
+    font-size: 3vmax;
     color: lightsalmon;
     padding-bottom: 10%;
 }

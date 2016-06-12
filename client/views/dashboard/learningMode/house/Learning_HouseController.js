@@ -2,7 +2,7 @@ function Learning_HouseController($scope, $http, $interval, videoService, dbServ
     $scope.message = 'בית';
     $scope.clips = [];
     $scope.isLoading = true;
-    $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן.";
+    $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן";
     var visited = 0;
     var visiting = 0;
 

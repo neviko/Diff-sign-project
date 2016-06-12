@@ -4,8 +4,8 @@ function Learning_playgroundController($scope,$http,$interval,videoService,dbSer
     $scope.clips =  [];
     var visited = 0;
     var visiting = 0;
-         $scope.isLoading = true;
-    $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן.";
+    $scope.isLoading = true;
+    $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן";
     
     ///Mute
     var video = document.getElementById("learn_video");

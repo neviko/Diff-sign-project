@@ -5,7 +5,7 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
 
     $scope.score = 0;
     $scope.timer = 10;
-    $scope.lives = 1;
+    $scope.lives = 5;
     $scope.isRunning = true;
     $scope.showAnswers = false;
     $scope.isGameOver = false;

@@ -5,7 +5,7 @@ var app = require('../app');
 
 // get table by category
 // if there isn't any category, return all the db table
-// -> json
+// -> list of json file
 router.get('/',function(req, res){
     var db = app.db;
     var category = req.query.category;

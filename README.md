@@ -1,8 +1,8 @@
-# DiffSign
+# Just-Sign
 
-DiffSign (Different Sign) - is a project that created to develop a web app that teaches children sign-language through a game, which is more easy and fun way to learn.
+Just-Sign is a project that created to develop a web app that teaches children sign-language through a game, which is more easy and fun way to learn.
 
-The project developing the wab app for the "SHAY-PROJECT" organization that helps deaf and mute kids.
+The project developing the web app for the "SHAY-PROJECT" organization that helps deaf and mute kids.
 
 ![project logo (this one is taken from basecamp)](https://github.com/neviko/Diff-sign-project/blob/master/client/images/logo/shai-logo.jpg)
 
@@ -31,9 +31,9 @@ Please visit our wiki for furthur project info:
 
 ### Iteration Pages
 - [Iteration 0 - ZFR](https://github.com/neviko/Diff-sign-project/wiki/Itr0_Zero-Feature-Release-(ZFR))
-- [Iteration 1 - MVP]()
-- [Iteration 2 - Feature X]()
-- [Iteration 3 - Feature Y]()
+- [Iteration 1 - MVP](https://github.com/neviko/Diff-sign-project/wiki/Iteration-1---MVP)
+- [Iteration 2 - Feature X](https://github.com/neviko/Diff-sign-project/wiki/iterations-2---ASM)
+- [Iteration 3 - Feature Y](https://github.com/neviko/Diff-sign-project/wiki/iterations-3---Integration)
 - [Iteration 4 - Feature Z]()
 
 

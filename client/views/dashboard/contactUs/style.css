@@ -188,7 +188,7 @@ label, input, textarea
 	transition: background-color 0.5s;
     width: 20%;
     min-width: 80px;
-    margin-left: 13%;
+    margin-left: 15%;
     text-align: center;
 }
 .theinput[type="submit"]:hover

@@ -1,71 +1,72 @@
-<div> 
+<div>
     <snap-drawer>
         <div class=snap-menu>
             <div class="sidebar-header text-center">
                 <img src="./images/logo/shai-logo.png" width="70%" height="70%">
-            </div> 
-            <ul class=snap-ul> 
+            </div>
+            <ul class=snap-ul>
                 <li ng-class="{active: $state.includes('overview')}">
                     <a ui-sref=overview>דף הבית</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('learningMode')}">
                     <a ui-sref=learningMode>לימוד שפת הסימנים</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('game')}">
-                     <a ui-sref=game>משחק</a>
+                    <a ui-sref=game>משחק</a>
                 </li>
-                
-<!--
+
+                <!--
                 <li ng-class="{active: $state.includes('login')}">
                     <a ui-sref=login>התנתק</a>
                 </li>
 -->
-                
+
                 <li ng-class="{active: $state.includes('contactUs')}">
                     <a ui-sref=contactUs>צור קשר</a>
                 </li>
             </ul>
         </div>
-    </snap-drawer> 
+    </snap-drawer>
     <snap-dragger>
     </snap-dragger>
     <snap-content snap-opt-tap-to-close=false>
-          
-      <div>
-        <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
-            <span class=menutoggle> 
+
+        <div>
+            <a snap-toggle=left ng-click="menuOpen = !menuOpen">
+                <span class=menutoggle> 
                 <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
             </span>
-        </a>
-        <div class=fr> <h2>דף הבית</h2> </div>
-          <div class="container">              
-          
-                <a href="http://shaiproject.org"><img src="../../images/logo/shai-logo-link.jpg" id ="gotoshai"></a>
-          
-          
+            </a>
+            <div class=fr>
+                <h2>דף הבית</h2> </div>
+            <div class="container">
+
+<!--                <a href="http://shaiproject.org"><img src="../../images/logo/shai-logo-link.jpg" id="gotoshai"></a>-->
+
+
                 <div class="title">Just Sign</div>
 
-                        <hr id = "line_learn">
+                <hr id="line_learn">
 
                 <div id="menu_overview" class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6" >
-                               <img src="../../images/overview/game_pic_main.jpg" width="100%" height ="100%" ui-sref=game>
-                        </div>
-                
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                                <img id ="learn_image_button" src="../../images/overview/learning_pic_main.jpg" width="85%" height ="85%"  ui-sref=learningMode>
+                            <img src="../../images/overview/game_pic_main.jpg" width="100%" height="100%" ui-sref=game>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <img id="learn_image_button" src="../../images/overview/learning_pic_main.jpg" width="85%" height="85%" ui-sref=learningMode>
                         </div>
                     </div>
-                      
+
                 </div>
             </div>
-              <div id="the_footer">© 2016 Shai Project</div>
+            <div id="the_footer">© 2016 Shai Project</div>
 
-    </snap-content> 
+    </snap-content>
+    </div>
+
 </div>
-
-</div>    

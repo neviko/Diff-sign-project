@@ -42,7 +42,6 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
 #menu_learn
 {
     padding-top: 8%;
-    background-color: aliceblue;
 }
 
 #theWords
@@ -58,7 +57,7 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
     width: 24%;
     
     margin-left: auto;
-    border-left: #808080 solid 1px;
+    border-right: black solid 1px;
 }
 
 #learn_video

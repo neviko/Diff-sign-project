@@ -180,7 +180,7 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .info {
         text-align: right;
-        width: 95%;
+        width: 100%;
         font-size: large;
         border-spacing: 50px;
         border-radius: 25%;

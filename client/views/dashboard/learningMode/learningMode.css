@@ -6,8 +6,11 @@
 
 }
 
-#imgLearn
+#title2
 {
-    width: 80%;
-    height: 80%;
+    text-align: center;
+   
+    font: 6vmax 'Great Vibes', Helvetica, sans-serif;
+    color: #ac2925;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
 }

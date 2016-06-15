@@ -41,11 +41,14 @@ a.colorVisited:hover, a.colorVisited:focus, a.colorVisited:active
 
 #menu_learn
 {
-    /*background-color: aliceblue;*/
+    background-color: aliceblue;
     width: 100%;
+   /*
     background-image: url("../../../images/bg/999.png");
     background-size: cover;
     background-repeat: no-repeat;
+    
+    */
 }
 
 #theWords

@@ -33,7 +33,7 @@
     </snap-dragger>
     <snap-content snap-opt-tap-to-close=false>
         <a snap-toggle=left ng-click="menuOpen = !menuOpen">
-      <span class=menutoggle>
+            <span class=menutoggle>
                 <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i>
             </span>
@@ -43,67 +43,47 @@
 
         <div>
             <div class=jumbotron id="bgImage2">
-                <div id="TriviaTitle">T r i v i a</div>
+
                 <!--header-->
                 <div id="gamePage" ng-show="isRunning">
                     <div class="container">
-                        <div class="col-md-12" id="fff">
-                            <button class="informationButton" ng-click="instructions()">{{buttonText}}</button>
-                            <p ng-show="showInstructions" class="instuctionStyle">
-
-                                מטרת המשחק : לענות על כמה שיותר שאלות בזמן קצר.
-                                <br> אם אתם מתקשים, אנא חזרו למצב הלמידה ואחר כך חיזרו למשחק.
-                                <br> בהצלחה :)
-                        </div>
-                        <div class="row">
-
-                            <div id="gameInfo" class="col-md-2 col-xs-12 ">
-                                <div class="row">
-                                    <div class="col-md-12 col-xs-4" >
-                                        <label class="info">{{lives}} :פסילות</label>
-                                    </div>
-
-                                    <div class="col-md-12 col-xs-4">
-                                        <label class="info">{{score}} :ניקוד</label>
-                                    </div>
-
-                                    <div class="col-md-12 col-xs-4">
-                                        <label class="info">{{timer}} :זמן</label>
-                                    </div>
 
 
+
+                        <!---------------------------------------------->
+
+
+                        <div id="gameInfo" class="col-md-2 col-xs-12 ">
+                            <div id="TriviaTitle">T r i v i a</div>
+                            <div class="row">
+                                <div class="col-md-12 col-xs-4">
+                                    <label class="info">{{lives}} :פסילות</label>
                                 </div>
 
+                                <div class="col-md-12 col-xs-4">
+                                    <label class="info">{{score}} :ניקוד</label>
+                                </div>
 
-
-                            </div>
-                            <!---------------------------------------------->
-                            <div class="col-md-10">
-
-
-
-
-
-
-
+                                <div class="col-md-12 col-xs-4">
+                                    <label class="info">{{timer}} :זמן</label>
+                                </div>
                             </div>
 
                             <!---------------------------------------------->
+                        </div>
 
+                        <div class="col-md-9 col-md-offset-1">
+                            <div id="uno" class="col-md-9 col-md-offset-1" ng-show="isLoading">{{loading}} </div>
+                            <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()">
+                            </video>
+                            <div class="col-md-12" id="fff">
+                                <button class="informationButton" ng-click="instructions()">{{buttonText}}</button>
+                                <p ng-show="showInstructions" class="instuctionStyle">
 
-
-
-                            <div class="col-md-9 col-md-offset-1">
-                                <div id="uno" class="col-md-9 col-md-offset-1" ng-show="isLoading">{{loading}} </div>
-                                <video id="videoId" class="video" ng-src='{{goTrust(currClip.clip_url)}}' controls autoplay='true' controls='true' onpause="onVideoPaused()">
-                                </video>
+                                    מטרת המשחק : לענות על כמה שיותר שאלות בזמן קצר.
+                                    <br> אם אתם מתקשים, אנא חזרו למצב הלמידה ואחר כך חיזרו למשחק.
+                                    <br> בהצלחה :)
                             </div>
-
-
-
-
-
-
                         </div>
 
 
@@ -120,45 +100,25 @@
                             <div ng-style="myStyle">{{messageAfterAnswer}}</div>
                         </div>
                     </div>
-
-
-
-
                     <!----------------------------------------------------answers area----------------------------------------------->
                     <div id="answersArea" ng-show="showAnswers">
-
                         <div class="row text-center">
-
-
                             <div class="col-md-3 col-md-offset-4 col-xs-5 col-xs-offset-1 ">
                                 <label class="answer_words" data-id="upLeft" ng-click="onUserWordClick($event)">א. {{ansArr[0].triviaObj.name_heb}}</label>
                             </div>
                             <div class="col-md-3 col-md-offset-1 col-xs-5 col-xs-offset-1 ">
                                 <label class="answer_words" data-id="upRight" ng-click="onUserWordClick($event)">ב. {{ansArr[1].triviaObj.name_heb}} </label>
                             </div>
-
-
                         </div>
-
-
                         <div class="row text-center">
-
-
                             <div class="col-md-3 col-md-offset-4 col-xs-5 col-xs-offset-1">
                                 <label class="answer_words" data-id="buttomLeft" ng-click="onUserWordClick($event)">ג. {{ansArr[2].triviaObj.name_heb}} </label>
                             </div>
                             <div class="col-md-3 col-md-offset-1 col-xs-5 col-xs-offset-1 ">
                                 <label class="answer_words" data-id="buttomRight" ng-click="onUserWordClick($event)">ד. {{ansArr[3].triviaObj.name_heb}} </label>
                             </div>
-
-
                         </div>
-
-
                     </div>
-
-
-
                     <!--button area-->
                     <div class="row text-center" ng-show="showNextQuesBtn">
                         <div class="col-md-7 col-md-offset-5 col-xs-8 col-xs-offset-3">
@@ -180,7 +140,7 @@
                     <div class="gameOver"> {{score}} : הנקודות שצברת </div>
 
                     <div class="row text-center">
-                         <button class="nextQuesBtn" ng-click="reGame()">התחל משחק מחדש</button>
+                        <button class="nextQuesBtn" ng-click="reGame()">התחל משחק מחדש</button>
                     </div>
                 </div>
                 <!-- END GAME PAGE -->

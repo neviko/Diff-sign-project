@@ -1,21 +1,16 @@
-.center{
-    text-align:center;
+.center {
+    text-align: center;
 }
 
-
-
-#gameInfo{
+#gameInfo {
     padding-bottom: 2%;
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 1%;
     font-size: 140%;
-
-
 }
 
-
-#userNotes{
+#userNotes {
     padding-bottom: 2%;
     padding-top: 2%;
     padding-left: 4.5%;
@@ -25,12 +20,9 @@
     text-align: center;
     font-size: xx-large;
     color: lightsalmon;
-
-
 }
 
-.answer_words
-{
+.answer_words {
     width: 90%;
     padding-bottom: 8%;
     padding-top: 8%;
@@ -38,40 +30,37 @@
     font-family: monospace;
     border-style: solid;
     border-color: black #ac2925 black #ac2925;
-    border-width:medium;
+    border-width: medium;
     /*border-bottom-left-radius: 30px;*/
     /*border-bottom-right-radius: 30px;*/
     border-radius: 25px;
     color: black;
 }
 
-.video
-{
-    width : 100%;
+.video {
+    width: 100%;
     height: 60%;
     border-width: medium;
     border-style: solid;
-    border-color:  black black black black;
+    border-color: black black black black;
 }
 
-.nextQuesBtn
-{
+.nextQuesBtn {
     display: inline-block;
     margin: 5% 34% 0 0;
     padding: 2% 2%;
     font-size: 2vmax;
     color: #ac2925;
-    font-family: "Bitter",serif;
-    border-radius:10%;
-    border-color: black ;
+    font-family: "Bitter", serif;
+    border-radius: 10%;
+    border-color: black;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    display:block;
-
+    display: block;
 }
 
-.gameOver{
+.gameOver {
     font-family: "Century Gothic";
     /*background-color: lightgoldenrodyellow;*/
     text-align: center;
@@ -80,22 +69,20 @@
     padding-bottom: 10%;
 }
 
-.green{
-    color:green;
+.green {
+    color: green;
 }
 
-.red{
-    color:red;
+.red {
+    color: red;
 }
 
-
-.instuctionStyle{
-   
+.instuctionStyle {
     text-align: right;
     font-size: 80%;
     font-family: fantasy;
     width: 90%;
-    border-style:groove;
+    border-style: groove;
     border-color: black white black white;
     border-width: 7px;
     background-color: white;
@@ -103,81 +90,71 @@
     /*border-bottom-left-radius: 30px;*/
     /*border-bottom-right-radius: 30px;*/
     border-radius: 15%;
-    
-    
 }
 
-#fff{
+#fff {
     text-align: right;
-
 }
 
-
-.info{
+.info {
+    position: relative;
     text-align: right;
-    width: 100%;
-    margin-top: 35%;
-    padding-bottom: 8%;
-    padding-top: 8%;
-    font-size: 140%;
+    /*    width: 100%;*/
+    /*    margin-top: 35%;*/
+    /*    padding-bottom: 8%;*/
+    /*    padding-top: 8%;*/
+    height: 80px;
+    font-size: 25px;
     font-family: monospace;
-    border-style: solid;
+    border-bottom: solid;
     border-color: black #ac2925 black #ac2925;
-    border-width:medium;
-    border-spacing: 40px;
-    border-radius: 15%;
-    color:#ac2925;
-    
 }
 
+.info span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+}
 
-.informationButton{
-    border-style: solid;
-    border-color: black #ac2925 black #ac2925;
-    border-width:medium;
+.informationButton {
+    border-color: transparent;
     background-color: inherit;
-    font-size: 200%;
-    border-radius: 25%;
-    
 }
 
-#bgImage2
-{
-    background-image:url(../../../../images/bg/kadurPoreah.jpg);
+#bgImage2 {
+    background-image: url(../../../../images/bg/kadurPoreah.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 
-
-
-
-#TriviaTitle
-{
-    text-align: center;
-    margin-top: 1%;
+#TriviaTitle {
+    height: 200px;
+    width: 300px;
+    text-align: left;
     /*font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;*/
     /*color: #ac2925;*/
     /*text-shadow: 4px 4px 3px rgba(255, 149, 144, 0.1);*/
-
-    font: 17vmax 'Great Vibes', Helvetica, sans-serif;
+    font: 4vmax 'Great Vibes', Helvetica, sans-serif;
     color: #ac2925;
-
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
-#uno{
+#uno {
     font-size: 200%;
     display: inline-table;
     //background-color: #ff9590;
     text-align: center;
-    color:#ac2925 ;
+    color: #ac2925;
     font-family: monospace;
     font-style: italic;
     font-weight: bolder;
 }
 
+
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .info {
         text-align: right;
         width: 100%;
@@ -186,7 +163,6 @@
         border-radius: 25%;
         color: #ac2925;
     }
-
     .instuctionStyle {
         text-align: right;
         font-size: 30%;
@@ -202,39 +178,28 @@
         border-radius: 15%;
         /* Styles */
     }
-
-
-    .answer_words
-{
-    width: 80%;
-    padding-bottom: 8%;
-    padding-top: 8%;
-    font-size: large;
-    font-family: monospace;
-    border-style: solid;
-    border-color: black #ac2925 black #ac2925;
-    border-width:medium;
-    /*border-bottom-left-radius: 30px;*/
-    /*border-bottom-right-radius: 30px;*/
-    border-radius: 25px;
-    color: black;
-}
-
-   #uno{
-       font-size: 100%;
-       text-align:right;
-       
-   }
-
-
-   #userNotes{
-
-    
-    font-size: medium;
-    
-   }
-
-    .informationButton{
-        font-size:medium;
+    .answer_words {
+        width: 80%;
+        padding-bottom: 8%;
+        padding-top: 8%;
+        font-size: large;
+        font-family: monospace;
+        border-style: solid;
+        border-color: black #ac2925 black #ac2925;
+        border-width: medium;
+        /*border-bottom-left-radius: 30px;*/
+        /*border-bottom-right-radius: 30px;*/
+        border-radius: 25px;
+        color: black;
+    }
+    #uno {
+        font-size: 100%;
+        text-align: right;
+    }
+    #userNotes {
+        font-size: medium;
+    }
+    .informationButton {
+        font-size: medium;
     }
 }

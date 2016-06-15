@@ -1,73 +1,65 @@
-<div> 
+<div>
     <snap-drawer>
         <div class=snap-menu>
             <div class="sidebar-header text-center">
                 <img src="./images/logo/shai-logo.png" width="70%" height="70%">
-            </div> 
-            <ul class=snap-ul> 
+            </div>
+            <ul class=snap-ul>
                 <li ng-class="{active: $state.includes('overview')}">
                     <a ui-sref=overview>דף הבית</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('learningMode')}">
                     <a ui-sref=learningMode>לימוד שפת הסימנים</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('game')}">
-                     <a ui-sref=game>משחק</a>
+                    <a ui-sref=game>משחק</a>
                 </li>
-                
-<!--
-                <li ng-class="{active: $state.includes('login')}">
-                    <a ui-sref=login>התנתק</a>
-                </li>
--->
-                
+
                 <li ng-class="{active: $state.includes('contactUs')}">
                     <a ui-sref=contactUs>צור קשר</a>
                 </li>
             </ul>
         </div>
-    </snap-drawer> 
+    </snap-drawer>
     <snap-dragger>
     </snap-dragger>
     <snap-content snap-opt-tap-to-close=false>
-      <div >
-        <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
+        <a snap-toggle=left ng-click="menuOpen = !menuOpen">
             <span class=menutoggle> 
                 <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
             </span>
         </a>
-        <div class=fr> <h2>לימודים</h2> </div>
-            <div class="container">
+        <div class=fr>
+            <h2>לימודים</h2> </div>
+        <div class="container">
 
 
 
-        <div id="my-page">    
+            <div id="my-page">
                 <h1 id="title_learn">{{message}}</h1>
 
-                <hr id = "line_learn">
-            <div id="bodyLearningLetters">
-                <div class="row">
-                    <div ng-repeat="pic in pictures">
-                        <div class="clearfix" ng-if="$index % 3 == 0"></div>
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                        <img id="pictLetters" ng-src="{{pic.url}}"/>
+                <hr id="line_learn">
+                <div id="bodyLearningLetters">
+                    <div class="row">
+                        <div ng-repeat="pic in pictures">
+                            <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <img id="pictLetters" ng-src="{{pic.url}}" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id ="img_learn">
-                        <img src="../../../../images/learningMode/green-button_goBack.jpg" width="60%" height="60%" <a ui-sref=learningMode></a>
+                <div id="img_learn">
+                    <img src="../../../../images/learningMode/green-button_goBack.jpg" width="60%" height="60%" <a ui-sref=learningMode></a>
+                </div>
+
             </div>
 
-        </div> 
-                    
-      </div>
+        </div>
         <div id="the_footer">© 2016 Shai Project</div>
+    </snap-content>
 
-    </snap-content> 
 </div>
-
-</div>    

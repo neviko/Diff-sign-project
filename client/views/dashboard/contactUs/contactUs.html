@@ -1,166 +1,81 @@
-
-
-<!--
-<div> 
+<div>
     <snap-drawer>
         <div class=snap-menu>
             <div class="sidebar-header text-center">
                 <img src="./images/logo/shai-logo.png" width="70%" height="70%">
-            </div> 
-            <ul class=snap-ul> 
+            </div>
+            <ul class=snap-ul>
                 <li ng-class="{active: $state.includes('overview')}">
                     <a ui-sref=overview>דף הבית</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('learningMode')}">
                     <a ui-sref=learningMode>לימוד שפת הסימנים</a>
                 </li>
-                
+
                 <li ng-class="{active: $state.includes('game')}">
-                     <a ui-sref=game>משחק</a>
+                    <a ui-sref=game>משחק</a>
                 </li>
                 <li ng-class="{active: $state.includes('contactUs')}">
                     <a ui-sref=contactUs>צור קשר</a>
                 </li>
             </ul>
         </div>
-    </snap-drawer> 
+    </snap-drawer>
     <snap-dragger>
     </snap-dragger>
     <snap-content snap-opt-tap-to-close=false>
-      <div>
-        <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
-            <span class=menutoggle> 
+        <div>
+            <a snap-toggle=left ng-click="menuOpen = !menuOpen">
+                <span class=menutoggle> 
                 <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
             </span>
-        </a>
-        <div class=fr> <h2>צור קשר</h2> </div>
-          
-                <div id="title_contact">צור קשר עם שי פרויקט</div>
-                          <hr id = "line_learn">
-                <div class="container">
+            </a>
+            <div class=fr>
+                <h2>צור קשר</h2> </div>
 
-                <div id="page-wrap">
+            <div id="title_contact">צור קשר עם שי פרויקט</div>
+            <hr id="line_learn">
+            <div id="Page">
 
-		  <div id="contact-area">
-			
-			<form ng-submit="clicked()" ng-show = "m_sending">
-				<label id="labelContact" for="Name">:שם</label>
-				<input type="text" name="Name" id="Name" ng-model="form.name" required placeholder="שם"/>
-	
-	
-				<label id="labelContact" for="Email">:אמייל </label>
-				<input type="email" name="Email" id="Email" ng-model="form.contactEmail" required placeholder = "email"/>
-				
-				<label id="labelContact" for="Message">:הודעה</label><br />
-				<textarea name="Message" rows="20" cols="20" id="Message" ng-model="form.message" required placeholder =" ההודעה שלך"></textarea>
+                <div id="form" ng-submit="clicked()">
 
-                    <input id="but_sub" type="submit" value="שלח" name="submit" class="submit-button" >			
-              </form>
-			
-            <div id="ret_mess" ng-show ="!m_sending">
-                <div>{{message}}</div>
-                <div>{{message2}}</div>
-            </div>    
-		</div>
-    </div> 
+                    <div class="fish" id="fish"></div>
+                    <div class="fish" id="fish2"></div>
+
+                    <form id="waterform" method="post">
+
+                        <div ng-show="m_sending">
+                            <div class="formgroup" id="name-form">
+                                <label id="thelabel" for="name">שם</label>
+                                <input class="theinput" type="text" id="name" name="name" ng-model="form.name" placeholder="שם" />
+                            </div>
+
+                            <div class="formgroup" id="email-form">
+                                <label id="thelabel" for="email">אמייל</label>
+                                <input class="theinput" type="email" id="email" name="email" ng-model="form.contactEmail" placeholder="email" />
+                            </div>
+
+                            <div class="formgroup" id="message-form">
+                                <label id="thelabel" for="message">הודעה</label>
+                                <textarea class="thetextarea" id="message" name="message" ng-model="form.message" placeholder=" ההודעה שלך"></textarea>
+                            </div>
+
+                            <input class="theinput" type="submit" value="שלח" />
+                        </div>
+                        <div id="ret_mess" ng-show="!m_sending">
+                            <div>{{message}}</div>
+                            <div>{{message2}}</div>
+                        </div>
                 </div>
-    <div id="the_footer">© 2016 Shai Project</div>
+                </form>
+            </div>
 
-    </snap-content> 
-</div>
-
-</div>    
-	
-	
-	
--->	
+            <div id="the_footer">© 2016 Shai Project</div>
 
 
+    </snap-content>
 
 
-<div> 
-    <snap-drawer>
-        <div class=snap-menu>
-            <div class="sidebar-header text-center">
-                <img src="./images/logo/shai-logo.png" width="70%" height="70%">
-            </div> 
-            <ul class=snap-ul> 
-                <li ng-class="{active: $state.includes('overview')}">
-                    <a ui-sref=overview>דף הבית</a>
-                </li>
-                
-                <li ng-class="{active: $state.includes('learningMode')}">
-                    <a ui-sref=learningMode>לימוד שפת הסימנים</a>
-                </li>
-                
-                <li ng-class="{active: $state.includes('game')}">
-                     <a ui-sref=game>משחק</a>
-                </li>
-                <li ng-class="{active: $state.includes('contactUs')}">
-                    <a ui-sref=contactUs>צור קשר</a>
-                </li>
-            </ul>
-        </div>
-    </snap-drawer> 
-    <snap-dragger>
-    </snap-dragger>
-    <snap-content snap-opt-tap-to-close=false>
-      <div>
-        <a snap-toggle=left ng-click="menuOpen = !menuOpen"> 
-            <span class=menutoggle> 
-                <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
-                <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
-            </span>
-        </a>
-        <div class=fr> <h2>צור קשר</h2> </div>
-          
-                <div id="title_contact">צור קשר עם שי פרויקט</div>
-                          <hr id = "line_learn">
-<div id="Page">
-
-<div id="form"  ng-submit="clicked()" >
-
-<div class="fish" id="fish"></div>
-<div class="fish" id="fish2"></div>
-
-<form id="waterform" method="post">
-
-<div  ng-show = "m_sending">    
-<div class="formgroup" id="name-form">
-    <label id="thelabel" for="name">שם</label>
-    <input class ="theinput" type="text" id="name" name="name" ng-model="form.name"  placeholder="שם" />
-</div>
-
-<div class="formgroup" id="email-form">
-    <label id="thelabel" for="email">אמייל</label>
-    <input class ="theinput" type="email" id="email" name="email" ng-model="form.contactEmail"  placeholder = "email" />
-</div>
-
-<div class="formgroup" id="message-form">
-    <label id="thelabel" for="message">הודעה</label>
-    <textarea class ="thetextarea" id="message" name="message" ng-model="form.message"  placeholder =" ההודעה שלך"></textarea>
-</div>
-
-	<input class ="theinput" type="submit" value="שלח"  />
-    </div> 
-    <div id="ret_mess" ng-show ="!m_sending">
-        <div>{{message}}</div>
-        <div>{{message2}}</div>
-    </div> 
-</div> 
-</form>
-</div>
-     
-               <div id="the_footer">© 2016 Shai Project</div>
-                          
-
-    </snap-content> 
-
-
-</div>    
-	
-	
-              <!--<div id="the_footer">© 2016 Shai Project</div>-->
-
+    </div>

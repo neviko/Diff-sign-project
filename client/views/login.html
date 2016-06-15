@@ -1,49 +1,62 @@
 <div class=login-page>
     <div class=img-container>
         <div class="text-center pull-right photo">
-            <img src=images/logo/shai-logo.png class="user-avatar img-circle img-responsive"> 
+            <img src=images/logo/shai-logo.png class="user-avatar img-circle img-responsive">
             <h1>JUST-SIGN<br> <span>משחק שפת סימנים</span></h1>
         </div>
     </div>
     <div class=form-content>
-        <div class=pro-link> 
+        <div class=pro-link>
             <a href="http://shaiproject.org">לאתר של הארגון</a>
-        </div> 
+        </div>
         <form role=form class=bottom-75 ng-submit=submit()>
-            <div class=table-form> 
-                <div class=form-groups> 
-                    <div class=form-group> <input type=text class="form-control input-lg" placeholder=שם-משתמש > 
-                    </div> 
-                    <div class=form-group> <input type=password class="form-control input-lg" placeholder=סיסמה>
+            <div class=table-form>
+                <div class=form-groups>
+                    <div class=form-group>
+                        <input type=text class="form-control input-lg" placeholder=שם-משתמש>
+                    </div>
+                    <div class=form-group>
+                        <input type=password class="form-control input-lg" placeholder=סיסמה>
                     </div>
                 </div>
                 <div class=button-container>
-                    <button class="btn btn-default login"> <!-- ng-click="connect()"-->
+                    <button class="btn btn-default login">
+                        <!-- ng-click="connect()"-->
                         <img src=images/arrow.png>
                     </button>
-                </div> 
+                </div>
             </div>
-            <div class=remember> 
-                <label class=checkbox1 for=Option> <input id=Option type=checkbox>
-                    <span></span>
-                    השאר מחובר
-                </label> 
-<!--                הישאר מחובר <span class=pass> לכניסה ללא שם משתמש וסיסמא</span>-->
-                <div  class="noPassword"> <button ng-click="connect()" class ="buttonPassword"><span>לחץ כאן - לכניסה ללא שם משתמש וסיסמא </span></button></div>
-               
-            </div>   
+            <div class=remember>
+                <label class=checkbox1 for=Option>
+                    <input id=Option type=checkbox>
+                    <span></span> השאר מחובר
+                </label>
+                <!--                הישאר מחובר <span class=pass> לכניסה ללא שם משתמש וסיסמא</span>-->
+                <div class="noPassword">
+                    <button ng-click="connect()" class="buttonPassword"><span>לחץ כאן - לכניסה ללא שם משתמש וסיסמא </span></button>
+                </div>
 
-<!--            <button class = "btn55" ng-click="toggle()">הרשמה</button>-->
+            </div>
 
-            <p ng-show="myVar" class="blocRegister" >
-                <label class ="labelRegister">שם משתמש</label><input id="userName" ng-model="userName" ><br>
-                <label class ="labelRegister">דוא"ל   </label><input id="theEmail" type=email ng-model="user.email" ><br>
-                <label class ="labelRegister">סיסמה</label><input id="password" type=password ng-model="user.password" ><br>
-                <label class ="labelRegister">סיסמה</label><input id="validatePassword" ng-class="{'error': password!= validatePassword, 'success' : password== validatePassword}" type=password ng-model="validatePassword"><br>
-                <button class="btn56"  ng-click="(pass == passVal)&&register()">הרשמה</button>
+            <!--            <button class = "btn55" ng-click="toggle()">הרשמה</button>-->
 
-                    
+            <p ng-show="myVar" class="blocRegister">
+                <label class="labelRegister">שם משתמש</label>
+                <input id="userName" ng-model="userName">
+                <br>
+                <label class="labelRegister">דוא"ל </label>
+                <input id="theEmail" type=email ng-model="user.email">
+                <br>
+                <label class="labelRegister">סיסמה</label>
+                <input id="password" type=password ng-model="user.password">
+                <br>
+                <label class="labelRegister">סיסמה</label>
+                <input id="validatePassword" ng-class="{'error': password!= validatePassword, 'success' : password== validatePassword}" type=password ng-model="validatePassword">
+                <br>
+                <button class="btn56" ng-click="(pass == passVal)&&register()">הרשמה</button>
+
+
             </p>
-         </form>
-    </div> 
-</div> 
+        </form>
+    </div>
+</div>

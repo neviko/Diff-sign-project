@@ -32,63 +32,60 @@
     <snap-dragger>
     </snap-dragger>
     <snap-content snap-opt-tap-to-close=false>
-        <div>
-            <a snap-toggle=left ng-click="menuOpen = !menuOpen">
-                <span class=menutoggle> 
+        <a snap-toggle=left ng-click="menuOpen = !menuOpen">
+            <span class=menutoggle> 
                 <i ng-hide=menuOpen class="fa fa-bars fa-2x"></i>
                 <i ng-show=menuOpen class="fa fa-times fa-2x"></i> 
             </span>
-            </a>
-            <div class=fr>
-                <h2>לימודים</h2> </div>
-            <div id="menu_learning" class="container">
+        </a>
+        <div class=fr>
+            <h2>לימודים</h2> </div>
+        <div id="menu_learning" class="container">
 
-                <div id="title2">{{title}}</div>
+            <div id="title2">{{title}}</div>
 
-                <hr id="line_learn">
+            <hr id="line_learn">
 
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-1 col-md-1 col-sm-1">
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5">
-
-                            <img id="imLearn" src="./images/learningMode/letters.jpg" width="60%" height="60%" ui-sref=learn_Letters>
-                        </div>
-
-                        <div class="col-lg-5 col-md-5 col-sm-5">
-                            <img id="imLearn" src="./images/learningMode/general_words.jpg" width="55%" height="55%"  ui-sref=learn_General>
-
-                        </div>
-                        <div class="col-lg-1 col-md-1 col-sm-1">
-                        </div>
-            </div>
-
-                    <div class="row">
+            <div class="container">
+                <div class="row">
 
                     <div class="col-lg-1 col-md-1 col-sm-1">
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
 
-                            <img id="imLearn" src="./images/learningMode/home.jpg" width="60%" height="60%" ui-sref=learn_House>
-
-
-                        </div>
-
-                        <div class="col-lg-5 col-md-5 col-sm-5">
-                            <img id="imLearn" src="./images/learningMode/playground.jpg" width="60%" height="60%"  ui-sref=learn_Playground>
-
-                        </div>
-                        <div class="col-lg-1 col-md-1 col-sm-1">
-                        </div>
+                        <img id="imLearn" src="./images/learningMode/letters.jpg" width="60%" height="60%" ui-sref=learn_Letters>
                     </div>
 
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <img id="imLearn" src="./images/learningMode/general_words.jpg" width="55%" height="55%" ui-sref=learn_General>
+
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1">
+                    </div>
                 </div>
+
+                <div class="row">
+
+                    <div class="col-lg-1 col-md-1 col-sm-1">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+
+                        <img id="imLearn" src="./images/learningMode/home.jpg" width="60%" height="60%" ui-sref=learn_House>
+
+
+                    </div>
+
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <img id="imLearn" src="./images/learningMode/playground.jpg" width="60%" height="60%" ui-sref=learn_Playground>
+
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1">
+                    </div>
+                </div>
+
             </div>
-            <div id="the_footer">© 2016 Shai Project</div>
+        </div>
+        <div id="the_footer">© 2016 Shai Project</div>
 
     </snap-content>
-    </div>
-
 </div>

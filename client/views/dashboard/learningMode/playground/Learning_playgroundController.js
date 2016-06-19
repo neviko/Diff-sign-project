@@ -1,6 +1,6 @@
 function Learning_playgroundController($scope,$http,$interval,videoService,dbService) 
 {
-    $scope.message='בגן משחקים';
+    $scope.message='בגן המשחקים';
     $scope.clips =  [];
     var visited = 0;
     var visiting = 0;

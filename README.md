@@ -29,7 +29,7 @@ Please visit our wiki for furthur project info:
 - [Software Design Specification](../../wiki/sds)
 
 ### Iteration Pages
-- [Iteration 0 - ZFR](https://github.com/neviko/Diff-sign-project/wiki/Itr0_Zero-Feature-Release-(ZFR))
+- [Iteration 0 - ZFR](https://github.com/neviko/Diff-sign-project/wiki/Iteration-0---ZFR)
 - [Iteration 1 - MVP](https://github.com/neviko/Diff-sign-project/wiki/Iteration-1---MVP)
 - [Iteration 2 - Feature X](https://github.com/neviko/Diff-sign-project/wiki/iterations-2---ASM)
 - [Iteration 3 - Feature Y](https://github.com/neviko/Diff-sign-project/wiki/iterations-3---Integration)

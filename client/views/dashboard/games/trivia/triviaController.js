@@ -19,6 +19,7 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
     $scope.isPaused=false;
     $scope.isLoading = true;
     $scope.loading = "הסרטון בטעינה, אנא המתן";
+    var inLoad=false;
     $scope.gotoBottom="";
 
 
@@ -64,15 +65,11 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
     var answers = [];
 
     function loadQuestion() {
-//        if($scope.timer==0)
-//        {
-//            
-//                
-//        }
+
         $scope.messageAfterAnswer = "";
         //$scope.showAnswers = true;
         $scope.showNextQuesBtn = false;
-        $scope.timer = 20;
+        $scope.timer = 10;
         //$scope.showAnswers = false;
         $scope.isPaused=false;
         $scope.onUserButtonClick = function (e){
@@ -160,6 +157,8 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
     
         //download the video from the server
     vid.onloadstart= function(){
+
+        inLoad=true;
         console.log("video is loading...");
        
         
@@ -176,14 +175,16 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
         
         
     };
-    
+
+    //when video can be played without breaks
     vid.oncanplaythrough = function()
     {
+        inLoad=false;
         $scope.$apply(function(){
              $scope.isLoading = false;
         });
        
-    }
+    };
     
 //    vid.ondurationchange = function(){
 //        console.log("video is changed");
@@ -194,21 +195,20 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
     
     vid.onpause = function() {
 
-        if($scope.isPaused==true) // promise that the video timer will not set up again
+        if(inLoad == true)
             return;
 
-        $scope.$apply(function(){
-            // set the location.hash to the id of
-            // the element you wish to scroll to.
-            $location.hash('answersArea');
+        if($scope.isPaused == true) // promise that the video timer will not set up again
+            return;
 
-            // call $anchorScroll()
-            $anchorScroll();
-        });
+
 
 
         $scope.isPaused=true;
-        $scope.showAnswers = true;
+       $scope.showAnswers = true;
+
+
+
         returnInterval = $interval(function() {
             $scope.timer--;
 
@@ -230,7 +230,11 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
             }
          
         }, 1000);
-          
+
+        $scope.$apply(function(){
+
+            $scope.gotoBottom();
+        });
     };
 
 

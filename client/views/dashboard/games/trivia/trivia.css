@@ -154,13 +154,13 @@
 
 /* Smartphones (portrait and landscape) ----------- */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 780px) {
     .info {
         text-align: right;
         width: 100%;
-        font-size: large;
+        font-size: medium;
         border-spacing: 50px;
-        border-radius: 25%;
+        border-radius: 15%;
         color: #ac2925;
     }
     .instuctionStyle {

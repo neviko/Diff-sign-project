@@ -3,7 +3,6 @@
     width: 100%;
     margin: auto;
     text-align: center;
-    
     background-image: url("../../../images/bg/789.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,11 +14,13 @@
     height: 85%;
 }
 
+/*
 #bgImage {
     background-image: url(../../images/bg/123.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+*/
 
 .title {
     text-align: center;

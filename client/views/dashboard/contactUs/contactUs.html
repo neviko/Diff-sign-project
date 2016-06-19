@@ -62,7 +62,17 @@
                                 <textarea class="thetextarea" id="message" name="message" ng-model="form.message" placeholder=" ההודעה שלך"></textarea>
                             </div>
 
-                            <input class="theinput" type="submit" value="שלח" />
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-0">
+                                </div>
+                                
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-9">
+                                    <input class="theinput" type="submit" value="שלח" />
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
+                                </div>
+                            </div>
                         </div>
                         <div id="ret_mess" ng-show="!m_sending">
                             <div>{{message}}</div>

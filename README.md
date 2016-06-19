@@ -2,7 +2,7 @@
 
 Just-Sign is a project that created to develop a web app that teaches children sign-language through a game, which is more easy and fun way to learn.
 
-The project developing the web app for the "SHAY-PROJECT" organization that helps deaf and mute kids.
+The project developing the web app for the "SHAI-PROJECT" organization that helps deaf and mute kids.
 
 ![project logo (this one is taken from basecamp)](https://github.com/neviko/Diff-sign-project/blob/master/client/images/logo/shai-logo.jpg)
 

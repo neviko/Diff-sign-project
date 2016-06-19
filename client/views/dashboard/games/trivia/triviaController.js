@@ -193,11 +193,19 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
 //    }
     
     vid.onpause = function() {
-        
-       $scope.gotoBottom();
 
-        if( $scope.isPaused==true) // promise that the video timer will not set up again
+        if($scope.isPaused==true) // promise that the video timer will not set up again
             return;
+
+        $scope.$apply(function(){
+            // set the location.hash to the id of
+            // the element you wish to scroll to.
+            $location.hash('answersArea');
+
+            // call $anchorScroll()
+            $anchorScroll();
+        });
+
 
         $scope.isPaused=true;
         $scope.showAnswers = true;

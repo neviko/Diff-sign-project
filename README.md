@@ -23,7 +23,7 @@ Please visit our wiki for furthur project info:
 ### [Team Page](https://github.com/neviko/Diff-sign-project/wiki/team-page)
 
 ### Project Documents
-- [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
+- [Project Idea](https://github.com/neviko/Diff-sign-project/wiki/inception) ([Presentation](docs/idea-slides.pdf))
 - [Project Inception](../../wiki/inception)
 - [Software Requirements Specification](../../wiki/srs)
 - [Software Design Specification](../../wiki/sds)
@@ -33,7 +33,7 @@ Please visit our wiki for furthur project info:
 - [Iteration 1 - MVP](https://github.com/neviko/Diff-sign-project/wiki/Iteration-1---MVP)
 - [Iteration 2 - Feature X](https://github.com/neviko/Diff-sign-project/wiki/iterations-2---ASM)
 - [Iteration 3 - Feature Y](https://github.com/neviko/Diff-sign-project/wiki/iterations-3---Integration)
-- [Iteration 4 - Feature Z]()
+- [Iteration 4 - Feature Z](https://github.com/neviko/Diff-sign-project/wiki/iterations-4---Final%20Iteration)
 
 
 

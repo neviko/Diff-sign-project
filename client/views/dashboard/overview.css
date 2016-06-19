@@ -1,11 +1,12 @@
-#backgroundAll {
-    background-color: #831919;
-}
 
 #menu_overview {
     width: 100%;
     margin: auto;
     text-align: center;
+    
+    background-image: url("../../../images/bg/789.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 

@@ -3,6 +3,10 @@
     width:100%;
 	margin:auto;
     text-align: center;
+    
+    background-image: url("../../../images/bg/959.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
  
 }
 

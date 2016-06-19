@@ -1,5 +1,5 @@
 function Learning_HouseController($scope, $http, $interval, videoService, dbService) {
-    $scope.message = 'בית';
+    $scope.message = 'בבית';
     $scope.clips = [];
     $scope.isLoading = true;
     $scope.loadingMessagee = "הסרטון בטעינה, אנא המתן";

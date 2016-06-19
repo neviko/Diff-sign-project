@@ -18,9 +18,9 @@ This project is developed as part of the requirements for a [software engineerin
 
 Please visit our wiki for furthur project info: 
 
-### [User Manual](../../wiki/user-manual)
+### [User Manual](https://github.com/neviko/Diff-sign-project/wiki/User-manual)
 
-### [Team Page](../../wiki/team-page)
+### [Team Page](https://github.com/neviko/Diff-sign-project/wiki/team-page)
 
 ### Project Documents
 - [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))

@@ -6,7 +6,7 @@ The project developing the web app for the "SHAI-PROJECT" organization that help
 
 ![project logo (this one is taken from basecamp)](https://github.com/neviko/Diff-sign-project/blob/master/client/images/logo/shai-logo.jpg)
 
-## Please visit our [live application](http://shay-proj.azurewebsites.net/)
+## Please visit our [live application](http://shai-project.azurewebsites.net/)
 - Alright, currently only a landing page...
 
 [![Join the chat at https://gitter.im/robi-y/seproject-team-template](https://badges.gitter.im/robi-y/seproject-team-template.svg)](https://gitter.im/neviko/Different-sign)

@@ -7,11 +7,11 @@ The project developing the web app for the "SHAI-PROJECT" organization that help
 ![project logo (this one is taken from basecamp)](https://github.com/neviko/Diff-sign-project/blob/master/client/images/logo/shai-logo.jpg)
 
 ## Please visit our [live application](http://shai-project.azurewebsites.net/)
-- Alright, currently only a landing page...
 
 [![Join the chat at https://gitter.im/robi-y/seproject-team-template](https://badges.gitter.im/robi-y/seproject-team-template.svg)](https://gitter.im/neviko/Different-sign)
 
 ## [Issue Board](https://huboard.com/neviko/Diff-sign-project/#/)
+for watching our issues
 
 ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
@@ -23,7 +23,6 @@ Please visit our wiki for furthur project info:
 ### [Team Page](https://github.com/neviko/Diff-sign-project/wiki/team-page)
 
 ### Project Documents
-- [Project Idea](https://github.com/neviko/Diff-sign-project/wiki/inception) ([Presentation](docs/idea-slides.pdf))
 - [Project Inception](../../wiki/inception)
 - [Software Requirements Specification](../../wiki/srs)
 - [Software Design Specification](../../wiki/sds)

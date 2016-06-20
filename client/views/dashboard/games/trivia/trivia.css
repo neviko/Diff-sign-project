@@ -83,7 +83,7 @@
     font-family: fantasy;
     width: 90%;
     border-style: groove;
-    border-color: black white black white;
+    border-color: greenyellow red blue #f2e961;
     border-width: 7px;
     background-color: white;
     color: black;
@@ -153,7 +153,6 @@
 
 
 /* Smartphones (portrait and landscape) ----------- */
-
 @media only screen and (min-device-width: 200px) and (max-device-width: 780px) {
     .info {
         text-align: right;

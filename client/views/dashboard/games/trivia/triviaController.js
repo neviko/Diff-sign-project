@@ -4,7 +4,7 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
 
 
     $scope.score = 0;
-    $scope.timer = 10;
+    $scope.timer = 20;
     $scope.lives = 5;
     $scope.isRunning = true;
     $scope.showAnswers = false;
@@ -69,7 +69,7 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
         $scope.messageAfterAnswer = "";
         //$scope.showAnswers = true;
         $scope.showNextQuesBtn = false;
-        $scope.timer = 10;
+        $scope.timer = 20;
         //$scope.showAnswers = false;
         $scope.isPaused=false;
         $scope.onUserButtonClick = function (e){
@@ -255,8 +255,6 @@ function triviaController($scope,$interval,triviaService,videoService,dbService,
         // call $anchorScroll()
         $anchorScroll();
     };
-
-
 
 };
 angular.module('diffSign').controller('triviaController',triviaController);

@@ -30,9 +30,9 @@ Please visit our wiki for furthur project info:
 ### Iteration Pages
 - [Iteration 0 - ZFR](https://github.com/neviko/Diff-sign-project/wiki/Iteration-0---ZFR)
 - [Iteration 1 - MVP](https://github.com/neviko/Diff-sign-project/wiki/Iteration-1---MVP)
-- [Iteration 2 - Feature X](https://github.com/neviko/Diff-sign-project/wiki/iterations-2---ASM)
-- [Iteration 3 - Feature Y](https://github.com/neviko/Diff-sign-project/wiki/iterations-3---Integration)
-- [Iteration 4 - Feature Z](https://github.com/neviko/Diff-sign-project/wiki/iterations-4---Final%20Iteration)
+- [Iteration 2 - Database and backend](https://github.com/neviko/Diff-sign-project/wiki/iterations-2---ASM)
+- [Iteration 3 - butify design, trivia and learning mode](https://github.com/neviko/Diff-sign-project/wiki/iterations-3---Integration)
+- [Iteration 4 - unitest, design , last things](https://github.com/neviko/Diff-sign-project/wiki/iterations-4---Final%20Iteration)
 
 
 

@@ -15,12 +15,12 @@ router.post('/', function(req, res) {
  
     transporter.sendMail({
         from: data.contactEmail,
-        to: 'elieraphm@gmail.com',
+        to: 'info@shaiproject.org',
         subject: data.name,
         text: data.message
     });
  transporter.sendMail({
-        from: 'elieraphm@gmail.com',
+        from: 'info@shaiproject.org',
         to: data.contactEmail,
         subject: "פרויקט שי ",
         text: 'הודעתך התקבלה ותטופל בקרוב. תודה על פנייתך ! '

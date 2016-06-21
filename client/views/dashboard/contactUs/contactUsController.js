@@ -16,7 +16,7 @@
             $http.post('/contact-us', data=$scope.form)
             .then(function(res)
             {                
-                $scope.message = " ההודעה שלך נשלח בהצלחה";
+                $scope.message = " ההודעה שלך נשלחה בהצלחה";
                 $scope.message2 = "תודה";
                 $scope.form={};
                 $scope.m_sending=false;

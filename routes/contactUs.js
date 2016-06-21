@@ -23,7 +23,7 @@ router.post('/', function(req, res) {
         from: 'info@shaiproject.org',
         to: data.contactEmail,
         subject: "פרויקט שי ",
-        text: 'הודעתך התקבלה ותטופל בקרוב. תודה על פנייתך ! '
+        text: 'הודעתך התקבלה ותטופל בקרוב. תודה על פנייתך! '
     });
     res.end("OK");
 });
